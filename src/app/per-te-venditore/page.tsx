@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { DocumentLayout } from '@/components/DocumentLayout'
 import { RedHeartIcon } from '@/components/RedHeartIcon'
 
@@ -15,6 +16,16 @@ const benefits = [
 export default function PerTeVenditore() {
   return (
     <DocumentLayout>
+      {/* Hero photo */}
+      <div className="relative w-full rounded-xl overflow-hidden mb-6" style={{ height: 320 }}>
+        <Image
+          src="/images/1c822ac222a5faed196d8c7f0d45eb55.jpg"
+          alt="Raffaela Rizza – Domus Tua Immobiliare"
+          fill
+          className="object-cover object-top"
+        />
+      </div>
+
       <div className="text-center mb-8">
         <h1 className="text-[#CC1414] font-bold uppercase text-2xl tracking-wide mb-2">
           Per te, VENDITORE

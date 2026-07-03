@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { DocumentLayout } from '@/components/DocumentLayout'
 
 export default function MatterportPage() {
@@ -13,11 +14,16 @@ export default function MatterportPage() {
       </div>
 
       {/* Matterport embed placeholder */}
-      <div className="relative w-full rounded-xl overflow-hidden border border-gray-200 bg-gray-900"
+      <div className="relative w-full rounded-xl overflow-hidden border border-gray-200"
         style={{ paddingBottom: '56.25%' }}
       >
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-white gap-4">
-          {/* Play button style */}
+        <Image
+          src="/images/5f4f75cfa1dd4c54d7e08fa03c394b97.jpg"
+          alt="Tour virtuale Matterport 3D"
+          fill
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center gap-4">
           <div className="w-16 h-16 rounded-full bg-[#CC1414]/90 flex items-center justify-center shadow-lg">
             <svg
               width="24"
@@ -30,9 +36,9 @@ export default function MatterportPage() {
               <path d="M8 5v14l11-7z" />
             </svg>
           </div>
-          <div className="text-center">
+          <div className="text-center text-white">
             <p className="font-semibold text-sm">37 Via Camillo Benso di Cavour</p>
-            <p className="text-xs text-gray-400 mt-1">Tradate, Varese</p>
+            <p className="text-xs text-white/70 mt-1">Tradate, Varese</p>
           </div>
           {/* TODO: replace src with actual Matterport embed URL */}
           {/* <iframe

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { DocumentLayout } from '@/components/DocumentLayout'
 import { RedHeartIcon } from '@/components/RedHeartIcon'
 
@@ -19,10 +20,53 @@ export default function BozzaPropostaPage() {
         ))}
       </ul>
 
-      {/* Document */}
-      <div className="bg-gray-100 rounded-xl h-[500px] flex items-center justify-center text-gray-500 text-sm text-center p-4 border border-gray-200">
-        {/* TODO: replace with actual bozza proposta di acquisto document */}
-        Bozza proposta di acquisto – appartamento Via Cavour 37
+      {/* Document pages */}
+      <div className="space-y-4">
+        <div className="relative w-full rounded-xl overflow-hidden border border-gray-200 shadow-sm">
+          <Image
+            src="/images/cba443dc0ee31925490f53351b4c99f4.jpg"
+            alt="Proposta Irrevocabile di Acquisto – copertina"
+            width={800}
+            height={1100}
+            className="w-full h-auto"
+          />
+        </div>
+        <div className="relative w-full rounded-xl overflow-hidden border border-gray-200 shadow-sm">
+          <Image
+            src="/images/087ff81d4997736a475c28c155fe7e20.jpg"
+            alt="Proposta Irrevocabile di Acquisto – pagina 2"
+            width={800}
+            height={1100}
+            className="w-full h-auto"
+          />
+        </div>
+        <div className="relative w-full rounded-xl overflow-hidden border border-gray-200 shadow-sm">
+          <Image
+            src="/images/18c9fbd494da5b53b10e44f903aff4bd.jpg"
+            alt="Proposta Irrevocabile di Acquisto – pagina 6"
+            width={800}
+            height={1100}
+            className="w-full h-auto"
+          />
+        </div>
+        <div className="relative w-full rounded-xl overflow-hidden border border-gray-200 shadow-sm">
+          <Image
+            src="/images/6fe4626cdc6db49391d8305d02d8e9cc.jpg"
+            alt="Proposta Irrevocabile di Acquisto – pagina 7"
+            width={800}
+            height={1100}
+            className="w-full h-auto"
+          />
+        </div>
+        <div className="relative w-full rounded-xl overflow-hidden border border-gray-200 shadow-sm">
+          <Image
+            src="/images/36ba0117307c1f5c7433ebc2ac5aa75c.jpg"
+            alt="Conferimento incarico di mediazione"
+            width={800}
+            height={1100}
+            className="w-full h-auto"
+          />
+        </div>
       </div>
     </DocumentLayout>
   )

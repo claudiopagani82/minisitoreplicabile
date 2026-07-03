@@ -4,14 +4,15 @@ import { DomusTuaLogo } from '@/components/DomusTuaLogo'
 interface PhotoLayoutProps {
   children: React.ReactNode
   logoSize?: number
+  backgroundImage?: string
 }
 
-export function PhotoLayout({ children, logoSize = 100 }: PhotoLayoutProps) {
+export function PhotoLayout({ children, logoSize = 100, backgroundImage = '/images/8f6569b87d7feaf4599adc31458d9094.jpg' }: PhotoLayoutProps) {
   return (
     <div className="relative min-h-[calc(100vh-6rem)] flex flex-col items-center justify-start overflow-hidden">
-      {/* Background living room photo */}
+      {/* Background property photo */}
       <Image
-        src="/images/2b08ce0b1046839f9e5c349afea5dda5.jpg"
+        src={backgroundImage}
         alt=""
         fill
         className="object-cover object-center"

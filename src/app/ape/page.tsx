@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { DocumentLayout } from '@/components/DocumentLayout'
 import { RedHeartIcon } from '@/components/RedHeartIcon'
 
@@ -11,12 +12,18 @@ export default function ApePage() {
         </li>
       </ul>
 
-      {/* APE document */}
       <div className="space-y-6">
-        <div className="bg-gray-100 rounded-xl h-[500px] flex items-center justify-center text-gray-500 text-sm text-center p-4 border border-gray-200">
-          {/* TODO: replace with actual APE energy certificate document */}
-          Attestato di Prestazione Energetica – Via Cavour 37, Tradate
+        <div className="relative w-full rounded-xl overflow-hidden" style={{ height: 320 }}>
+          <Image
+            src="/images/ed442926865ddc73b7a776634595ec2d.jpg"
+            alt="Attestato di Prestazione Energetica"
+            fill
+            className="object-cover object-center"
+          />
         </div>
+        <p className="text-[#555555] text-xs text-center italic">
+          Attestato di Prestazione Energetica – Via Cavour 37, Tradate
+        </p>
       </div>
     </DocumentLayout>
   )

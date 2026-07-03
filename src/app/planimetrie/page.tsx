@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { DocumentLayout } from '@/components/DocumentLayout'
 import { RedHeartIcon } from '@/components/RedHeartIcon'
 
@@ -15,14 +16,22 @@ export default function PlanimetriePage() {
         </li>
       </ul>
 
-      {/* Floor plan images */}
-      <div className="space-y-6">
+      {/* Floor plan context photo */}
+      <div className="relative w-full rounded-xl overflow-hidden mb-6" style={{ height: 260 }}>
+        <Image
+          src="/images/c25176a0978c920212a50b0f663b3c7a.jpg"
+          alt="Planimetrie quotate appartamento"
+          fill
+          className="object-cover object-center"
+        />
+      </div>
+
+      {/* Floor plan images placeholders */}
+      <div className="space-y-4">
         <div className="bg-gray-100 rounded-xl h-96 flex items-center justify-center text-gray-500 text-sm text-center p-4 border border-gray-200">
-          {/* TODO: replace with actual floor plan image of the apartment */}
           Planimetria quotata appartamento – Via Cavour 37, secondo piano
         </div>
         <div className="bg-gray-100 rounded-xl h-64 flex items-center justify-center text-gray-500 text-sm text-center p-4 border border-gray-200">
-          {/* TODO: replace with actual floor plan image of the box/garage */}
           Planimetria box auto – piano interrato
         </div>
       </div>
