@@ -1,18 +1,20 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { DomusTuaLogo } from '@/components/DomusTuaLogo'
 
 export default function BenvenutoPage() {
   return (
     <div className="relative min-h-[calc(100vh-3rem)] flex items-center justify-center overflow-hidden">
-      {/* Background placeholder — TODO: replace with actual living room photo */}
-      <div
-        className="absolute inset-0"
-        style={{ backgroundColor: '#f5f5f0' }}
+      {/* Background living room photo */}
+      <Image
+        src="/images/2b08ce0b1046839f9e5c349afea5dda5.jpg"
+        alt=""
+        fill
+        className="object-cover object-center"
+        priority
         aria-hidden="true"
-      >
-        {/* Warm overlay to simulate photo wash */}
-        <div className="absolute inset-0 bg-white/60" />
-      </div>
+      />
+      <div className="absolute inset-0 bg-white/50" aria-hidden="true" />
 
       {/* Instruction hint pointing to menu */}
       <div className="absolute top-4 left-1/2 -translate-x-1/2 flex flex-col items-center z-10 pointer-events-none">
