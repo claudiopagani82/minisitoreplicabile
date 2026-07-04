@@ -3,5 +3,25 @@
   "address": "Via Cavour, 37 / Centro Tradate",
   "agencyName": "DomusTua Immobiliare",
   "agencyPhone": "+39 0331 844898",
-  "agencyEmail": "info@domustua.com"
+  "agencyEmail": "info@domustua.com",
+
+  "introduzione": {
+    "heading": "Benvenuti in Domus Tua",
+    "greeting": "Gentile cliente,",
+    "paragraph1": "La presente brochure digitale è stata pensata per offrirLe una panoramica completa e dettagliata dell'immobile di Suo interesse, con l'obiettivo di fornirLe tutte le informazioni necessarie per valutare con chiarezza ogni aspetto dell'immobile.",
+    "sectionsLabel": "All'interno troverà sezioni dedicate a:",
+    "sections": [
+      "CARATTERISTICHE PRINCIPALI DELL'IMMOBILE",
+      "PLANIMETRIE",
+      "DATI CATASTALI",
+      "ATTESTATO DI PRESTAZIONE ENERGETICA (APE)",
+      "RELAZIONE TECNICA",
+      "DICHIARAZIONI IMPIANTI",
+      "DOCUMENTI CONDOMINIO",
+      "BOZZA PROPOSTA DI ACQUISTO",
+      "PROSPETTO COSTI",
+      "VIDEO SOCIAL"
+    ],
+    "paragraph2": "Con Domus Tua, avere tutte le informazioni a portata di mano significa poter valutare l'immobile con serenità e trasparenza, senza dover attendere ulteriori documenti o chiarimenti."
+  }
 }
