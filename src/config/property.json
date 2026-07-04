@@ -23,5 +23,166 @@
       "VIDEO SOCIAL"
     ],
     "paragraph2": "Con Domus Tua, avere tutte le informazioni a portata di mano significa poter valutare l'immobile con serenità e trasparenza, senza dover attendere ulteriori documenti o chiarimenti."
+  },
+
+  "dalCentroTradate": {
+    "heading": "Come raggiungere l'immobile se arrivate dal centro di Tradate",
+    "leftText": "Potete parcheggiare l'auto in Via XXV Aprile o in Via de Simoni, dove sono presenti diversi parcheggi gratuiti.",
+    "rightText": "L'ingresso all'abitazione è accanto alla gelateria Buosi, come indicato dalla freccia.",
+    "footer": "Troverete una collaboratrice ad aspettarvi per condurvi all'abitazione"
+  },
+
+  "daViaCrocifisso": {
+    "heading": "Come raggiungere l'immobile da via Crocifisso",
+    "leftText": "Percorrendo via Crocifisso, svoltate in via Cavour. L'edificio è facilmente riconoscibile.",
+    "rightText": "Sono disponibili parcheggi nelle vie adiacenti. Seguite le indicazioni presenti sul posto.",
+    "footer": "Troverete una collaboratrice ad aspettarvi per condurvi all'abitazione"
+  },
+
+  "openDomus": {
+    "heading": "COS'È E COME FUNZIONA L'OPEN DOMUS",
+    "subtitle": "Open Domus non è una semplice visita, ma un modo organizzato, trasparente e corretto per acquistare casa.",
+    "sections": [
+      {
+        "title": "Visiti l'immobile con tranquillità",
+        "text": "Durante l'Open Domus avrete tutto il tempo necessario per visitare l'appartamento senza fretta, accompagnati dal nostro personale qualificato che risponderà a ogni vostra domanda. Potrete esaminare ogni dettaglio con calma e serenità."
+      },
+      {
+        "title": "Nessuna corsa contro il tempo",
+        "text": "Il formato Open Domus è pensato per garantire a tutti gli interessati le medesime opportunità. Non si tratta di una vendita all'asta né di una gara: ogni acquirente viene trattato con rispetto e professionalità, con tempi adeguati per valutare con serenità la propria decisione."
+      },
+      {
+        "title": "Trasparenza totale",
+        "text": "Tutta la documentazione relativa all'immobile è raccolta in questa brochure digitale. Nessun documento nascosto, nessuna sorpresa: quello che vedete è quello che acquistate."
+      }
+    ]
+  },
+
+  "caratteristichePrincipali": {
+    "sectionNumber": "1",
+    "sectionTitle": "CARATTERISTICHE PRINCIPALI",
+    "features": [
+      { "label": "Tipologia", "text": "trilocale disposto su un unico livello, situato al secondo piano di una palazzina di 4 piani fuori terra dotata di ascensore." },
+      { "label": "Appartamento", "text": "superficie coperta di 95.5 m²." },
+      { "label": "Area Esterna", "text": "terrazzo (o balcone) di 7.2 m²." },
+      { "label": "Autorimessa", "text": "Include un box auto singolo di 19 m² situato al piano interrato." },
+      { "text": "Stato dell'Immobile: L'edificio, con struttura in cemento armato, è stato costruito nel 1993, mentre l'appartamento ha subito una ristrutturazione nel 2021 💧" },
+      { "text": "Interni: È composto da tre locali con una cucina abitabile. Le pavimentazioni sono in gres porcellanato nel bagno e parquet in massello nel resto dell'abitazione" },
+      { "text": "Arredi inclusi: La vendita comprende l'arredamento della cucina e del bagno" },
+      { "text": "Impianti e infissi: Il riscaldamento è autonomo, caldaia a condensazione con radiatori in ghisa, porta blindata, infissi sono in PVC con vetri tripli e persiane in legno." },
+      { "text": "Altre dotazioni: videocitofono, zanzariere, tende da sole manuali e una rete per computer cablata." }
+    ],
+    "condominioTitle": "Informazioni Condominiali",
+    "condominioItems": [
+      "Struttura scala: 3 appartamenti per pianerottolo per un totale di 10 appartamenti nella scala."
+    ]
+  },
+
+  "planimetrie": {
+    "sectionNumber": "2)",
+    "sectionTitle": "PLANIMETRIE QUOTATE:",
+    "items": ["Appartamento", "Box"]
+  },
+
+  "documentiCatastali": {
+    "sectionNumber": "3)",
+    "sectionTitle": "CATASTO",
+    "items": ["Schede catastali", "Visure catastali"]
+  },
+
+  "ape": {
+    "sectionNumber": "4)",
+    "sectionTitle": "APE - ATTESTATO DI PRESTAZIONE ENERGETICA",
+    "items": ["Certificato energetico"],
+    "caption": "Attestato di Prestazione Energetica – Via Cavour 37, Tradate"
+  },
+
+  "bolletteImpianti": {
+    "sectionNumber": "5)",
+    "sectionTitle": "BOLLETTE E IMPIANTI",
+    "items": [
+      "Bolletta gas – riscaldamento autonomo",
+      "Bolletta energia elettrica",
+      "Dichiarazione di conformità impianto elettrico",
+      "Dichiarazione di conformità impianto idraulico",
+      "Dichiarazione di conformità impianto termico",
+      "Libretto caldaia a condensazione"
+    ]
+  },
+
+  "relazioneTecnica": {
+    "sectionNumber": "6)",
+    "sectionTitle": "RELAZIONE TECNICA",
+    "items": [
+      "Relazione tecnica descrittiva dell'immobile",
+      "Stato di conservazione delle strutture",
+      "Descrizione interventi di ristrutturazione 2021"
+    ]
+  },
+
+  "documentiCondominiali": {
+    "sectionNumber": "7)",
+    "sectionTitle": "DOCUMENTI CONDOMINIALI",
+    "items": [
+      "Regolamento condominiale",
+      "Verbale ultima assemblea condominiale",
+      "Piano di riparto spese condominiali",
+      "Attestazione assenza morosità condominiale"
+    ]
+  },
+
+  "bozzaProposta": {
+    "sectionNumber": "8)",
+    "sectionTitle": "BOZZA PROPOSTA DI ACQUISTO",
+    "items": [
+      "Bozza proposta di acquisto compilabile",
+      "Modalità di presentazione offerta",
+      "Tempistiche e procedura"
+    ]
+  },
+
+  "prospettoCosti": {
+    "sectionNumber": "9)",
+    "sectionTitle": "PROSPETTO COSTI",
+    "items": [
+      "Prezzo di vendita dell'immobile",
+      "Provvigione agenzia immobiliare",
+      "Costi notarili stimati",
+      "Imposte e tasse sull'acquisto",
+      "Riepilogo totale costi acquisto"
+    ]
+  },
+
+  "matterport": {
+    "heading": "GUARDA IL MATTERPORT!",
+    "subtitle": "Entra dentro all'appartamento attraverso una visita virtuale in 3D",
+    "propertyName": "37 Via Camillo Benso di Cavour",
+    "propertyLocation": "Tradate, Varese"
+  },
+
+  "videoSocial": {
+    "heading": "GUARDA IL VIDEO DELL'IMMOBILE SU INSTAGRAM",
+    "subtitle": "Segui Domus Tua Immobiliare su Instagram per non perdere nessun immobile",
+    "instagramHandle": "@domustua.immobiliare"
+  },
+
+  "perTeVenditore": {
+    "heading": "Per te, VENDITORE",
+    "subtitle": "Tutto quello che Domus Tua fa per valorizzare il tuo immobile",
+    "intro": "Con Domus Tua Immobiliare, la vendita del tuo immobile è gestita in modo professionale, trasparente e digitale. Mettiamo a tua disposizione tutti gli strumenti più innovativi per presentare al meglio la tua proprietà e trovare l'acquirente giusto nel minor tempo possibile.",
+    "servicesTitle": "I nostri servizi per il venditore",
+    "benefits": [
+      "Brochure digitale professionale inclusa nella vendita",
+      "Fotografie professionali dell'immobile",
+      "Video tour dell'appartamento per i social media",
+      "Tour virtuale in 3D Matterport",
+      "Open Domus: format di vendita organizzato e trasparente",
+      "Assistenza completa in tutte le fasi della compravendita",
+      "Supporto nella gestione della documentazione",
+      "Consulenza per la valutazione dell'immobile"
+    ],
+    "ctaTitle": "Contattaci oggi",
+    "ctaSubtitle": "Scopri come possiamo valorizzare il tuo immobile",
+    "ctaButtonLabel": "Chiama Domus Tua"
   }
 }

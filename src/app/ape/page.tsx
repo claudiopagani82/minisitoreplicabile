@@ -1,15 +1,20 @@
 import Image from 'next/image'
 import { DocumentLayout } from '@/components/DocumentLayout'
 import { RedHeartIcon } from '@/components/RedHeartIcon'
+import property from '@/config/property.json'
+
+const p = property.ape
 
 export default function ApePage() {
   return (
-    <DocumentLayout sectionNumber="4)" sectionTitle="APE - ATTESTATO DI PRESTAZIONE ENERGETICA">
+    <DocumentLayout sectionNumber={p.sectionNumber} sectionTitle={p.sectionTitle}>
       <ul className="space-y-3 mb-8">
-        <li className="flex items-start gap-3">
-          <RedHeartIcon size={16} className="mt-0.5" />
-          <span className="text-[#333333] text-sm font-semibold">Certificato energetico</span>
-        </li>
+        {p.items.map((item, index) => (
+          <li key={index} className="flex items-start gap-3">
+            <RedHeartIcon size={16} className="mt-0.5" />
+            <span className="text-[#333333] text-sm font-semibold">{item}</span>
+          </li>
+        ))}
       </ul>
 
       <div className="space-y-6">
@@ -21,9 +26,7 @@ export default function ApePage() {
             className="object-cover object-center"
           />
         </div>
-        <p className="text-[#555555] text-xs text-center italic">
-          Attestato di Prestazione Energetica – Via Cavour 37, Tradate
-        </p>
+        <p className="text-[#555555] text-xs text-center italic">{p.caption}</p>
       </div>
     </DocumentLayout>
   )
