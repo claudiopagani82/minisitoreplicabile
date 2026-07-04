@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { DocumentLayout } from '@/components/DocumentLayout'
+import { PhotoLayout } from '@/components/PhotoLayout'
 import { RedHeartIcon } from '@/components/RedHeartIcon'
 import property from '@/config/property.json'
 
@@ -7,7 +7,12 @@ const p = property.planimetrie
 
 export default function PlanimetriePage() {
   return (
-    <DocumentLayout sectionNumber={p.sectionNumber} sectionTitle={p.sectionTitle}>
+    <PhotoLayout>
+      <div className="mb-6">
+        <h1 className="text-[#CC1414] font-bold text-xl uppercase tracking-wide">
+          <span className="mr-1">{p.sectionNumber}</span>{p.sectionTitle}
+        </h1>
+      </div>
       <ul className="space-y-3 mb-8">
         {p.items.map((item, index) => (
           <li key={index} className="flex items-start gap-3">
@@ -34,6 +39,6 @@ export default function PlanimetriePage() {
           Planimetria box auto – piano interrato
         </div>
       </div>
-    </DocumentLayout>
+    </PhotoLayout>
   )
 }

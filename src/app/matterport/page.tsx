@@ -1,12 +1,12 @@
 import Image from 'next/image'
-import { DocumentLayout } from '@/components/DocumentLayout'
+import { PhotoLayout } from '@/components/PhotoLayout'
 import property from '@/config/property.json'
 
 const p = property.matterport
 
 export default function MatterportPage() {
   return (
-    <DocumentLayout>
+    <PhotoLayout>
       <div className="text-center mb-6">
         <h1 className="text-[#CC1414] font-bold uppercase text-xl tracking-wide mb-2">
           {p.heading}
@@ -31,16 +31,8 @@ export default function MatterportPage() {
             <p className="font-semibold text-sm">{p.propertyName}</p>
             <p className="text-xs text-white/70 mt-1">{p.propertyLocation}</p>
           </div>
-          {/* TODO: replace with actual Matterport embed URL
-          <iframe
-            src="https://my.matterport.com/show/?m=YOUR_MODEL_ID"
-            className="absolute inset-0 w-full h-full border-0"
-            allowFullScreen
-            allow="xr-spatial-tracking"
-            title="Tour virtuale 3D - Via Cavour 37, Tradate"
-          /> */}
         </div>
       </div>
-    </DocumentLayout>
+    </PhotoLayout>
   )
 }

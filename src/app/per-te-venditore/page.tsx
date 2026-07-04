@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { DocumentLayout } from '@/components/DocumentLayout'
+import { PhotoLayout } from '@/components/PhotoLayout'
 import { RedHeartIcon } from '@/components/RedHeartIcon'
 import property from '@/config/property.json'
 
@@ -7,7 +7,7 @@ const p = property.perTeVenditore
 
 export default function PerTeVenditore() {
   return (
-    <DocumentLayout>
+    <PhotoLayout>
       <div className="relative w-full rounded-xl overflow-hidden mb-6" style={{ height: 320 }}>
         <Image
           src="/images/1c822ac222a5faed196d8c7f0d45eb55.jpg"
@@ -47,6 +47,6 @@ export default function PerTeVenditore() {
           {p.ctaButtonLabel}
         </a>
       </div>
-    </DocumentLayout>
+    </PhotoLayout>
   )
 }

@@ -1,11 +1,11 @@
-import { DocumentLayout } from '@/components/DocumentLayout'
+import { PhotoLayout } from '@/components/PhotoLayout'
 import property from '@/config/property.json'
 
 const p = property.videoSocial
 
 export default function VideoSocialPage() {
   return (
-    <DocumentLayout>
+    <PhotoLayout>
       <div className="text-center mb-6">
         <h1 className="text-[#CC1414] font-bold uppercase text-xl tracking-wide mb-2">
           {p.heading}
@@ -23,14 +23,8 @@ export default function VideoSocialPage() {
           </svg>
           <p className="text-white font-semibold text-center text-sm">Video immobile disponibile su Instagram</p>
           <p className="text-white/80 text-xs text-center">{p.instagramHandle}</p>
-          {/* TODO: replace with actual Instagram embed
-          <blockquote
-            className="instagram-media"
-            data-instgrm-permalink="https://www.instagram.com/p/YOUR_POST_ID/"
-            data-instgrm-version="14"
-          /> */}
         </div>
       </div>
-    </DocumentLayout>
+    </PhotoLayout>
   )
 }
