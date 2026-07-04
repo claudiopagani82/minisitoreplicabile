@@ -12,7 +12,7 @@ export function DomusTuaLogo({ size = 100, className = '' }: DomusTuaLogoProps) 
       alt="DomusTua Immobiliare"
       width={size}
       height={size}
-      className={`rounded-full ${className}`}
+      className={`rounded-full mix-blend-multiply ${className}`}
       priority
     />
   )
