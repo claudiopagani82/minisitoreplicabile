@@ -3,6 +3,7 @@ import { Open_Sans, Dancing_Script } from 'next/font/google'
 import './globals.css'
 import { Navigation } from '@/components/Navigation'
 import { Footer } from '@/components/Footer'
+import property from '@/config/property.json'
 
 const openSans = Open_Sans({
   variable: '--font-open-sans',
@@ -28,6 +29,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  if (property.disabled) {
+    return (
+      <html lang="it">
+        <body style={{ display: 'flex', minHeight: '100vh', alignItems: 'center', justifyContent: 'center', background: '#f4f4f5', fontFamily: 'sans-serif' }}>
+          <p style={{ color: '#71717a', fontSize: '1rem' }}>Questo sito non è al momento disponibile.</p>
+        </body>
+      </html>
+    )
+  }
+
   return (
     <html
       lang="it"
