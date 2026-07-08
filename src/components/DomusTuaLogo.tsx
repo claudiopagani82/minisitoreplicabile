@@ -8,7 +8,7 @@ interface DomusTuaLogoProps {
 export function DomusTuaLogo({ size = 100, className = '' }: DomusTuaLogoProps) {
   return (
     <Image
-      src="/images/22639e828439154297d6622ecd942558.png"
+      src="/images/logo-domustua-componente.png"
       alt="DomusTua Immobiliare"
       width={size}
       height={size}

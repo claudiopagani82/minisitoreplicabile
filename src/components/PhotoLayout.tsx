@@ -7,7 +7,7 @@ interface PhotoLayoutProps {
   backgroundImage?: string
 }
 
-export function PhotoLayout({ children, logoSize = 100, backgroundImage = '/images/8f6569b87d7feaf4599adc31458d9094.jpg' }: PhotoLayoutProps) {
+export function PhotoLayout({ children, logoSize = 100, backgroundImage = '/images/foto-principale.jpg' }: PhotoLayoutProps) {
   return (
     <div className="relative min-h-[calc(100vh-6rem)] flex flex-col items-center justify-start overflow-hidden">
       {/* Background property photo */}

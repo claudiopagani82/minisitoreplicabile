@@ -16,7 +16,7 @@ export default function MatterportPage() {
 
       <div className="relative w-full rounded-xl overflow-hidden border border-gray-200" style={{ paddingBottom: '56.25%' }}>
         <Image
-          src="/images/5f4f75cfa1dd4c54d7e08fa03c394b97.jpg"
+          src="/images/matterport-thumbnail.jpg"
           alt="Tour virtuale Matterport 3D"
           fill
           className="object-cover object-center"

@@ -8,7 +8,7 @@ export default function BenvenutoPage() {
     <div className="relative h-[calc(100vh-3rem)] flex items-center justify-center overflow-hidden">
       {/* Background property photo */}
       <Image
-        src="/images/8f6569b87d7feaf4599adc31458d9094.jpg"
+        src="/images/foto-principale.jpg"
         alt=""
         fill
         className="object-cover object-center"
@@ -50,7 +50,7 @@ export default function BenvenutoPage() {
           <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden flex flex-col items-center justify-center px-8 py-10">
             {/* Property photo inside screen */}
             <Image
-              src="/images/8f6569b87d7feaf4599adc31458d9094.jpg"
+              src="/images/foto-principale.jpg"
               alt=""
               fill
               className="object-cover object-center"
@@ -88,7 +88,7 @@ export default function BenvenutoPage() {
           {/* iPhone frame overlay — mix-blend-mode:multiply makes white screen transparent */}
           <div className="absolute inset-0 pointer-events-none" style={{ mixBlendMode: 'multiply' }}>
             <Image
-              src="/images/5e28eee0ca086b51151fe8bb2c79b820.png"
+              src="/images/iphone-mockup.png"
               alt=""
               fill
               className="object-contain"
