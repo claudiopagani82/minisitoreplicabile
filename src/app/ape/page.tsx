@@ -8,30 +8,30 @@ const p = property.ape
 export default function ApePage() {
   return (
     <PhotoLayout>
-      <div className="mb-6">
+      <div className="bg-white/85 rounded-xl shadow-md p-6 w-full space-y-4">
         <h1 className="text-[#CC1414] font-bold text-xl uppercase tracking-wide">
-          <span className="mr-1">{p.sectionNumber}</span>{p.sectionTitle}
+          {p.sectionTitle}
         </h1>
-      </div>
-      <ul className="space-y-3 mb-8">
-        {p.items.map((item, index) => (
-          <li key={index} className="flex items-start gap-3">
-            <RedHeartIcon size={16} className="mt-0.5" />
-            <span className="text-[#333333] text-sm font-semibold">{item}</span>
-          </li>
-        ))}
-      </ul>
 
-      <div className="space-y-6">
-        <div className="relative w-full rounded-xl overflow-hidden" style={{ height: 320 }}>
-          <Image
-            src="/images/ed442926865ddc73b7a776634595ec2d.jpg"
-            alt="Attestato di Prestazione Energetica"
-            fill
-            className="object-cover object-center"
-          />
-        </div>
-        <p className="text-[#555555] text-xs text-center italic">{p.caption}</p>
+        <ul className="space-y-3">
+          {p.items.map((item, i) => (
+            <li key={i} className="flex items-start gap-3">
+              <RedHeartIcon size={16} className="mt-0.5" />
+              <span className="text-[#333333] text-sm font-semibold">{item}</span>
+            </li>
+          ))}
+        </ul>
+
+        {p.images.length > 0 && (
+          <div className="space-y-4">
+            {p.images.map((src, i) => (
+              <div key={i} className="relative w-full rounded-xl overflow-hidden" style={{ height: 360 }}>
+                <Image src={src} alt={`APE ${i + 1}`} fill className="object-contain object-center" />
+              </div>
+            ))}
+            <p className="text-[#555555] text-xs text-center italic">{p.caption}</p>
+          </div>
+        )}
       </div>
     </PhotoLayout>
   )

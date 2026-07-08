@@ -14,8 +14,11 @@ export default function VideoSocialPage() {
       </div>
 
       <div className="flex justify-center">
-        <div
-          className="bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 rounded-2xl flex flex-col items-center justify-center gap-4 p-8 shadow-lg"
+        <a
+          href={p.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 rounded-2xl flex flex-col items-center justify-center gap-4 p-8 shadow-lg hover:opacity-90 transition-opacity"
           style={{ width: 340, minHeight: 400 }}
         >
           <svg width="60" height="60" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -23,7 +26,7 @@ export default function VideoSocialPage() {
           </svg>
           <p className="text-white font-semibold text-center text-sm">Video immobile disponibile su Instagram</p>
           <p className="text-white/80 text-xs text-center">{p.instagramHandle}</p>
-        </div>
+        </a>
       </div>
     </PhotoLayout>
   )

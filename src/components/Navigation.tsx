@@ -1,9 +1,12 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { pages } from '@/lib/navigation'
+import property from '@/config/property.json'
+
+const pages = property.navigation.filter((p) => p.enabled)
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -31,8 +34,15 @@ export function Navigation() {
       {/* Top navbar */}
       <header className="fixed top-0 left-0 right-0 z-50 h-12 bg-white shadow-sm flex items-center justify-between px-4">
         <div className="flex items-center">
-          <Link href="/" className="text-[#CC1414] font-bold text-sm tracking-wide">
-            DomusTua
+          <Link href="/">
+            <Image
+              src="/images/logo-domustua.png"
+              alt="DomusTua Immobiliare"
+              width={110}
+              height={36}
+              className="object-contain"
+              priority
+            />
           </Link>
         </div>
         <button
@@ -78,21 +88,18 @@ export function Navigation() {
 
         {/* Nav links */}
         <ul className="flex-1 overflow-y-auto py-4">
-          {pages.map((page, index) => {
+          {pages.map((page) => {
             const isActive = pathname === page.href
             return (
               <li key={page.href}>
                 <Link
                   href={page.href}
-                  className={`flex items-center gap-3 px-6 py-3 text-sm transition-colors hover:bg-red-50 hover:text-[#CC1414] ${
+                  className={`flex items-center px-6 py-3 text-sm transition-colors hover:bg-red-50 hover:text-[#CC1414] ${
                     isActive
                       ? 'font-bold text-[#CC1414] bg-red-50'
                       : 'text-[#333333]'
                   }`}
                 >
-                  <span className="text-xs text-[#CC1414] font-semibold w-5 flex-shrink-0">
-                    {index + 1}.
-                  </span>
                   {page.title}
                 </Link>
               </li>

@@ -21,8 +21,13 @@ export default function MatterportPage() {
           fill
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center gap-4">
-          <div className="w-16 h-16 rounded-full bg-[#CC1414]/90 flex items-center justify-center shadow-lg">
+        <a
+          href={p.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center gap-4"
+        >
+          <div className="w-16 h-16 rounded-full bg-[#CC1414]/90 flex items-center justify-center shadow-lg hover:bg-[#CC1414] transition-colors">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M8 5v14l11-7z" />
             </svg>
@@ -31,7 +36,7 @@ export default function MatterportPage() {
             <p className="font-semibold text-sm">{p.propertyName}</p>
             <p className="text-xs text-white/70 mt-1">{p.propertyLocation}</p>
           </div>
-        </div>
+        </a>
       </div>
     </PhotoLayout>
   )

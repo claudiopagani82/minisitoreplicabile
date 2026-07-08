@@ -8,36 +8,29 @@ const p = property.planimetrie
 export default function PlanimetriePage() {
   return (
     <PhotoLayout>
-      <div className="mb-6">
+      <div className="bg-white/85 rounded-xl shadow-md p-6 w-full space-y-4">
         <h1 className="text-[#CC1414] font-bold text-xl uppercase tracking-wide">
-          <span className="mr-1">{p.sectionNumber}</span>{p.sectionTitle}
+          {p.sectionTitle}
         </h1>
-      </div>
-      <ul className="space-y-3 mb-8">
-        {p.items.map((item, index) => (
-          <li key={index} className="flex items-start gap-3">
-            <RedHeartIcon size={16} className="mt-0.5" />
-            <span className="text-[#333333] text-sm font-semibold">{item}</span>
-          </li>
-        ))}
-      </ul>
 
-      <div className="relative w-full rounded-xl overflow-hidden mb-6" style={{ height: 260 }}>
-        <Image
-          src="/images/c25176a0978c920212a50b0f663b3c7a.jpg"
-          alt="Planimetrie quotate appartamento"
-          fill
-          className="object-cover object-center"
-        />
-      </div>
+        <ul className="space-y-3">
+          {p.items.map((item, i) => (
+            <li key={i} className="flex items-start gap-3">
+              <RedHeartIcon size={16} className="mt-0.5" />
+              <span className="text-[#333333] text-sm font-semibold">{item}</span>
+            </li>
+          ))}
+        </ul>
 
-      <div className="space-y-4">
-        <div className="bg-gray-100 rounded-xl h-96 flex items-center justify-center text-gray-500 text-sm text-center p-4 border border-gray-200">
-          Planimetria quotata appartamento – Via Cavour 37, secondo piano
-        </div>
-        <div className="bg-gray-100 rounded-xl h-64 flex items-center justify-center text-gray-500 text-sm text-center p-4 border border-gray-200">
-          Planimetria box auto – piano interrato
-        </div>
+        {p.images.length > 0 && (
+          <div className="space-y-4">
+            {p.images.map((src, i) => (
+              <div key={i} className="relative w-full rounded-xl overflow-hidden" style={{ height: 280 }}>
+                <Image src={src} alt={`Planimetria ${i + 1}`} fill className="object-contain object-center" />
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </PhotoLayout>
   )

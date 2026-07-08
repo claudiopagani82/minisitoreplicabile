@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { PhotoLayout } from '@/components/PhotoLayout'
 import { RedHeartIcon } from '@/components/RedHeartIcon'
 import property from '@/config/property.json'
@@ -7,22 +8,29 @@ const p = property.relazioneTecnica
 export default function RelazioneTecnicaPage() {
   return (
     <PhotoLayout>
-      <div className="mb-6">
+      <div className="bg-white/85 rounded-xl shadow-md p-6 w-full space-y-4">
         <h1 className="text-[#CC1414] font-bold text-xl uppercase tracking-wide">
-          <span className="mr-1">{p.sectionNumber}</span>{p.sectionTitle}
+          {p.sectionTitle}
         </h1>
-      </div>
-      <ul className="space-y-3 mb-8">
-        {p.items.map((item, index) => (
-          <li key={index} className="flex items-start gap-3">
-            <RedHeartIcon size={16} className="mt-0.5" />
-            <span className="text-[#333333] text-sm font-semibold">{item}</span>
-          </li>
-        ))}
-      </ul>
 
-      <div className="bg-gray-100 rounded-xl h-[500px] flex items-center justify-center text-gray-500 text-sm text-center p-4 border border-gray-200">
-        Relazione tecnica – appartamento Via Cavour 37, Tradate
+        <ul className="space-y-3">
+          {p.items.map((item, i) => (
+            <li key={i} className="flex items-start gap-3">
+              <RedHeartIcon size={16} className="mt-0.5" />
+              <span className="text-[#333333] text-sm font-semibold">{item}</span>
+            </li>
+          ))}
+        </ul>
+
+        {p.images.length > 0 && (
+          <div className="space-y-4">
+            {p.images.map((src, i) => (
+              <div key={i} className="relative w-full rounded-xl overflow-hidden" style={{ height: 360 }}>
+                <Image src={src} alt={`Relazione tecnica ${i + 1}`} fill className="object-contain object-center" />
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </PhotoLayout>
   )
