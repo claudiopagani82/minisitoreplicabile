@@ -1,11 +1,17 @@
+'use client'
+
+import { useState } from 'react'
 import Image from 'next/image'
 import { PhotoLayout } from '@/components/PhotoLayout'
+import { Lightbox } from '@/components/Lightbox'
 import { RedHeartIcon } from '@/components/RedHeartIcon'
 import property from '@/config/property.json'
 
 const p = property.bolletteImpianti
 
 export default function BolletteImpiantiPage() {
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
+
   return (
     <PhotoLayout>
       <div className="bg-white/85 rounded-xl shadow-md p-6 w-full space-y-4">
@@ -25,13 +31,27 @@ export default function BolletteImpiantiPage() {
         {p.images.length > 0 && (
           <div className="space-y-4">
             {p.images.map((src, i) => (
-              <div key={i} className="relative w-full rounded-xl overflow-hidden" style={{ height: 280 }}>
+              <button
+                key={i}
+                type="button"
+                onClick={() => setLightboxIndex(i)}
+                className="relative w-full rounded-xl overflow-hidden cursor-pointer"
+                style={{ height: 280 }}
+              >
                 <Image src={src} alt={`Bollette e impianti ${i + 1}`} fill className="object-contain object-center" />
-              </div>
+              </button>
             ))}
           </div>
         )}
       </div>
+
+      {lightboxIndex !== null && (
+        <Lightbox
+          images={p.images}
+          initialIndex={lightboxIndex}
+          onClose={() => setLightboxIndex(null)}
+        />
+      )}
     </PhotoLayout>
   )
 }
