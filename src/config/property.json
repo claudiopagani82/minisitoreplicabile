@@ -224,8 +224,9 @@
       "Visure catastali"
     ],
     "images": [
-      "/images/catasto-image1.jpg",
-      "/images/catasto-image2.jpg"
+      "/images/catasto-image1.png",
+      "/images/catasto-image2.png",
+      "/images/catasto-image3.png"
     ]
   },
   "ape": {
@@ -237,8 +238,7 @@
     ],
     "caption": "Attestato di Prestazione Energetica – Via Cavour 37, Tradate",
     "images": [
-      "/images/ape-image1.jpg",
-      "/images/ape-image2.jpg"
+      "/images/APE-image1.png"
     ]
   },
   "bolletteImpianti": {
@@ -254,12 +254,13 @@
       "Libretto caldaia a condensazione"
     ],
     "images": [
-      "/images/bollette-image1.jpg",
-      "/images/bollette-image2.jpg",
-      "/images/bollette-image3.jpg",
-      "/images/bollette-image4.jpg",
-      "/images/bollette-image5.jpg",
-      "/images/bollette-image6.jpg"
+      "/images/bollette-image1.png",
+      "/images/bollette-image2.png",
+      "/images/bollette-image3.png",
+      "/images/bollette-image4.png",
+      "/images/bollette-image5.png",
+      "/images/bollette-image6.png",
+      "/images/bollette-image7.png"
     ]
   },
   "relazioneTecnica": {
@@ -271,11 +272,7 @@
       "Stato di conservazione delle strutture",
       "Descrizione interventi di ristrutturazione 2021"
     ],
-    "images": [
-      "/images/rel-tecnica-image1.jpg",
-      "/images/rel-tecnica-image2.jpg",
-      "/images/rel-tecnica-image3.jpg"
-    ]
+    "images": []
   },
   "documentiCondominiali": {
     "enabled": true,
@@ -323,11 +320,7 @@
       "Riepilogo totale costi acquisto"
     ],
     "images": [
-      "/images/prospetto-costi-image1.jpg",
-      "/images/prospetto-costi-image2.jpg",
-      "/images/prospetto-costi-image3.jpg",
-      "/images/prospetto-costi-image4.jpg",
-      "/images/prospetto-costi-image5.jpg"
+      "/images/prospetto-costi-image1.png"
     ]
   },
   "matterport": {
