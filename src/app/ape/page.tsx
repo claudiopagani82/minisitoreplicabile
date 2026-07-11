@@ -1,11 +1,17 @@
+'use client'
+
+import { useState } from 'react'
 import Image from 'next/image'
 import { PhotoLayout } from '@/components/PhotoLayout'
+import { Lightbox } from '@/components/Lightbox'
 import { RedHeartIcon } from '@/components/RedHeartIcon'
 import property from '@/config/property.json'
 
 const p = property.ape
 
 export default function ApePage() {
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
+
   return (
     <PhotoLayout>
       <div className="bg-white/85 rounded-xl shadow-md p-6 w-full space-y-4">
@@ -25,14 +31,28 @@ export default function ApePage() {
         {p.images.length > 0 && (
           <div className="space-y-4">
             {p.images.map((src, i) => (
-              <div key={i} className="relative w-full rounded-xl overflow-hidden" style={{ height: 360 }}>
+              <button
+                key={i}
+                type="button"
+                onClick={() => setLightboxIndex(i)}
+                className="relative w-full rounded-xl overflow-hidden cursor-pointer"
+                style={{ height: 360 }}
+              >
                 <Image src={src} alt={`APE ${i + 1}`} fill className="object-contain object-center" />
-              </div>
+              </button>
             ))}
             <p className="text-[#555555] text-xs text-center italic">{p.caption}</p>
           </div>
         )}
       </div>
+
+      {lightboxIndex !== null && (
+        <Lightbox
+          images={p.images}
+          initialIndex={lightboxIndex}
+          onClose={() => setLightboxIndex(null)}
+        />
+      )}
     </PhotoLayout>
   )
 }
