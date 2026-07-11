@@ -53,6 +53,9 @@ export function Lightbox({ images, initialIndex, onClose }: LightboxProps) {
     touchStartX.current = null
   }
 
+  // Portal to body: PhotoLayout wraps children in a `relative z-10` div, which
+  // creates a stacking context that traps this overlay's z-index below the
+  // site header (z-50) even though this is `position: fixed`. Don't remove.
   return createPortal(
     <div
       className="fixed inset-0 z-[60] bg-black/90 flex items-center justify-center"
