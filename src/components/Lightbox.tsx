@@ -1,6 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import Image from 'next/image'
 
 interface LightboxProps {
@@ -52,7 +53,7 @@ export function Lightbox({ images, initialIndex, onClose }: LightboxProps) {
     touchStartX.current = null
   }
 
-  return (
+  return createPortal(
     <div
       className="fixed inset-0 z-[60] bg-black/90 flex items-center justify-center"
       onClick={onClose}
@@ -104,6 +105,7 @@ export function Lightbox({ images, initialIndex, onClose }: LightboxProps) {
       <div className="relative w-[90vw] h-[80vh]" onClick={(e) => e.stopPropagation()}>
         <Image src={images[index]} alt="" fill className="object-contain" sizes="90vw" />
       </div>
-    </div>
+    </div>,
+    document.body
   )
 }
