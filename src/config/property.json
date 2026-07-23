@@ -264,10 +264,26 @@
     "sectionNumber": "",
     "sectionTitle": "DOCUMENTI CONDOMINIALI",
     "items": [
-      { "label": "Regolamento condominiale", "enabled": true, "documentUrl": null },
-      { "label": "Verbale ultima assemblea condominiale", "enabled": true, "documentUrl": null },
-      { "label": "Piano di riparto spese condominiali", "enabled": true, "documentUrl": null },
-      { "label": "Attestazione assenza morosità condominiale", "enabled": true, "documentUrl": null }
+      {
+        "label": "Regolamento condominiale",
+        "enabled": true,
+        "documentUrl": "/images/doc-condominio-0-1784830614760.pdf"
+      },
+      {
+        "label": "Verbale ultima assemblea condominiale",
+        "enabled": true,
+        "documentUrl": "/images/doc-condominio-1-1784830734734.doc"
+      },
+      {
+        "label": "Piano di riparto spese condominiali",
+        "enabled": true,
+        "documentUrl": "/images/doc-condominio-2-1784830801416.pdf"
+      },
+      {
+        "label": "Attestazione assenza morosità condominiale",
+        "enabled": false,
+        "documentUrl": null
+      }
     ]
   },
   "bozzaProposta": {
