@@ -125,7 +125,7 @@ export default function BenvenutoPage() {
           {property.title}
         </h1>
 
-        <p className="text-[#555555] italic text-lg text-center mb-4">
+        <p className="text-[#333333] italic text-lg text-center mb-4 drop-shadow-[0_1px_3px_rgba(255,255,255,0.9)]">
           {property.address}
         </p>
 
@@ -137,9 +137,9 @@ export default function BenvenutoPage() {
           SCOPRI ORA
         </Link>
 
-        <p className="text-[#555555] text-base text-center leading-snug">
+        <p className="text-[#333333] text-base text-center leading-snug drop-shadow-[0_1px_3px_rgba(255,255,255,0.9)]">
           Tutti i dettagli dell&apos;immobile visualizzando la{' '}
-          <strong className="text-[#333333]">nostra brochure digitale</strong>
+          <strong className="text-[#000000]">nostra brochure digitale</strong>
         </p>
       </div>
     </div>
