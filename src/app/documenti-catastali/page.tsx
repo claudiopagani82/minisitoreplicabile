@@ -4,7 +4,6 @@ import { useState } from 'react'
 import Image from 'next/image'
 import { PhotoLayout } from '@/components/PhotoLayout'
 import { Lightbox } from '@/components/Lightbox'
-import { RedHeartIcon } from '@/components/RedHeartIcon'
 import property from '@/config/property.json'
 
 const p = property.documentiCatastali
@@ -22,7 +21,7 @@ export default function DocumentiCatastaliPage() {
         <ul className="space-y-3">
           {p.items.map((item, i) => (
             <li key={i} className="flex items-start gap-3">
-              <RedHeartIcon size={16} className="mt-0.5" />
+              <Image src="/images/cuore.png" alt="" width={16} height={14} className="flex-shrink-0 mt-0.5" />
               <span className="text-[#333333] text-sm font-semibold">{item}</span>
             </li>
           ))}

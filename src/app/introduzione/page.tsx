@@ -1,5 +1,5 @@
+import Image from 'next/image'
 import { PhotoLayout } from '@/components/PhotoLayout'
-import { RedHeartIcon } from '@/components/RedHeartIcon'
 import property from '@/config/property.json'
 
 const { introduzione: intro } = property
@@ -24,7 +24,7 @@ export default function IntroduzionePage() {
         <ul className="space-y-2">
           {intro.sections.map((section, index) => (
             <li key={index} className="flex items-start gap-2">
-              <RedHeartIcon size={16} className="mt-0.5" />
+              <Image src="/images/cuore.png" alt="" width={16} height={14} className="flex-shrink-0 mt-0.5" />
               <span className="font-semibold uppercase text-xs tracking-wide text-[#333333]">
                 {section}
               </span>

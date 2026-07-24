@@ -1,5 +1,5 @@
+import Image from 'next/image'
 import { PhotoLayout } from '@/components/PhotoLayout'
-import { RedHeartIcon } from '@/components/RedHeartIcon'
 import property from '@/config/property.json'
 
 const p = property.documentiCondominiali
@@ -22,13 +22,13 @@ export default function DocumentiCondominaliPage() {
                   rel="noopener noreferrer"
                   className="flex items-start gap-3 hover:opacity-80 transition-opacity"
                 >
-                  <RedHeartIcon size={16} className="mt-0.5" />
+                  <Image src="/images/cuore.png" alt="" width={16} height={14} className="flex-shrink-0 mt-0.5" />
                   <span className="text-[#333333] text-sm font-semibold underline">{item.label}</span>
                 </a>
               </li>
             ) : (
               <li key={i} className="flex items-start gap-3 opacity-50">
-                <RedHeartIcon size={16} className="mt-0.5" />
+                <Image src="/images/cuore.png" alt="" width={16} height={14} className="flex-shrink-0 mt-0.5" />
                 <span className="text-[#333333] text-sm font-semibold">
                   {item.label} <span className="text-xs italic font-normal">(non disponibile)</span>
                 </span>

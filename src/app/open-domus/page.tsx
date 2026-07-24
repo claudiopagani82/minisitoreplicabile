@@ -1,5 +1,5 @@
+import Image from 'next/image'
 import { PhotoLayout } from '@/components/PhotoLayout'
-import { RedHeartIcon } from '@/components/RedHeartIcon'
 import property from '@/config/property.json'
 
 const p = property.openDomus
@@ -7,7 +7,7 @@ const p = property.openDomus
 function Bullet({ children }: { children: React.ReactNode }) {
   return (
     <li className="flex items-start gap-2">
-      <RedHeartIcon size={14} className="mt-1" />
+      <Image src="/images/cuore.png" alt="" width={14} height={13} className="flex-shrink-0 mt-1" />
       <span>{children}</span>
     </li>
   )

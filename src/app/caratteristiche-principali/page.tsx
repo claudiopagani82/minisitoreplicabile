@@ -1,5 +1,5 @@
+import Image from 'next/image'
 import { PhotoLayout } from '@/components/PhotoLayout'
-import { RedHeartIcon } from '@/components/RedHeartIcon'
 import property from '@/config/property.json'
 
 const p = property.caratteristichePrincipali
@@ -15,7 +15,7 @@ export default function CaratteristichePage() {
         <ul className="space-y-3">
           {p.features.map((feature, index) => (
             <li key={index} className="flex items-start gap-3">
-              <RedHeartIcon size={16} className="mt-0.5" />
+              <Image src="/images/cuore.png" alt="" width={16} height={14} className="flex-shrink-0 mt-0.5" />
               <span className="text-[#333333] text-sm leading-relaxed">
                 {'label' in feature && feature.label ? (
                   <><strong>{feature.label}:</strong> {feature.text}</>
@@ -34,7 +34,7 @@ export default function CaratteristichePage() {
           <ul className="space-y-3">
             {p.condominioItems.map((item, index) => (
               <li key={index} className="flex items-start gap-3">
-                <RedHeartIcon size={16} className="mt-0.5" />
+                <Image src="/images/cuore.png" alt="" width={16} height={14} className="flex-shrink-0 mt-0.5" />
                 <span className="text-[#333333] text-sm leading-relaxed">{item}</span>
               </li>
             ))}
