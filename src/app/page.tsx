@@ -42,8 +42,8 @@ export default function BenvenutoPage() {
         </svg>
       </div>
 
-      {/* Phone mockup */}
-      <div className="relative z-10 flex items-center justify-center">
+      {/* Phone mockup — desktop/tablet only: shows a preview of the mobile experience */}
+      <div className="hidden md:flex relative z-10 items-center justify-center">
         <div className="relative shadow-2xl" style={{ width: 280, height: 560 }}>
 
           {/* Screen content (visible through iPhone frame) */}
@@ -97,6 +97,32 @@ export default function BenvenutoPage() {
           </div>
 
         </div>
+      </div>
+
+      {/* Mobile: direct full-screen content, no phone-frame mockup */}
+      <div className="flex md:hidden relative z-10 flex-col items-center w-full px-8">
+        <DomusTuaLogo size={110} className="mb-4" />
+
+        <h1 className="text-[#CC1414] font-bold text-center uppercase text-xl leading-tight mb-2">
+          {property.title}
+        </h1>
+
+        <p className="text-[#555555] italic text-base text-center mb-3">
+          {property.address}
+        </p>
+
+        <Link
+          href="/introduzione"
+          className="text-[#CC1414] font-bold italic text-4xl mb-3 hover:opacity-80 transition-opacity"
+          style={{ fontFamily: 'var(--font-dancing-script), Dancing Script, cursive' }}
+        >
+          SCOPRI ORA
+        </Link>
+
+        <p className="text-[#555555] text-sm text-center leading-snug">
+          Tutti i dettagli dell&apos;immobile visualizzando la{' '}
+          <strong className="text-[#333333]">nostra brochure digitale</strong>
+        </p>
       </div>
     </div>
   )
