@@ -118,7 +118,7 @@ export default function BenvenutoPage() {
       </div>
 
       {/* Desktop/tablet only: direct full-screen content, no phone-frame mockup */}
-      <div className="hidden md:flex relative z-10 flex-col items-center max-w-md w-full mx-8 px-8 py-8 bg-white/85 rounded-2xl shadow-lg">
+      <div className="hidden md:flex relative z-10 flex-col items-center max-w-md w-full mx-8 px-8 py-8 bg-white/65 rounded-2xl shadow-lg">
         <DomusTuaLogo size={130} className="mb-5" />
 
         <h1 className="text-[#CC1414] font-bold text-center uppercase text-2xl leading-tight mb-3">
