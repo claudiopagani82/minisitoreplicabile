@@ -42,8 +42,8 @@ export default function BenvenutoPage() {
         </svg>
       </div>
 
-      {/* Phone mockup — desktop/tablet only: shows a preview of the mobile experience */}
-      <div className="hidden md:flex relative z-10 items-center justify-center">
+      {/* Phone mockup — mobile only: unchanged original design */}
+      <div className="flex md:hidden relative z-10 items-center justify-center">
         <div className="relative shadow-2xl" style={{ width: 280, height: 560 }}>
 
           {/* Screen content (visible through iPhone frame) */}
@@ -99,27 +99,27 @@ export default function BenvenutoPage() {
         </div>
       </div>
 
-      {/* Mobile: direct full-screen content, no phone-frame mockup */}
-      <div className="flex md:hidden relative z-10 flex-col items-center w-full px-8">
-        <DomusTuaLogo size={110} className="mb-4" />
+      {/* Desktop/tablet only: direct full-screen content, no phone-frame mockup */}
+      <div className="hidden md:flex relative z-10 flex-col items-center max-w-md w-full px-8">
+        <DomusTuaLogo size={130} className="mb-5" />
 
-        <h1 className="text-[#CC1414] font-bold text-center uppercase text-xl leading-tight mb-2">
+        <h1 className="text-[#CC1414] font-bold text-center uppercase text-2xl leading-tight mb-3">
           {property.title}
         </h1>
 
-        <p className="text-[#555555] italic text-base text-center mb-3">
+        <p className="text-[#555555] italic text-lg text-center mb-4">
           {property.address}
         </p>
 
         <Link
           href="/introduzione"
-          className="text-[#CC1414] font-bold italic text-4xl mb-3 hover:opacity-80 transition-opacity"
+          className="text-[#CC1414] font-bold italic text-5xl mb-4 hover:opacity-80 transition-opacity"
           style={{ fontFamily: 'var(--font-dancing-script), Dancing Script, cursive' }}
         >
           SCOPRI ORA
         </Link>
 
-        <p className="text-[#555555] text-sm text-center leading-snug">
+        <p className="text-[#555555] text-base text-center leading-snug">
           Tutti i dettagli dell&apos;immobile visualizzando la{' '}
           <strong className="text-[#333333]">nostra brochure digitale</strong>
         </p>
