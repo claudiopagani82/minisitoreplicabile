@@ -1,16 +1,10 @@
-'use client'
-
-import { useState } from 'react'
 import Image from 'next/image'
 import { PhotoLayout } from '@/components/PhotoLayout'
-import { Lightbox } from '@/components/Lightbox'
 import property from '@/config/property.json'
 
 const p = property.relazioneTecnica
 
 export default function RelazioneTecnicaPage() {
-  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
-
   return (
     <PhotoLayout>
       <div className="bg-white/85 rounded-xl shadow-md p-6 w-full space-y-4">
@@ -19,38 +13,30 @@ export default function RelazioneTecnicaPage() {
         </h1>
 
         <ul className="space-y-3">
-          {p.items.map((item, i) => (
-            <li key={i} className="flex items-start gap-3">
-              <Image src="/images/cuore.png" alt="" width={16} height={14} className="flex-shrink-0 mt-0.5" />
-              <span className="text-[#333333] text-sm font-semibold">{item}</span>
-            </li>
+          {p.items.filter((item) => item.enabled).map((item, i) => (
+            item.documentUrl ? (
+              <li key={i}>
+                <a
+                  href={item.documentUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 hover:opacity-80 transition-opacity"
+                >
+                  <Image src="/images/cuore.png" alt="" width={16} height={14} className="flex-shrink-0 mt-0.5" />
+                  <span className="text-[#333333] text-sm font-semibold underline">{item.label}</span>
+                </a>
+              </li>
+            ) : (
+              <li key={i} className="flex items-start gap-3 opacity-50">
+                <Image src="/images/cuore.png" alt="" width={16} height={14} className="flex-shrink-0 mt-0.5" />
+                <span className="text-[#333333] text-sm font-semibold">
+                  {item.label} <span className="text-xs italic font-normal">(non disponibile)</span>
+                </span>
+              </li>
+            )
           ))}
         </ul>
-
-        {p.images.length > 0 && (
-          <div className="space-y-4">
-            {p.images.map((src, i) => (
-              <button
-                key={i}
-                type="button"
-                onClick={() => setLightboxIndex(i)}
-                className="relative w-full rounded-xl overflow-hidden cursor-pointer"
-                style={{ height: 360 }}
-              >
-                <Image src={src} alt={`Relazione tecnica ${i + 1}`} fill className="object-contain object-center" />
-              </button>
-            ))}
-          </div>
-        )}
       </div>
-
-      {lightboxIndex !== null && (
-        <Lightbox
-          images={p.images}
-          initialIndex={lightboxIndex}
-          onClose={() => setLightboxIndex(null)}
-        />
-      )}
     </PhotoLayout>
   )
 }

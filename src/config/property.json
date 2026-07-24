@@ -253,11 +253,22 @@
     "sectionNumber": "",
     "sectionTitle": "RELAZIONE TECNICA",
     "items": [
-      "Relazione tecnica descrittiva dell'immobile",
-      "Stato di conservazione delle strutture",
-      "Descrizione interventi di ristrutturazione 2021"
-    ],
-    "images": []
+      {
+        "label": "Relazione tecnica descrittiva dell'immobile",
+        "enabled": true,
+        "documentUrl": null
+      },
+      {
+        "label": "Stato di conservazione delle strutture",
+        "enabled": true,
+        "documentUrl": null
+      },
+      {
+        "label": "Descrizione interventi di ristrutturazione 2021",
+        "enabled": true,
+        "documentUrl": null
+      }
+    ]
   },
   "documentiCondominiali": {
     "enabled": true,
