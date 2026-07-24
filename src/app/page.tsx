@@ -118,14 +118,14 @@ export default function BenvenutoPage() {
       </div>
 
       {/* Desktop/tablet only: direct full-screen content, no phone-frame mockup */}
-      <div className="hidden md:flex relative z-10 flex-col items-center max-w-md w-full px-8">
+      <div className="hidden md:flex relative z-10 flex-col items-center max-w-md w-full mx-8 px-8 py-8 bg-white/85 rounded-2xl shadow-lg">
         <DomusTuaLogo size={130} className="mb-5" />
 
         <h1 className="text-[#CC1414] font-bold text-center uppercase text-2xl leading-tight mb-3">
           {property.title}
         </h1>
 
-        <p className="text-[#333333] italic text-lg text-center mb-4 drop-shadow-[0_1px_3px_rgba(255,255,255,0.9)]">
+        <p className="text-[#555555] italic text-lg text-center mb-4">
           {property.address}
         </p>
 
@@ -137,9 +137,9 @@ export default function BenvenutoPage() {
           SCOPRI ORA
         </Link>
 
-        <p className="text-[#333333] text-base text-center leading-snug drop-shadow-[0_1px_3px_rgba(255,255,255,0.9)]">
+        <p className="text-[#555555] text-base text-center leading-snug">
           Tutti i dettagli dell&apos;immobile visualizzando la{' '}
-          <strong className="text-[#000000]">nostra brochure digitale</strong>
+          <strong className="text-[#333333]">nostra brochure digitale</strong>
         </p>
       </div>
     </div>
