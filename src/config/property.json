@@ -60,7 +60,7 @@
     {
       "title": "Relazione tecnica",
       "href": "/relazione-tecnica",
-      "enabled": true
+      "enabled": false
     },
     {
       "title": "Documenti condominiali",
