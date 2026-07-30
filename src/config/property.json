@@ -93,6 +93,11 @@
       "enabled": true
     },
     {
+      "title": "Link utili 2",
+      "href": "/link-utili2",
+      "enabled": true
+    },
+    {
       "title": "Per te, VENDITORE",
       "href": "/per-te-venditore",
       "enabled": true
@@ -351,6 +356,39 @@
     "thumbnail": "/images/video-social-thumbnail-1784883660809.png"
   },
   "linkUtili": {
+    "enabled": true,
+    "heading": "Domus Tua Immobiliare",
+    "bio": "❤️ Facile vendere e sicuro acquistare ❤️",
+    "reviewsBadge": "⭐ 500+ recensioni · ★ 4.9 su Google",
+    "links": [
+      {
+        "label": "🏡 Vuoi vendere casa? Scopri come funziona",
+        "url": "https://www.domustua.com/",
+        "enabled": true
+      },
+      {
+        "label": "📸 Guarda come vendiamo casa su Instagram",
+        "url": "https://www.instagram.com/domustuaimmobiliare_tradate",
+        "enabled": true
+      },
+      {
+        "label": "▶️ Scopri il metodo Domus Tua su YouTube",
+        "url": "https://www.youtube.com/@DOMUSTUASRLIMMOBILIARE?sub_confirmation=1",
+        "enabled": true
+      },
+      {
+        "label": "📲 Scrivici su WhatsApp per una valutazione",
+        "url": "https://wa.me/3466042314",
+        "enabled": true
+      },
+      {
+        "label": "📍 Vieni a trovarci in agenzia",
+        "url": "https://www.google.com/maps?ll=45.711428,8.907599&z=15&t=m&hl=it&gl=IT&mapclient=embed&cid=1402630747648240075",
+        "enabled": true
+      }
+    ]
+  },
+  "linkUtili2": {
     "enabled": true,
     "heading": "Domus Tua Immobiliare",
     "bio": "❤️ Facile vendere e sicuro acquistare ❤️",
