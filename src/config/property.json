@@ -357,67 +357,127 @@
   },
   "linkUtili": {
     "enabled": true,
-    "heading": "Domus Tua Immobiliare",
+    "heading": "Benvenuti in Domus Tua",
     "bio": "❤️ Facile vendere e sicuro acquistare ❤️",
-    "reviewsBadge": "⭐ 500+ recensioni · ★ 4.9 su Google",
+    "avatarImage": "/images/logo-domustua.png",
+    "bannerImage": null,
+    "socialLinks": [
+      { "platform": "instagram", "url": "https://www.instagram.com/domustuaimmobiliare_tradate" },
+      { "platform": "tiktok", "url": null },
+      { "platform": "youtube", "url": "https://www.youtube.com/@DOMUSTUASRLIMMOBILIARE" },
+      { "platform": "facebook", "url": null }
+    ],
+    "reviewsBadge": "+500 recensioni · ★4.9 su Google",
+    "reviewsLive": false,
+    "reviews": [
+      {
+        "name": "Cliente Domus Tua",
+        "rating": 5,
+        "text": "Recensione di esempio: verrà sostituita automaticamente dalle recensioni reali di Google una volta collegata l'integrazione."
+      }
+    ],
     "links": [
       {
+        "type": "sell",
         "label": "🏡 Vuoi vendere casa? Scopri come funziona",
         "url": "https://www.domustua.com/",
-        "enabled": true
+        "enabled": true,
+        "image": null
       },
       {
+        "type": "instagram",
         "label": "📸 Guarda come vendiamo casa su Instagram",
         "url": "https://www.instagram.com/domustuaimmobiliare_tradate",
-        "enabled": true
+        "enabled": true,
+        "image": null,
+        "badge": "Segui su Instagram"
       },
       {
+        "type": "youtube",
         "label": "▶️ Scopri il metodo Domus Tua su YouTube",
-        "url": "https://www.youtube.com/@DOMUSTUASRLIMMOBILIARE?sub_confirmation=1",
-        "enabled": true
+        "url": "https://www.youtube.com/@DOMUSTUASRLIMMOBILIARE",
+        "enabled": true,
+        "image": null,
+        "badge": "Iscriviti al canale"
       },
       {
+        "type": "whatsapp",
         "label": "📲 Scrivici su WhatsApp per una valutazione",
         "url": "https://wa.me/3466042314",
-        "enabled": true
+        "enabled": true,
+        "image": null,
+        "badge": null
       },
       {
+        "type": "agency",
         "label": "📍 Vieni a trovarci in agenzia",
         "url": "https://www.google.com/maps?ll=45.711428,8.907599&z=15&t=m&hl=it&gl=IT&mapclient=embed&cid=1402630747648240075",
-        "enabled": true
+        "enabled": true,
+        "image": null,
+        "badge": null
       }
     ]
   },
   "linkUtili2": {
     "enabled": true,
-    "heading": "Domus Tua Immobiliare",
+    "heading": "Benvenuti in Domus Tua",
     "bio": "❤️ Facile vendere e sicuro acquistare ❤️",
-    "reviewsBadge": "⭐ 500+ recensioni · ★ 4.9 su Google",
+    "avatarImage": "/images/logo-domustua.png",
+    "bannerImage": null,
+    "socialLinks": [
+      { "platform": "instagram", "url": "https://www.instagram.com/domustuaimmobiliare_tradate" },
+      { "platform": "tiktok", "url": null },
+      { "platform": "youtube", "url": "https://www.youtube.com/@DOMUSTUASRLIMMOBILIARE" },
+      { "platform": "facebook", "url": null }
+    ],
+    "reviewsBadge": "+500 recensioni · ★4.9 su Google",
+    "reviewsLive": false,
+    "reviews": [
+      {
+        "name": "Cliente Domus Tua",
+        "rating": 5,
+        "text": "Recensione di esempio: verrà sostituita automaticamente dalle recensioni reali di Google una volta collegata l'integrazione."
+      }
+    ],
     "links": [
       {
+        "type": "sell",
         "label": "🏡 Vuoi vendere casa? Scopri come funziona",
         "url": "https://www.domustua.com/",
-        "enabled": true
+        "enabled": true,
+        "image": null
       },
       {
+        "type": "instagram",
         "label": "📸 Guarda come vendiamo casa su Instagram",
         "url": "https://www.instagram.com/domustuaimmobiliare_tradate",
-        "enabled": true
+        "enabled": true,
+        "image": null,
+        "badge": "Segui su Instagram"
       },
       {
+        "type": "youtube",
         "label": "▶️ Scopri il metodo Domus Tua su YouTube",
-        "url": "https://www.youtube.com/@DOMUSTUASRLIMMOBILIARE?sub_confirmation=1",
-        "enabled": true
+        "url": "https://www.youtube.com/@DOMUSTUASRLIMMOBILIARE",
+        "enabled": true,
+        "image": null,
+        "badge": "Iscriviti al canale"
       },
       {
+        "type": "whatsapp",
         "label": "📲 Scrivici su WhatsApp per una valutazione",
         "url": "https://wa.me/3466042314",
-        "enabled": true
+        "enabled": true,
+        "image": null,
+        "badge": null
       },
       {
+        "type": "agency",
         "label": "📍 Vieni a trovarci in agenzia",
         "url": "https://www.google.com/maps?ll=45.711428,8.907599&z=15&t=m&hl=it&gl=IT&mapclient=embed&cid=1402630747648240075",
-        "enabled": true
+        "enabled": true,
+        "image": null,
+        "badge": null
       }
     ]
   },
