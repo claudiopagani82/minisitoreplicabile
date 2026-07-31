@@ -33,7 +33,7 @@ export function ScrollFadeBanner({ src }: ScrollFadeBannerProps) {
         src={src}
         alt=""
         fill
-        className="object-cover object-top"
+        className="object-cover object-top rounded-3xl"
         style={{ opacity, willChange: 'opacity' }}
       />
     </div>
