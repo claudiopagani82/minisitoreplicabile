@@ -16,9 +16,14 @@ export function ScrollFadeBanner({ src }: ScrollFadeBannerProps) {
       const el = containerRef.current
       if (!el) return
       const rect = el.getBoundingClientRect()
-      const fadeDistance = rect.height || 1
+      // Frazione ridotta dell'altezza: la foto è già completamente
+      // sfumata a meta' della sua altezza di scroll, invece che alla fine.
+      const fadeDistance = (rect.height || 1) * 0.35
       const scrolledPast = -rect.top
-      const nextOpacity = 1 - Math.min(Math.max(scrolledPast / fadeDistance, 0), 1)
+      const t = Math.min(Math.max(scrolledPast / fadeDistance, 0), 1)
+      // Curva accelerata (non lineare): la trasparenza aumenta piu'
+      // rapidamente appena si inizia a scrollare, per un effetto più marcato.
+      const nextOpacity = Math.pow(1 - t, 1.6)
       setOpacity(nextOpacity)
     }
     handleScroll()
