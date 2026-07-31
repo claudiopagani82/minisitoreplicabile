@@ -12,6 +12,28 @@ export default function RelazioneTecnicaPage() {
           {p.sectionTitle}
         </h1>
 
+        {p.introHeading && (
+          <div>
+            <h2 className="text-[#333333] font-bold text-sm mb-1.5">{p.introHeading}</h2>
+            {p.introParagraph.split('\n\n').map((paragraph, i) => (
+              <p key={i} className="text-[#555555] text-sm leading-relaxed mb-2 last:mb-0">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        )}
+
+        {p.statusHeading && (
+          <div>
+            <h2 className="text-[#333333] font-bold text-sm mb-1.5">{p.statusHeading}</h2>
+            {p.statusParagraph.split('\n\n').map((paragraph, i) => (
+              <p key={i} className="text-[#555555] text-sm leading-relaxed mb-2 last:mb-0">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        )}
+
         <ul className="space-y-3">
           {p.items.filter((item) => item.enabled).map((item, i) => (
             item.documentUrl ? (

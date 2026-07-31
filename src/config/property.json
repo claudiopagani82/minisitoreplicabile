@@ -262,6 +262,10 @@
     "enabled": true,
     "sectionNumber": "",
     "sectionTitle": "RELAZIONE TECNICA",
+    "introHeading": "Cos'è la Relazione Tecnico-Integrata",
+    "introParagraph": "È un documento redatto da un tecnico abilitato che certifica: la conformità urbanistica, verificando la corrispondenza tra lo stato dell'immobile e i titoli edilizi; la conformità catastale, con riscontro tra dati catastali e situazione reale; gli aspetti amministrativi, attraverso la consultazione delle pratiche depositate presso gli uffici comunali.\n\nQuesta relazione rappresenta una garanzia di trasparenza per chi vende e per chi acquista.",
+    "statusHeading": "Accesso agli Atti",
+    "statusParagraph": "È stato effettuato l'accesso agli atti presso il Comune di Tradate, con analisi della documentazione urbanistica e catastale relativa all'immobile.\n\nLa prossima settimana il tecnico procederà con il ritiro della documentazione, l'analisi dei documenti e il sopralluogo presso l'immobile.\n\nSuccessivamente verrà redatta una relazione tecnica integrata urbanistica e catastale, nella quale saranno indicate eventuali discrepanze. Qualora dovessero emergere difformità, sarà cura e spesa della parte venditrice provvedere alla loro regolarizzazione.",
     "items": [
       {
         "label": "Relazione tecnica descrittiva dell'immobile",
