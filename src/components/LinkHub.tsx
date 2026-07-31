@@ -130,7 +130,7 @@ export async function LinkHub({ data }: { data: LinkHubData }) {
         {data.bannerImage ? (
           <ScrollFadeBanner src={data.bannerImage} />
         ) : (
-          <div className="w-full aspect-[3/4] rounded-2xl bg-[#f4f4f5] border border-[#e4e4e7] flex items-center justify-center overflow-hidden">
+          <div className="w-full aspect-[3/4] rounded-3xl bg-[#f4f4f5] border border-[#e4e4e7] shadow-md flex items-center justify-center overflow-hidden">
             <span className="text-xs text-[#a1a1aa] px-6 text-center">Foto di copertina da aggiungere</span>
           </div>
         )}

@@ -28,7 +28,7 @@ export function ScrollFadeBanner({ src }: ScrollFadeBannerProps) {
   }, [])
 
   return (
-    <div ref={containerRef} className="w-full aspect-[3/4] rounded-2xl bg-[#f4f4f5] border border-[#e4e4e7] overflow-hidden">
+    <div ref={containerRef} className="w-full aspect-[3/4] rounded-3xl bg-[#f4f4f5] border border-[#e4e4e7] shadow-md overflow-hidden">
       <Image
         src={src}
         alt=""
