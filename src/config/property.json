@@ -383,7 +383,7 @@
         "label": "🏡 Vuoi vendere casa? Scopri come funziona",
         "url": "https://www.domustua.com/",
         "enabled": true,
-        "image": null
+        "image": "/images/link-utili-sell.jpg"
       },
       {
         "type": "instagram",
@@ -447,7 +447,7 @@
         "label": "🏡 Vuoi vendere casa? Scopri come funziona",
         "url": "https://www.domustua.com/",
         "enabled": true,
-        "image": null
+        "image": "/images/link-utili-sell.jpg"
       },
       {
         "type": "instagram",
