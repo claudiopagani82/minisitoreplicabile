@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { Home, MapPin, PlayCircle, Image as ImageIcon } from 'lucide-react'
 import { InstagramIcon, FacebookIcon, YoutubeIcon, TiktokIcon, WhatsappIcon } from '@/components/icons'
+import { getLatestYoutubeVideo } from '@/lib/youtube'
 
 interface SocialLink {
   platform: string
@@ -29,6 +30,7 @@ export interface LinkHubData {
   avatarImage?: string | null
   bannerImage?: string | null
   socialLinks: SocialLink[]
+  youtubeChannelId?: string | null
   reviewsBadge: string
   reviewsLive?: boolean
   reviews: Review[]
@@ -103,9 +105,20 @@ function LinkRow({ link }: { link: LinkItem }) {
   )
 }
 
-export function LinkHub({ data }: { data: LinkHubData }) {
+export async function LinkHub({ data }: { data: LinkHubData }) {
   const activeSocial = data.socialLinks.filter((s): s is SocialLink & { url: string } => Boolean(s.url))
-  const activeLinks = data.links.filter((l) => l.enabled)
+
+  const activeLinks = await Promise.all(
+    data.links.filter((l) => l.enabled).map(async (link) => {
+      if (link.type === 'youtube' && data.youtubeChannelId) {
+        const latest = await getLatestYoutubeVideo(data.youtubeChannelId)
+        if (latest) {
+          return { ...link, url: latest.url, image: latest.thumbnail, badge: latest.title }
+        }
+      }
+      return link
+    })
+  )
 
   return (
     <div className="min-h-[calc(100vh-3rem)] bg-gradient-to-b from-red-50 via-white to-white flex flex-col items-center px-4 py-10">
