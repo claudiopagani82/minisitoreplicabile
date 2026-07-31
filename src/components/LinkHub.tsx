@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Home, MapPin, PlayCircle, Image as ImageIcon } from 'lucide-react'
 import { InstagramIcon, FacebookIcon, YoutubeIcon, TiktokIcon, WhatsappIcon } from '@/components/icons'
 import { getLatestYoutubeVideo } from '@/lib/youtube'
+import { ScrollFadeBanner } from '@/components/ScrollFadeBanner'
 
 interface SocialLink {
   platform: string
@@ -124,13 +125,13 @@ export async function LinkHub({ data }: { data: LinkHubData }) {
     <div className="min-h-[calc(100vh-3rem)] bg-gradient-to-b from-red-50 via-white to-white flex flex-col items-center px-4 py-10">
       {/* Banner + avatar */}
       <div className="relative w-full max-w-sm mb-10">
-        <div className="w-full aspect-[3/4] rounded-2xl bg-[#f4f4f5] border border-[#e4e4e7] flex items-center justify-center overflow-hidden">
-          {data.bannerImage ? (
-            <Image src={data.bannerImage} alt="" fill className="object-cover object-top" />
-          ) : (
+        {data.bannerImage ? (
+          <ScrollFadeBanner src={data.bannerImage} />
+        ) : (
+          <div className="w-full aspect-[3/4] rounded-2xl bg-[#f4f4f5] border border-[#e4e4e7] flex items-center justify-center overflow-hidden">
             <span className="text-xs text-[#a1a1aa] px-6 text-center">Foto di copertina da aggiungere</span>
-          )}
-        </div>
+          </div>
+        )}
         <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-20 h-20 rounded-full bg-white border-4 border-white shadow-md overflow-hidden flex items-center justify-center">
           {data.avatarImage ? (
             <Image src={data.avatarImage} alt="" width={80} height={80} className="object-contain p-1.5" />
