@@ -48,7 +48,9 @@ const SOCIAL_ICONS: Record<string, React.ComponentType<{ size?: number; classNam
 const CARD_PLACEHOLDER_ICONS: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
   sell: Home,
   instagram: InstagramIcon,
+  tiktok: TiktokIcon,
   youtube: PlayCircle,
+  facebook: FacebookIcon,
   agency: MapPin,
 }
 

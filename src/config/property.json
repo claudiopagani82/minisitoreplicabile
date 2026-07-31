@@ -394,12 +394,28 @@
         "badge": "Segui su Instagram"
       },
       {
+        "type": "tiktok",
+        "label": "🎵 Guarda gli ultimi video su TikTok",
+        "url": "https://www.tiktok.com/@domustuaimmobiliare",
+        "enabled": true,
+        "image": null,
+        "badge": "Segui su TikTok"
+      },
+      {
         "type": "youtube",
         "label": "▶️ Scopri il metodo Domus Tua su YouTube",
         "url": "https://www.youtube.com/@DOMUSTUASRLIMMOBILIARE",
         "enabled": true,
         "image": null,
         "badge": "Iscriviti al canale"
+      },
+      {
+        "type": "facebook",
+        "label": "👍 Seguici su Facebook",
+        "url": "https://www.facebook.com/domustuaimmobiliaretradate/",
+        "enabled": true,
+        "image": null,
+        "badge": "Segui su Facebook"
       },
       {
         "type": "whatsapp",
@@ -458,12 +474,28 @@
         "badge": "Segui su Instagram"
       },
       {
+        "type": "tiktok",
+        "label": "🎵 Guarda gli ultimi video su TikTok",
+        "url": "https://www.tiktok.com/@domustuaimmobiliare",
+        "enabled": true,
+        "image": null,
+        "badge": "Segui su TikTok"
+      },
+      {
         "type": "youtube",
         "label": "▶️ Scopri il metodo Domus Tua su YouTube",
         "url": "https://www.youtube.com/@DOMUSTUASRLIMMOBILIARE",
         "enabled": true,
         "image": null,
         "badge": "Iscriviti al canale"
+      },
+      {
+        "type": "facebook",
+        "label": "👍 Seguici su Facebook",
+        "url": "https://www.facebook.com/domustuaimmobiliaretradate/",
+        "enabled": true,
+        "image": null,
+        "badge": "Segui su Facebook"
       },
       {
         "type": "whatsapp",
