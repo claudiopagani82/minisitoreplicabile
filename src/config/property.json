@@ -60,7 +60,7 @@
     {
       "title": "Relazione tecnica",
       "href": "/relazione-tecnica",
-      "enabled": false
+      "enabled": true
     },
     {
       "title": "Documenti condominiali",
@@ -362,10 +362,22 @@
     "avatarImage": "/images/logo-domustua.png",
     "bannerImage": "/images/link-utili-banner.jpg",
     "socialLinks": [
-      { "platform": "instagram", "url": "https://www.instagram.com/domustuaimmobiliare_tradate" },
-      { "platform": "tiktok", "url": "https://www.tiktok.com/@domustuaimmobiliare" },
-      { "platform": "youtube", "url": "https://www.youtube.com/@DOMUSTUASRLIMMOBILIARE" },
-      { "platform": "facebook", "url": "https://www.facebook.com/domustuaimmobiliaretradate/" }
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/domustuaimmobiliare_tradate"
+      },
+      {
+        "platform": "tiktok",
+        "url": "https://www.tiktok.com/@domustuaimmobiliare"
+      },
+      {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/@DOMUSTUASRLIMMOBILIARE"
+      },
+      {
+        "platform": "facebook",
+        "url": "https://www.facebook.com/domustuaimmobiliaretradate/"
+      }
     ],
     "youtubeChannelId": "UCNkIKFUChLpMibKacUe7BXw",
     "reviewsBadge": "+500 recensioni · ★4.9 su Google",
@@ -442,10 +454,22 @@
     "avatarImage": "/images/logo-domustua.png",
     "bannerImage": "/images/link-utili-banner.jpg",
     "socialLinks": [
-      { "platform": "instagram", "url": "https://www.instagram.com/domustuaimmobiliare_tradate" },
-      { "platform": "tiktok", "url": "https://www.tiktok.com/@domustuaimmobiliare" },
-      { "platform": "youtube", "url": "https://www.youtube.com/@DOMUSTUASRLIMMOBILIARE" },
-      { "platform": "facebook", "url": "https://www.facebook.com/domustuaimmobiliaretradate/" }
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/domustuaimmobiliare_tradate"
+      },
+      {
+        "platform": "tiktok",
+        "url": "https://www.tiktok.com/@domustuaimmobiliare"
+      },
+      {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/@DOMUSTUASRLIMMOBILIARE"
+      },
+      {
+        "platform": "facebook",
+        "url": "https://www.facebook.com/domustuaimmobiliaretradate/"
+      }
     ],
     "youtubeChannelId": "UCNkIKFUChLpMibKacUe7BXw",
     "reviewsBadge": "+500 recensioni · ★4.9 su Google",
