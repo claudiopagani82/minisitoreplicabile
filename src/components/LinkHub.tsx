@@ -108,7 +108,7 @@ function LinkRow({ link }: { link: LinkItem }) {
   )
 }
 
-export async function LinkHub({ data }: { data: LinkHubData }) {
+export async function LinkHub({ data, bordered = false }: { data: LinkHubData; bordered?: boolean }) {
   const activeSocial = data.socialLinks.filter((s): s is SocialLink & { url: string } => Boolean(s.url))
 
   const activeLinks = await Promise.all(
@@ -123,8 +123,8 @@ export async function LinkHub({ data }: { data: LinkHubData }) {
     })
   )
 
-  return (
-    <div className="min-h-[calc(100vh-3rem)] bg-gradient-to-b from-red-50 via-white to-white flex flex-col items-center px-4 py-10">
+  const content = (
+    <>
       {/* Banner + avatar */}
       <div className="relative w-full max-w-sm mb-10">
         {data.bannerImage ? (
@@ -211,6 +211,18 @@ export async function LinkHub({ data }: { data: LinkHubData }) {
           )
         )}
       </div>
+    </>
+  )
+
+  return (
+    <div className="min-h-[calc(100vh-3rem)] bg-gradient-to-b from-red-50 via-white to-white flex flex-col items-center px-4 py-10">
+      {bordered ? (
+        <div className="w-full max-w-sm rounded-[2rem] border border-[#e4e4e7] bg-white shadow-lg px-4 pt-8 pb-6 flex flex-col items-center">
+          {content}
+        </div>
+      ) : (
+        content
+      )}
     </div>
   )
 }
