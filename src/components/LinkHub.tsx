@@ -175,7 +175,7 @@ export async function LinkHub({ data, bordered = false }: { data: LinkHubData; b
 
       {data.reviews.length > 0 && (
         <div className="w-full max-w-sm mb-8">
-          <div className="flex gap-3 overflow-x-auto pb-2 snap-x snap-mandatory -mx-4 px-4">
+          <div className={`flex gap-3 overflow-x-auto pb-2 snap-x snap-mandatory ${bordered ? '' : '-mx-4 px-4'}`}>
             {data.reviews.map((r, i) => (
               <div
                 key={i}
@@ -217,7 +217,7 @@ export async function LinkHub({ data, bordered = false }: { data: LinkHubData; b
   return (
     <div className="min-h-[calc(100vh-3rem)] bg-gradient-to-b from-red-50 via-white to-white flex flex-col items-center px-4 py-10">
       {bordered ? (
-        <div className="w-full max-w-sm rounded-[2rem] border border-[#e4e4e7] bg-white shadow-lg px-4 pt-8 pb-6 flex flex-col items-center">
+        <div className="w-full max-w-sm rounded-[2rem] border border-[#e4e4e7] bg-[#f6f3f2] shadow-lg px-4 pt-8 pb-6 flex flex-col items-center">
           {content}
         </div>
       ) : (
