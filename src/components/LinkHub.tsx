@@ -111,9 +111,9 @@ export function LinkHub({ data }: { data: LinkHubData }) {
     <div className="min-h-[calc(100vh-3rem)] bg-gradient-to-b from-red-50 via-white to-white flex flex-col items-center px-4 py-10">
       {/* Banner + avatar */}
       <div className="relative w-full max-w-sm mb-10">
-        <div className="w-full aspect-[4/3] rounded-2xl bg-[#f4f4f5] border border-[#e4e4e7] flex items-center justify-center overflow-hidden">
+        <div className="w-full aspect-[3/4] rounded-2xl bg-[#f4f4f5] border border-[#e4e4e7] flex items-center justify-center overflow-hidden">
           {data.bannerImage ? (
-            <Image src={data.bannerImage} alt="" fill className="object-cover" />
+            <Image src={data.bannerImage} alt="" fill className="object-cover object-top" />
           ) : (
             <span className="text-xs text-[#a1a1aa] px-6 text-center">Foto di copertina da aggiungere</span>
           )}

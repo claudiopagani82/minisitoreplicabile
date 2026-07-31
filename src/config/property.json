@@ -360,7 +360,7 @@
     "heading": "Benvenuti in Domus Tua",
     "bio": "❤️ Facile vendere e sicuro acquistare ❤️",
     "avatarImage": "/images/logo-domustua.png",
-    "bannerImage": null,
+    "bannerImage": "/images/link-utili-banner.jpg",
     "socialLinks": [
       { "platform": "instagram", "url": "https://www.instagram.com/domustuaimmobiliare_tradate" },
       { "platform": "tiktok", "url": "https://www.tiktok.com/@domustuaimmobiliare" },
@@ -423,7 +423,7 @@
     "heading": "Benvenuti in Domus Tua",
     "bio": "❤️ Facile vendere e sicuro acquistare ❤️",
     "avatarImage": "/images/logo-domustua.png",
-    "bannerImage": null,
+    "bannerImage": "/images/link-utili-banner.jpg",
     "socialLinks": [
       { "platform": "instagram", "url": "https://www.instagram.com/domustuaimmobiliare_tradate" },
       { "platform": "tiktok", "url": "https://www.tiktok.com/@domustuaimmobiliare" },
