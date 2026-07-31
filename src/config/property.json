@@ -414,7 +414,7 @@
         "label": "📍 Vieni a trovarci in agenzia",
         "url": "https://www.google.com/maps?ll=45.711428,8.907599&z=15&t=m&hl=it&gl=IT&mapclient=embed&cid=1402630747648240075",
         "enabled": true,
-        "image": null,
+        "image": "/images/link-utili-agenzia.jpg",
         "badge": null
       }
     ]
@@ -478,7 +478,7 @@
         "label": "📍 Vieni a trovarci in agenzia",
         "url": "https://www.google.com/maps?ll=45.711428,8.907599&z=15&t=m&hl=it&gl=IT&mapclient=embed&cid=1402630747648240075",
         "enabled": true,
-        "image": null,
+        "image": "/images/link-utili-agenzia.jpg",
         "badge": null
       }
     ]
