@@ -30,7 +30,7 @@
     {
       "title": "Dove siamo",
       "href": "/dove-siamo",
-      "enabled": false
+      "enabled": true
     },
     {
       "title": "Cos'è e come funziona l'Open Domus",
