@@ -4,62 +4,85 @@
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
 
-# Website Reverse-Engineer Template
+# DomusTua — Mini-sito immobiliare replicabile
 
-## What This Is
-A reusable template for reverse-engineering any website into a clean, modern Next.js codebase using AI coding agents. The Next.js + shadcn/ui + Tailwind v4 base is pre-scaffolded — just run `/clone-website <url1> [<url2> ...]`.
+## Cos'è questo progetto
+Il **template di mini-sito** usato da DomusTua Immobiliare per presentare un singolo immobile in vendita. Ogni immobile ha il suo sito, generato clonando questo repo.
+
+Questo repo (`minisitoreplicabile`) è il **template repository su GitHub**: il pannello di controllo `domus-admin-hub` lo clona per creare un nuovo sito, crea il progetto Vercel corrispondente e poi ne modifica i contenuti da remoto.
+
+Il repo nasceva da un template generico di reverse-engineering di siti web — da qui il nome cartella `ai-website-cloner-template`, ormai fuorviante. Quella fase è conclusa: oggi è un prodotto a sé.
+
+## Architettura dei contenuti — LEGGERE PRIMA DI MODIFICARE
+
+**`src/config/property.json` è l'unica fonte dei contenuti variabili del sito.** Tutte le pagine e il `layout.tsx` lo importano direttamente (`import property from '@/config/property.json'`).
+
+Contiene: `version`, `disabled`, `title`, `address`, `agencyName`, `agencyPhone`, `agencyEmail` e l'array `navigation` di `{ title, href, enabled }`.
+
+La sezione `doveSiamo` (`enabled`, `heading`, `address`, `mapImage`, `generatedAt`, `lat`, `lng`, `servizi[]`) è generata automaticamente da `minisito-admintool` (Google Maps Platform: geocoding + luoghi vicini + mappa statica) al momento della creazione del sito o tramite il pulsante "Rigenera mappa" nell'editor — non va compilata a mano.
+
+Due vincoli che ne derivano:
+
+1. **Il file viene scritto dall'esterno.** Il pannello admin lo modifica via API GitHub, committando direttamente sul branch `main` di ogni sito. Prima di lavorare in locale fai sempre `git pull`: il repo può essere avanti senza che tu abbia toccato nulla.
+2. **La sua struttura è un contratto.** `minisito-admintool/src/components/PropertyEditor.tsx` costruisce il form sui nomi di questi campi. Rinominare o rimuovere una chiave rompe il pannello **in silenzio**, senza errori di build. Qualunque modifica allo schema va fatta sui due repo insieme.
+
+Il flag `enabled` di ogni voce di `navigation` controlla se la pagina compare nel menu; `disabled: true` a livello di root mostra la pagina "immobile non disponibile".
 
 ## Tech Stack
 - **Framework:** Next.js 16 (App Router, React 19, TypeScript strict)
-- **UI:** shadcn/ui (Radix primitives, Tailwind CSS v4, `cn()` utility)
-- **Icons:** Lucide React (default — will be replaced/supplemented by extracted SVGs)
-- **Styling:** Tailwind CSS v4 with oklch design tokens
-- **Deployment:** Vercel
+- **UI:** shadcn/ui, Tailwind CSS v4 con token oklch, utility `cn()`
+- **Icone:** Lucide React
+- **Deploy:** Vercel (deploy automatico al push su `main`)
+- **Node:** 24 (vedi `.nvmrc` e `engines` in `package.json`)
 
-## Commands
-- `npm run dev` — Start dev server
-- `npm run build` — Production build
-- `npm run lint` — ESLint check
-- `npm run typecheck` — TypeScript check
-- `npm run check` — Run lint + typecheck + build
+## Comandi
+- `npm run dev` — server di sviluppo
+- `npm run build` — build di produzione
+- `npm run lint` — ESLint
+- `npm run typecheck` — controllo TypeScript
+- `npm run check` — lint + typecheck + build (usa questo prima di committare)
 
 ## Code Style
-- TypeScript strict mode, no `any`
-- Named exports, PascalCase components, camelCase utils
-- Tailwind utility classes, no inline styles
-- 2-space indentation
-- Responsive: mobile-first
+- TypeScript strict, mai `any`
+- Named export, componenti PascalCase, utility camelCase
+- Solo classi Tailwind, niente stili inline
+- Indentazione 2 spazi
+- Mobile-first: il sito viene aperto quasi sempre da telefono
 
-## Design Principles
-- **Pixel-perfect emulation** — match the target's spacing, colors, typography exactly
-- **No personal aesthetic changes during emulation phase** — match 1:1 first, customize later
-- **Real content** — use actual text and assets from the target site, not placeholders
-- **Beauty-first** — every pixel matters
+## Design
+- Ogni pixel conta: spaziature, colori e tipografia sono curati
+- Contenuti reali, mai placeholder
+- Il committente è un'agenzia immobiliare: tono sobrio e professionale
 
-## Project Structure
+## Struttura
 ```
 src/
-  app/              # Next.js routes
-  components/       # React components
-    ui/             # shadcn/ui primitives
-    icons.tsx       # Extracted SVG icons as React components
+  app/              # 18 rotte, una cartella per pagina + page.tsx (home)
+                    #   introduzione, come-raggiungerci-1, come-raggiungerci-2,
+                    #   dove-siamo, open-domus, caratteristiche-principali, planimetrie,
+                    #   documenti-catastali, ape, bollette-e-impianti,
+                    #   relazione-tecnica, documenti-condominiali, bozza-proposta,
+                    #   prospetto-costi, matterport, video-social, per-te-venditore
+  components/
+    DocumentLayout.tsx  # layout pagine-documento (elenchi di PDF scaricabili)
+    PhotoLayout.tsx     # layout pagine-fotografiche
+    Navigation.tsx      # menu, legge navigation[] da property.json
+    Lightbox.tsx        # visualizzatore foto a schermo intero
+    Footer.tsx
+    DomusTuaLogo.tsx
+    ui/                 # primitive shadcn/ui
+  config/
+    property.json   # ⚠️ fonte dei contenuti — vedi sezione Architettura
   lib/
-    utils.ts        # cn() utility (shadcn)
-  types/            # TypeScript interfaces
-  hooks/            # Custom React hooks
+    utils.ts        # cn()
 public/
-  images/           # Downloaded images from target site
-  videos/           # Downloaded videos from target site
-  seo/              # Favicons, OG images, webmanifest
-docs/
-  research/         # Inspection output (design tokens, components, layout)
-  design-references/ # Screenshots and visual references
-scripts/            # Asset download scripts
+  images/           # foto e documenti dell'immobile
+  videos/
+  seo/
+docs/superpowers/   # piani e specifiche delle feature già realizzate
 ```
 
-## MOST IMPORTANT NOTES
-- When launching Claude Code agent teams, ALWAYS have each teammate work in their own worktree branch and merge everyone's work at the end, resolving any merge conflicts smartly since you are basically serving the orchestrator role and have full context to our goals, work given, work achieved, and desired outcomes.
-- After editing `AGENTS.md`, run `bash scripts/sync-agent-rules.sh` to regenerate platform-specific instruction files.
-- After editing `.claude/skills/clone-website/SKILL.md`, run `node scripts/sync-skills.mjs` to regenerate the skill for all platforms.
-
-@docs/research/INSPECTION_GUIDE.md
+## Note operative
+- Il progetto vive dentro OneDrive, in un percorso lungo. Sono necessari `git config core.longpaths true` e il supporto Windows ai percorsi lunghi attivo, altrimenti `npm install` e le operazioni Git falliscono con "Filename too long".
+- `src/lib/navigation.ts` non è importato da nessun file e contiene rotte non esistenti: è un residuo, non usarlo come riferimento.
+- I file di istruzioni per altri assistenti (`.cursor/`, `.gemini/`, `.windsurf/`, `.codex/`, ecc.) erano generati da uno script di sincronizzazione non più presente. Se modifichi questo file, restano indietro: aggiornali a mano solo se ti servono davvero.

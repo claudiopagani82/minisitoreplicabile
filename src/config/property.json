@@ -28,6 +28,11 @@
       "enabled": true
     },
     {
+      "title": "Dove siamo",
+      "href": "/dove-siamo",
+      "enabled": false
+    },
+    {
       "title": "Cos'è e come funziona l'Open Domus",
       "href": "/open-domus",
       "enabled": true
@@ -144,6 +149,16 @@
       "/images/come-raggiungerci-2-image1.png",
       "/images/come-raggiungerci-2-image2.png"
     ]
+  },
+  "doveSiamo": {
+    "enabled": false,
+    "heading": "Dove siamo",
+    "address": "",
+    "mapImage": null,
+    "generatedAt": null,
+    "lat": null,
+    "lng": null,
+    "servizi": []
   },
   "openDomus": {
     "enabled": true,
