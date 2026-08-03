@@ -1,5 +1,5 @@
 {
-  "version": "1.4",
+  "version": "1.5",
   "disabled": false,
   "title": "TRILOCALE RISTRUTTURATO IN PIENO CENTRO CON BOX",
   "address": "Via Cavour, 37 / Centro Tradate",
@@ -43,13 +43,8 @@
       "enabled": true
     },
     {
-      "title": "Planimetrie",
+      "title": "Planimetrie e Catasto",
       "href": "/planimetrie",
-      "enabled": true
-    },
-    {
-      "title": "Documenti catastali",
-      "href": "/documenti-catastali",
       "enabled": true
     },
     {
@@ -213,30 +208,31 @@
     ],
     "images": []
   },
-  "planimetrie": {
+  "planimetrieCatasto": {
     "enabled": true,
     "sectionNumber": "",
-    "sectionTitle": "PLANIMETRIE QUOTATE:",
+    "sectionTitle": "PLANIMETRIE E DATI CATASTALI",
     "items": [
-      "Appartamento",
-      "Box"
-    ],
-    "images": [
-      "/images/planimetrie-image1.jpg"
-    ]
-  },
-  "documentiCatastali": {
-    "enabled": true,
-    "sectionNumber": "",
-    "sectionTitle": "CATASTO",
-    "items": [
-      "Schede catastali",
-      "Visure catastali"
-    ],
-    "images": [
-      "/images/catasto-image1.png",
-      "/images/catasto-image2.png",
-      "/images/catasto-image3.png"
+      {
+        "label": "Planimetria appartamento",
+        "enabled": true,
+        "documentUrl": null
+      },
+      {
+        "label": "Planimetria box",
+        "enabled": true,
+        "documentUrl": null
+      },
+      {
+        "label": "Schede catastali",
+        "enabled": true,
+        "documentUrl": null
+      },
+      {
+        "label": "Visure catastali",
+        "enabled": true,
+        "documentUrl": null
+      }
     ]
   },
   "ape": {

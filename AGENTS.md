@@ -60,12 +60,13 @@ Ogni volta che il campo `version` di `property.json` viene incrementato, aggiung
 ## Struttura
 ```
 src/
-  app/              # 18 rotte, una cartella per pagina + page.tsx (home)
+  app/              # 17 rotte, una cartella per pagina + page.tsx (home)
                     #   introduzione, come-raggiungerci-1, come-raggiungerci-2,
-                    #   dove-siamo, open-domus, caratteristiche-principali, planimetrie,
-                    #   documenti-catastali, ape, bollette-e-impianti,
-                    #   relazione-tecnica, documenti-condominiali, bozza-proposta,
-                    #   prospetto-costi, matterport, video-social, per-te-venditore
+                    #   dove-siamo, open-domus, caratteristiche-principali,
+                    #   planimetrie (planimetrie + dati catastali uniti), ape,
+                    #   bollette-e-impianti, relazione-tecnica, documenti-condominiali,
+                    #   bozza-proposta, prospetto-costi, matterport, video-social,
+                    #   per-te-venditore
   components/
     DocumentLayout.tsx  # layout pagine-documento (elenchi di PDF scaricabili)
     PhotoLayout.tsx     # layout pagine-fotografiche
