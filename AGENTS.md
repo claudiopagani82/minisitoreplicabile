@@ -28,6 +28,9 @@ Due vincoli che ne derivano:
 
 Il flag `enabled` di ogni voce di `navigation` controlla se la pagina compare nel menu; `disabled: true` a livello di root mostra la pagina "immobile non disponibile".
 
+## Versioning
+Ogni volta che il campo `version` di `property.json` viene incrementato, aggiungi una voce corrispondente in `CHANGELOG.md` **prima** di committare, descrivendo cosa cambia per i siti generati dal template. Questo changelog è la base della futura funzione "Aggiorna" nell'admin hub (confronto tra la versione di un sito deployato e l'ultima disponibile).
+
 ## Tech Stack
 - **Framework:** Next.js 16 (App Router, React 19, TypeScript strict)
 - **UI:** shadcn/ui, Tailwind CSS v4 con token oklch, utility `cn()`
