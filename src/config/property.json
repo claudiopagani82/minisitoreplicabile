@@ -146,14 +146,78 @@
     ]
   },
   "doveSiamo": {
-    "enabled": false,
+    "enabled": true,
     "heading": "Dove siamo",
-    "address": "",
-    "mapImage": null,
-    "generatedAt": null,
-    "lat": null,
-    "lng": null,
-    "servizi": []
+    "address": "Via Cavour, 37 / Centro Tradate",
+    "mapImage": "/images/dove-siamo-map-1785849011265.png",
+    "generatedAt": "2026-08-04T13:10:12.288Z",
+    "lat": 45.7115556,
+    "lng": 8.907163299999999,
+    "servizi": [
+      {
+        "markerNumber": 1,
+        "category": "scuola",
+        "label": "EUROUFFICIO TRADATE Varese",
+        "distanceText": "29 m",
+        "durationText": "1 min"
+      },
+      {
+        "markerNumber": 2,
+        "category": "scuola",
+        "label": "Scuole Pubbliche Medie Superiori Istituto Professionale Di Stato Per L'Industria E L'Artigianato",
+        "distanceText": "0,1 km",
+        "durationText": "1 min"
+      },
+      {
+        "markerNumber": 3,
+        "category": "supermercato",
+        "label": "Carrefour Express - Supermarket",
+        "distanceText": "17 m",
+        "durationText": "1 min"
+      },
+      {
+        "markerNumber": 4,
+        "category": "supermercato",
+        "label": "Antica Macelleria del Corso",
+        "distanceText": "0,4 km",
+        "durationText": "6 min"
+      },
+      {
+        "markerNumber": 5,
+        "category": "farmacia",
+        "label": "Farmacia Pianori",
+        "distanceText": "0,2 km",
+        "durationText": "3 min"
+      },
+      {
+        "markerNumber": 6,
+        "category": "farmacia",
+        "label": "Farmacia Carrari di Carrari dr. Marco",
+        "distanceText": "0,8 km",
+        "durationText": "10 min"
+      },
+      {
+        "markerNumber": 7,
+        "category": "parcheggio",
+        "label": "Parcheggio",
+        "distanceText": "0,6 km",
+        "durationText": "8 min"
+      },
+      {
+        "markerNumber": 8,
+        "category": "parcheggio",
+        "label": "Parcheggio pubblico",
+        "distanceText": "1,3 km",
+        "durationText": "18 min"
+      },
+      {
+        "markerNumber": 9,
+        "category": "stazione",
+        "label": "Tradate",
+        "distanceText": "0,2 km",
+        "durationText": "2 min"
+      }
+    ]
   },
   "openDomus": {
     "enabled": true,
