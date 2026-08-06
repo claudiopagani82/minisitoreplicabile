@@ -2,6 +2,9 @@ import Image from 'next/image'
 import { Home, MapPin, PlayCircle, Image as ImageIcon } from 'lucide-react'
 import { InstagramIcon, FacebookIcon, YoutubeIcon, TiktokIcon, WhatsappIcon } from '@/components/icons'
 import { getLatestYoutubeVideo } from '@/lib/youtube'
+import { getLatestFacebookPost } from '@/lib/facebook'
+import { TiktokEmbed } from '@/components/TiktokEmbed'
+import { parseTiktokUsername } from '@/lib/tiktok'
 import { ScrollFadeBanner } from '@/components/ScrollFadeBanner'
 
 interface SocialLink {
@@ -94,6 +97,28 @@ function LinkCard({ link }: { link: LinkItem }) {
   )
 }
 
+// La card TikTok ospita il widget con gli ultimi video del profilo. Il link in
+// fondo resta comunque cliccabile: se lo script di TikTok non parte (blocco
+// pubblicità, rete lenta), la card continua a funzionare come prima.
+function TiktokCard({ link, username }: { link: LinkItem; username: string }) {
+  return (
+    <div className="bg-white rounded-2xl border border-[#e4e4e7] shadow-sm overflow-hidden">
+      <div className="flex justify-center px-2 pt-2">
+        <TiktokEmbed username={username} />
+      </div>
+      <a
+        href={link.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-2 px-4 py-3 border-t border-[#f4f4f5] hover:bg-[#f9f9f9] transition-colors"
+      >
+        <TiktokIcon size={18} className="text-[#18181b] flex-shrink-0" />
+        <span className="text-sm font-medium text-[#18181b]">{link.label}</span>
+      </a>
+    </div>
+  )
+}
+
 function LinkRow({ link }: { link: LinkItem }) {
   return (
     <a
@@ -117,6 +142,12 @@ export async function LinkHub({ data, bordered = false }: { data: LinkHubData; b
         const latest = await getLatestYoutubeVideo(data.youtubeChannelId)
         if (latest) {
           return { ...link, url: latest.url, image: latest.thumbnail, badge: latest.title }
+        }
+      }
+      if (link.type === 'facebook') {
+        const latest = await getLatestFacebookPost()
+        if (latest) {
+          return { ...link, url: latest.url, image: latest.image, badge: latest.text }
         }
       }
       return link
@@ -203,13 +234,16 @@ export async function LinkHub({ data, bordered = false }: { data: LinkHubData; b
       )}
 
       <div className="w-full max-w-sm flex flex-col gap-3">
-        {activeLinks.map((link) =>
-          link.type === 'whatsapp' ? (
-            <LinkRow key={link.url} link={link} />
-          ) : (
-            <LinkCard key={link.url} link={link} />
-          )
-        )}
+        {activeLinks.map((link) => {
+          if (link.type === 'whatsapp') return <LinkRow key={link.url} link={link} />
+
+          if (link.type === 'tiktok') {
+            const username = parseTiktokUsername(link.url)
+            if (username) return <TiktokCard key={link.url} link={link} username={username} />
+          }
+
+          return <LinkCard key={link.url} link={link} />
+        })}
       </div>
     </>
   )
