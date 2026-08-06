@@ -1,41 +1,18 @@
-'use client'
-
-import { useEffect } from 'react'
-
-const EMBED_SCRIPT = 'https://www.tiktok.com/embed.js'
-
-// TikTok non espone i video di un profilo via API pubblica: l'unico modo per
-// mostrarli senza credenziali è il widget ufficiale, che TikTok riempie nel
-// browser del visitatore. Il markup qui sotto è quello restituito dal suo
-// endpoint oEmbed per i profili creator.
+// TikTok non espone i video di un profilo via API pubblica: servirebbero OAuth
+// e una revisione dell'app. L'unica via senza credenziali è la sua pagina di
+// embed, che mostra i video più recenti e si aggiorna da sola.
+//
+// Si punta l'iframe direttamente a quella pagina invece di usare embed.js: lo
+// script ufficiale crea sì l'iframe, ma non gli comunica mai l'altezza e lo
+// lascia alto un pixel. Così il componente non ha bisogno di JavaScript e non
+// carica script di terze parti nella pagina.
 export function TiktokEmbed({ username }: { username: string }) {
-  useEffect(() => {
-    // Lo script processa i blockquote una volta sola, al caricamento. Navigando
-    // tra le pagine del sito il componente si rimonta e il widget resterebbe
-    // vuoto: rimuovendo lo script e reinserendolo lo si obbliga a rileggere.
-    document.querySelector(`script[src="${EMBED_SCRIPT}"]`)?.remove()
-
-    const script = document.createElement('script')
-    script.src = EMBED_SCRIPT
-    script.async = true
-    document.body.appendChild(script)
-  }, [username])
-
-  const profileUrl = `https://www.tiktok.com/@${username}`
-
   return (
-    <blockquote
-      className="tiktok-embed min-w-[288px] max-w-[780px]"
-      cite={profileUrl}
-      data-unique-id={username}
-      data-embed-from="oembed"
-      data-embed-type="creator"
-    >
-      <section>
-        <a target="_blank" rel="noopener noreferrer" href={`${profileUrl}?refer=creator_embed`}>
-          @{username}
-        </a>
-      </section>
-    </blockquote>
+    <iframe
+      src={`https://www.tiktok.com/embed/@${username}`}
+      title={`Ultimi video di @${username} su TikTok`}
+      loading="lazy"
+      className="w-full h-[600px] border-0"
+    />
   )
 }

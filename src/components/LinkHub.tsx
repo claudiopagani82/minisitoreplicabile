@@ -98,14 +98,12 @@ function LinkCard({ link }: { link: LinkItem }) {
 }
 
 // La card TikTok ospita il widget con gli ultimi video del profilo. Il link in
-// fondo resta comunque cliccabile: se lo script di TikTok non parte (blocco
-// pubblicità, rete lenta), la card continua a funzionare come prima.
+// fondo resta comunque cliccabile: se TikTok non risponde o l'iframe viene
+// bloccato, la card continua a funzionare come prima.
 function TiktokCard({ link, username }: { link: LinkItem; username: string }) {
   return (
     <div className="bg-white rounded-2xl border border-[#e4e4e7] shadow-sm overflow-hidden">
-      <div className="flex justify-center px-2 pt-2">
-        <TiktokEmbed username={username} />
-      </div>
+      <TiktokEmbed username={username} />
       <a
         href={link.url}
         target="_blank"
