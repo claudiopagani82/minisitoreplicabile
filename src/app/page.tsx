@@ -85,7 +85,7 @@ export default function BenvenutoPage() {
               </h1>
 
               {property.subtitle && (
-                <p className="text-[#CC1414] font-semibold text-center text-sm leading-tight mb-2">
+                <p className="text-[#CC1414] font-semibold text-center text-base leading-tight mb-2">
                   {property.subtitle}
                 </p>
               )}
@@ -103,7 +103,7 @@ export default function BenvenutoPage() {
               </Link>
 
               <p className="text-[#555555] text-sm text-center leading-snug">
-                Tutti i dettagli dell&apos;immobile visualizzando la{' '}
+                tutti i dettagli dell&apos;immobile visualizzando la{' '}
                 <strong className="text-[#333333]">nostra brochure digitale</strong>
               </p>
             </div>
@@ -132,7 +132,7 @@ export default function BenvenutoPage() {
         </h1>
 
         {property.subtitle && (
-          <p className="text-[#CC1414] font-semibold text-center text-lg leading-tight mb-3">
+          <p className="text-[#CC1414] font-semibold text-center text-xl leading-tight mb-3">
             {property.subtitle}
           </p>
         )}
@@ -150,7 +150,7 @@ export default function BenvenutoPage() {
         </Link>
 
         <p className="text-[#555555] text-base text-center leading-snug">
-          Tutti i dettagli dell&apos;immobile visualizzando la{' '}
+          tutti i dettagli dell&apos;immobile visualizzando la{' '}
           <strong className="text-[#333333]">nostra brochure digitale</strong>
         </p>
       </div>
