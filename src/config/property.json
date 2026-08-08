@@ -45,8 +45,8 @@
       "enabled": true
     },
     {
-      "title": "APE",
-      "href": "/ape",
+      "title": "La Documentazione",
+      "href": "/la-documentazione",
       "enabled": true
     },
     {
@@ -57,11 +57,6 @@
     {
       "title": "Relazione tecnica",
       "href": "/relazione-tecnica",
-      "enabled": true
-    },
-    {
-      "title": "Documenti condominiali",
-      "href": "/documenti-condominiali",
       "enabled": true
     },
     {
@@ -98,6 +93,48 @@
       "title": "Per te, VENDITORE",
       "href": "/per-te-venditore",
       "enabled": true
+    },
+    {
+      "title": "APE",
+      "href": "/ape",
+      "enabled": true,
+      "parent": "/la-documentazione"
+    },
+    {
+      "title": "Certificazione (rispondenza) impianto elettrico",
+      "href": "/certificazione-impianto-elettrico",
+      "enabled": true,
+      "parent": "/la-documentazione"
+    },
+    {
+      "title": "Certificazione (rispondenza) impianto idrico/termico/sanitario",
+      "href": "/certificazione-impianto-idrico-termico",
+      "enabled": true,
+      "parent": "/la-documentazione"
+    },
+    {
+      "title": "Libretto caldaia",
+      "href": "/libretto-caldaia",
+      "enabled": true,
+      "parent": "/la-documentazione"
+    },
+    {
+      "title": "Regolamento di condominio",
+      "href": "/regolamento-condominio",
+      "enabled": true,
+      "parent": "/la-documentazione"
+    },
+    {
+      "title": "Spese condominiali 2024-2025",
+      "href": "/spese-condominiali",
+      "enabled": true,
+      "parent": "/la-documentazione"
+    },
+    {
+      "title": "Verbali",
+      "href": "/verbali",
+      "enabled": true,
+      "parent": "/la-documentazione"
     }
   ],
   "introduzione": {
@@ -291,11 +328,11 @@
     "sectionNumber": "",
     "sectionTitle": "APE - ATTESTATO DI PRESTAZIONE ENERGETICA",
     "items": [
-      "Certificato energetico"
-    ],
-    "caption": "Attestato di Prestazione Energetica – Via Cavour 37, Tradate",
-    "images": [
-      "/images/APE-image1.png"
+      {
+        "label": "Certificato energetico",
+        "enabled": true,
+        "documentUrl": null
+      }
     ]
   },
   "bolletteImpianti": {
@@ -304,11 +341,7 @@
     "sectionTitle": "BOLLETTE E IMPIANTI",
     "items": [
       "Bolletta gas – riscaldamento autonomo",
-      "Bolletta energia elettrica",
-      "Dichiarazione di conformità impianto elettrico",
-      "Dichiarazione di conformità impianto idraulico",
-      "Dichiarazione di conformità impianto termico",
-      "Libretto caldaia a condensazione"
+      "Bolletta energia elettrica"
     ],
     "images": [
       "/images/bollette-image1.png",
@@ -342,33 +375,6 @@
       {
         "label": "Descrizione interventi di ristrutturazione 2021",
         "enabled": true,
-        "documentUrl": null
-      }
-    ]
-  },
-  "documentiCondominiali": {
-    "enabled": true,
-    "sectionNumber": "",
-    "sectionTitle": "DOCUMENTI CONDOMINIALI",
-    "items": [
-      {
-        "label": "Regolamento condominiale",
-        "enabled": true,
-        "documentUrl": "/images/doc-condominio-0-1784830614760.pdf"
-      },
-      {
-        "label": "Verbale ultima assemblea condominiale",
-        "enabled": true,
-        "documentUrl": "/images/doc-condominio-1-1784830734734.doc"
-      },
-      {
-        "label": "Piano di riparto spese condominiali",
-        "enabled": true,
-        "documentUrl": "/images/doc-condominio-2-1784830801416.pdf"
-      },
-      {
-        "label": "Attestazione assenza morosità condominiale",
-        "enabled": false,
         "documentUrl": null
       }
     ]
@@ -615,5 +621,92 @@
     "agencyCell": "346 604 2314",
     "reviewsLabel": "Clicca qui e LEGGI tutte LE NOSTRE RECENSIONI",
     "reviewsScore": "4.9"
+  },
+  "certificazioneElettrico": {
+    "enabled": true,
+    "sectionNumber": "",
+    "sectionTitle": "CERTIFICAZIONE (RISPONDENZA) IMPIANTO ELETTRICO",
+    "items": [
+      {
+        "label": "Dichiarazione di conformità impianto elettrico",
+        "enabled": true,
+        "documentUrl": null
+      }
+    ]
+  },
+  "certificazioneIdricoTermico": {
+    "enabled": true,
+    "sectionNumber": "",
+    "sectionTitle": "CERTIFICAZIONE (RISPONDENZA) IMPIANTO IDRICO/TERMICO/SANITARIO",
+    "items": [
+      {
+        "label": "Dichiarazione di conformità impianto idraulico",
+        "enabled": true,
+        "documentUrl": null
+      },
+      {
+        "label": "Dichiarazione di conformità impianto termico",
+        "enabled": true,
+        "documentUrl": null
+      }
+    ]
+  },
+  "librettoCaldaia": {
+    "enabled": true,
+    "sectionNumber": "",
+    "sectionTitle": "LIBRETTO CALDAIA",
+    "items": [
+      {
+        "label": "Libretto caldaia a condensazione",
+        "enabled": true,
+        "documentUrl": null
+      }
+    ]
+  },
+  "regolamentoCondominio": {
+    "enabled": true,
+    "sectionNumber": "",
+    "sectionTitle": "REGOLAMENTO DI CONDOMINIO",
+    "items": [
+      {
+        "label": "Regolamento condominiale",
+        "enabled": true,
+        "documentUrl": "/images/doc-condominio-0-1784830614760.pdf"
+      }
+    ]
+  },
+  "speseCondominiali": {
+    "enabled": true,
+    "sectionNumber": "",
+    "sectionTitle": "SPESE CONDOMINIALI 2024-2025",
+    "items": [
+      {
+        "label": "Piano di riparto spese condominiali",
+        "enabled": true,
+        "documentUrl": "/images/doc-condominio-2-1784830801416.pdf"
+      },
+      {
+        "label": "Attestazione assenza morosità condominiale",
+        "enabled": false,
+        "documentUrl": null
+      }
+    ]
+  },
+  "verbali": {
+    "enabled": true,
+    "sectionNumber": "",
+    "sectionTitle": "VERBALI",
+    "items": [
+      {
+        "label": "Verbale ultima assemblea condominiale",
+        "enabled": true,
+        "documentUrl": "/images/doc-condominio-1-1784830734734.doc"
+      }
+    ]
+  },
+  "laDocumentazione": {
+    "enabled": true,
+    "sectionNumber": "4.",
+    "sectionTitle": "LA DOCUMENTAZIONE"
   }
 }

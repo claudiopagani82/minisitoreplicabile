@@ -1,9 +1,9 @@
 import { ElencoDocumenti } from '@/components/ElencoDocumenti'
 import property from '@/config/property.json'
 
-const p = property.ape
+const p = property.certificazioneIdricoTermico
 
-export default function ApePage() {
+export default function CertificazioneIdricoTermicoPage() {
   return (
     <ElencoDocumenti
       sectionNumber={p.sectionNumber}

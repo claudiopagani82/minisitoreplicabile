@@ -1,9 +1,9 @@
 import { ElencoDocumenti } from '@/components/ElencoDocumenti'
 import property from '@/config/property.json'
 
-const p = property.ape
+const p = property.verbali
 
-export default function ApePage() {
+export default function VerbaliPage() {
   return (
     <ElencoDocumenti
       sectionNumber={p.sectionNumber}

@@ -6,7 +6,10 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import property from '@/config/property.json'
 
-const pages = property.navigation.filter((p) => p.enabled)
+// Le voci con `parent` non compaiono nel menu: si raggiungono dalla pagina
+// indice del ramo che le contiene (per esempio "La Documentazione"), così il
+// menu resta a un livello solo.
+const pages = property.navigation.filter((p) => p.enabled && !('parent' in p && p.parent))
 
 export function Navigation() {
   const pathname = usePathname()

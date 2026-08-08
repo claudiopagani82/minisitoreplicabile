@@ -1,9 +1,9 @@
 import { ElencoDocumenti } from '@/components/ElencoDocumenti'
 import property from '@/config/property.json'
 
-const p = property.ape
+const p = property.speseCondominiali
 
-export default function ApePage() {
+export default function SpeseCondominialiPage() {
   return (
     <ElencoDocumenti
       sectionNumber={p.sectionNumber}
