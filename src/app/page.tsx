@@ -90,8 +90,8 @@ export default function BenvenutoPage() {
                 </p>
               )}
 
-              <p className="text-[#555555] italic text-sm text-center mb-2">
-                {property.address}
+              <p className="text-[#555555] italic text-sm text-center mb-2 whitespace-pre-line">
+                {property.description}
               </p>
 
               <Link
@@ -137,8 +137,8 @@ export default function BenvenutoPage() {
           </p>
         )}
 
-        <p className="text-[#555555] italic text-lg text-center mb-4">
-          {property.address}
+        <p className="text-[#555555] italic text-lg text-center mb-4 whitespace-pre-line">
+          {property.description}
         </p>
 
         <Link

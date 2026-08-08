@@ -35,6 +35,12 @@ export default function DoveSiamoPage() {
 
   return (
     <DocumentLayout sectionTitle={p.heading.toUpperCase()}>
+      {p.showAddress && p.address && (
+        <p className="text-sm text-[#333333] text-center font-semibold mb-4">
+          {p.address}
+        </p>
+      )}
+
       {p.mapImage && (
         <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-[#e4e4e7] mb-6">
           <Image src={p.mapImage} alt={`Mappa dei dintorni di ${p.address}`} fill className="object-cover" />
