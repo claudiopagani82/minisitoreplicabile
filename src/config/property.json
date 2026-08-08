@@ -20,13 +20,8 @@
       "enabled": true
     },
     {
-      "title": "Come raggiungere – dal Centro di Abbiate",
-      "href": "/come-raggiungerci-1",
-      "enabled": true
-    },
-    {
-      "title": "Come raggiungere – da via Crocifisso",
-      "href": "/come-raggiungerci-2",
+      "title": "Dove parcheggiare",
+      "href": "/dove-parcheggiare",
       "enabled": true
     },
     {
@@ -125,7 +120,7 @@
     ],
     "paragraph2": "Con Domus Tua, avere tutte le informazioni a portata di mano significa poter valutare l'immobile con serenità e trasparenza, senza dover attendere ulteriori documenti o chiarimenti."
   },
-  "dalCentroTradate": {
+  "doveParcheggiare": {
     "enabled": true,
     "heading": "Come raggiungere l'immobile se arrivate dal centro di Tradate",
     "leftText": "Potete parcheggiare l'auto in Via XXV Aprile o in Via de Simoni, dove sono presenti diversi parcheggi gratuiti.",
@@ -134,17 +129,6 @@
     "images": [
       "/images/come-raggiungerci-1-image1.png",
       "/images/come-raggiungerci-1-image2.jpg"
-    ]
-  },
-  "daViaCrocifisso": {
-    "enabled": true,
-    "heading": "Come raggiungere l'immobile da via Crocifisso",
-    "leftText": "Percorrendo via Crocifisso, svoltate in via Cavour. L'edificio è facilmente riconoscibile.",
-    "rightText": "Sono disponibili parcheggi nelle vie adiacenti. Seguite le indicazioni presenti sul posto.",
-    "footer": "Troverete una collaboratrice ad aspettarvi per condurvi all'abitazione",
-    "images": [
-      "/images/come-raggiungerci-2-image1.png",
-      "/images/come-raggiungerci-2-image2.png"
     ]
   },
   "doveSiamo": {

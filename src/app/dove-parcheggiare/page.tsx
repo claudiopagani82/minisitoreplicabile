@@ -6,9 +6,9 @@ import { PhotoLayout } from '@/components/PhotoLayout'
 import { Lightbox } from '@/components/Lightbox'
 import property from '@/config/property.json'
 
-const p = property.daViaCrocifisso
+const p = property.doveParcheggiare
 
-export default function ComeRaggiungereViaCrocifissoPage() {
+export default function ComeRaggiungereCentroPage() {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
 
   return (
