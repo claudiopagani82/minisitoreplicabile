@@ -84,6 +84,12 @@ export default function BenvenutoPage() {
                 {property.title}
               </h1>
 
+              {property.subtitle && (
+                <p className="text-[#CC1414] font-semibold text-center text-sm leading-tight mb-2">
+                  {property.subtitle}
+                </p>
+              )}
+
               <p className="text-[#555555] italic text-sm text-center mb-2">
                 {property.address}
               </p>
@@ -124,6 +130,12 @@ export default function BenvenutoPage() {
         <h1 className="text-[#CC1414] font-bold text-center uppercase text-2xl leading-tight mb-3">
           {property.title}
         </h1>
+
+        {property.subtitle && (
+          <p className="text-[#CC1414] font-semibold text-center text-lg leading-tight mb-3">
+            {property.subtitle}
+          </p>
+        )}
 
         <p className="text-[#555555] italic text-lg text-center mb-4">
           {property.address}
