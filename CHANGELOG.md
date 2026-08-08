@@ -4,6 +4,10 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.7] - 2026-08-08
+### Corretto
+- `Navigation.tsx` chiamava `setState` in modo sincrono dentro un `useEffect` per chiudere il menu al cambio pagina (errore lint `react-hooks/set-state-in-effect`, può causare render a cascata non necessari). Ora l'apertura del menu è derivata dal confronto tra la rotta corrente e la rotta su cui è stato aperto (`openedFrom === pathname`): cambiare pagina lo chiude senza bisogno di un effect. Nessuna chiave di `property.json` coinvolta, nessun cambiamento visibile per l'utente finale.
+
 ## [1.6] - 2026-08-04
 ### Aggiunto
 - Nella pagina "Link utili" la card Facebook mostra l'ultimo post pubblicato dalla Pagina dell'agenzia (foto del post, testo come didascalia, click che porta al post), come già faceva la card YouTube con l'ultimo video. I dati arrivano dall'endpoint `/api/social/facebook` di `minisito-admintool`, dove risiede l'unico token della Graph API: nessuna credenziale e nessuna configurazione da impostare sui singoli siti.
