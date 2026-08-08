@@ -106,7 +106,7 @@
     }
   ],
   "introduzione": {
-    "enabled": true,
+    "enabled": false,
     "heading": "Benvenuti in Domus Tua",
     "greeting": "Gentile cliente,",
     "paragraph1": "La presente brochure digitale è stata pensata per offrirLe una panoramica completa e dettagliata dell'immobile di Suo interesse, con l'obiettivo di fornirLe tutte le informazioni necessarie per valutare con chiarezza ogni aspetto dell'immobile.",
