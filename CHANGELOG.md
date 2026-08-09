@@ -4,6 +4,14 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.11] - 2026-08-09
+### Aggiunto
+- Nuova sezione **"La Qualità dell'Immobile"** (sezione 2), pagina `/la-qualita-dell-immobile`, con dieci voci fisse: anno costruzione, ristrutturazioni, serramenti, tetto, cappotto, riscaldamento, climatizzazione, materiali, impianti e "tutti i plus".
+- I contenuti si ricavano dal PDF del modulo compilato al sopralluogo, allegato dal pannello alla creazione del sito o in un secondo momento. Le voci di cui il modulo non parla restano vuote e **non compaiono in pagina**: un appartamento in condominio non ha un tetto proprio, e un'etichetta seguita dal nulla è peggio di un'etichetta assente.
+
+### Modificato
+- Le voci che parlano di qualità costruttiva sono uscite da "Caratteristiche principali" per confluire qui: stato dell'immobile, interni, impianti e infissi, altre dotazioni. "Caratteristiche principali" resta su tipologia, superfici, area esterna, autorimessa e arredi inclusi. I testi già presenti sono stati travasati nelle voci corrispondenti, non persi.
+
 ## [1.10] - 2026-08-09
 ### Aggiunto
 - La pagina "Dove parcheggiare" può mostrare **quattro varianti di mappa** una sotto l'altra, etichettate, per scegliere quale tenere. Si accende e si spegne dal pannello con `confrontoMappe`; da spenta resta la sola mappa disegnata.

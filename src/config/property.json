@@ -1,5 +1,5 @@
 {
-  "version": "1.10",
+  "version": "1.11",
   "disabled": false,
   "title": "IL METODO OPENDOMUS",
   "subtitle": "Un modo diverso di acquistare casa",
@@ -17,6 +17,11 @@
     {
       "title": "Introduzione",
       "href": "/introduzione",
+      "enabled": true
+    },
+    {
+      "title": "La Qualità dell'Immobile",
+      "href": "/la-qualita-dell-immobile",
       "enabled": true
     },
     {
@@ -156,6 +161,55 @@
       "VIDEO SOCIAL"
     ],
     "paragraph2": "Con Domus Tua, avere tutte le informazioni a portata di mano significa poter valutare l'immobile con serenità e trasparenza, senza dover attendere ulteriori documenti o chiarimenti."
+  },
+  "qualitaImmobile": {
+    "enabled": true,
+    "sectionNumber": "2.",
+    "sectionTitle": "LA QUALITÀ DELL'IMMOBILE",
+    "sourceDocument": null,
+    "generatedAt": null,
+    "voci": [
+      {
+        "label": "Anno costruzione",
+        "text": "L'edificio, con struttura in cemento armato, è stato costruito nel 1993, mentre l'appartamento ha subito una ristrutturazione nel 2021 💧"
+      },
+      {
+        "label": "Ristrutturazioni",
+        "text": ""
+      },
+      {
+        "label": "Serramenti",
+        "text": ""
+      },
+      {
+        "label": "Tetto",
+        "text": ""
+      },
+      {
+        "label": "Cappotto",
+        "text": ""
+      },
+      {
+        "label": "Riscaldamento",
+        "text": ""
+      },
+      {
+        "label": "Climatizzazione",
+        "text": ""
+      },
+      {
+        "label": "Materiali",
+        "text": "È composto da tre locali con una cucina abitabile. Le pavimentazioni sono in gres porcellanato nel bagno e parquet in massello nel resto dell'abitazione"
+      },
+      {
+        "label": "Impianti",
+        "text": "Il riscaldamento è autonomo, caldaia a condensazione con radiatori in ghisa, porta blindata, infissi sono in PVC con vetri tripli e persiane in legno."
+      },
+      {
+        "label": "Tutti i plus",
+        "text": "Videocitofono, zanzariere, tende da sole manuali e una rete per computer cablata."
+      }
+    ]
   },
   "doveParcheggiare": {
     "enabled": true,
@@ -304,24 +358,8 @@
         "text": "Include un box auto singolo di 19 m² situato al piano interrato."
       },
       {
-        "text": "L'edificio, con struttura in cemento armato, è stato costruito nel 1993, mentre l'appartamento ha subito una ristrutturazione nel 2021 💧",
-        "label": "Stato dell'Immobile"
-      },
-      {
-        "text": "È composto da tre locali con una cucina abitabile. Le pavimentazioni sono in gres porcellanato nel bagno e parquet in massello nel resto dell'abitazione",
-        "label": "Interni"
-      },
-      {
         "text": "La vendita comprende l'arredamento della cucina e del bagno",
         "label": "Arredi inclusi"
-      },
-      {
-        "text": "Il riscaldamento è autonomo, caldaia a condensazione con radiatori in ghisa, porta blindata, infissi sono in PVC con vetri tripli e persiane in legno.",
-        "label": "Impianti e infissi"
-      },
-      {
-        "text": "Videocitofono, zanzariere, tende da sole manuali e una rete per computer cablata.",
-        "label": "Altre dotazioni"
       }
     ],
     "condominioTitle": "Informazioni Condominiali",
