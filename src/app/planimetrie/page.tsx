@@ -1,5 +1,5 @@
 import { PhotoLayout } from '@/components/PhotoLayout'
-import { ListaDocumenti, documentiDisponibili, type VoceDocumento } from '@/components/ElencoDocumenti'
+import { ListaDocumenti, documentiDisponibili, vociDocumento } from '@/components/ElencoDocumenti'
 import property from '@/config/property.json'
 
 const p = property.planimetrieCatasto
@@ -18,7 +18,7 @@ const mostraRelazione = rel.enabled
 // titolo alla pagina. Nasconderlo quando non c'è ancora nulla da scaricare
 // faceva aprire "Planimetrie e Catasto" sull'intestazione "Relazione tecnica",
 // come se la voce di menu portasse altrove.
-const planimetrieVuote = documentiDisponibili(p.items as VoceDocumento[]).length === 0
+const planimetrieVuote = documentiDisponibili(vociDocumento(p.items)).length === 0
 
 function Card({ children }: { children: React.ReactNode }) {
   return (
@@ -57,7 +57,7 @@ export default function PlanimetrieCatastoPage() {
             {planimetrieVuote ? (
               <p className="text-sm text-[#71717a]">Nessun documento disponibile al momento.</p>
             ) : (
-              <ListaDocumenti items={p.items as VoceDocumento[]} />
+              <ListaDocumenti items={vociDocumento(p.items)} />
             )}
           </Card>
         )}
@@ -82,7 +82,7 @@ export default function PlanimetrieCatastoPage() {
               </div>
             )}
 
-            <ListaDocumenti items={rel.items as VoceDocumento[]} />
+            <ListaDocumenti items={vociDocumento(rel.items)} />
           </Card>
         )}
       </div>

@@ -1,5 +1,5 @@
 import { PhotoLayout } from '@/components/PhotoLayout'
-import { ListaDocumenti, documentiDisponibili, type VoceDocumento } from '@/components/ElencoDocumenti'
+import { ListaDocumenti, documentiDisponibili, vociDocumento } from '@/components/ElencoDocumenti'
 import property from '@/config/property.json'
 
 const p = property.laDocumentazione
@@ -9,7 +9,7 @@ const p = property.laDocumentazione
 // nessuno di loro ha una voce propria nel menu.
 //
 // L'ordine di questo elenco è l'ordine in cui compaiono in pagina.
-const GRUPPI: { titolo: string; sezione: { enabled?: boolean; items: VoceDocumento[] } }[] = [
+const GRUPPI: { titolo: string; sezione: { enabled?: boolean; items?: unknown } }[] = [
   { titolo: 'APE', sezione: property.ape },
   { titolo: 'Certificazione (rispondenza) impianto elettrico', sezione: property.certificazioneElettrico },
   { titolo: 'Certificazione (rispondenza) impianto idrico/termico/sanitario', sezione: property.certificazioneIdricoTermico },
@@ -22,9 +22,9 @@ const GRUPPI: { titolo: string; sezione: { enabled?: boolean; items: VoceDocumen
 
 // Un gruppo compare solo se è acceso e ha almeno un documento caricato: la
 // pagina elenca ciò che si può davvero scaricare, senza titoli seguiti dal nulla.
-const gruppi = GRUPPI.filter(
-  (g) => g.sezione.enabled !== false && documentiDisponibili(g.sezione.items).length > 0
-)
+const gruppi = GRUPPI
+  .map((g) => ({ titolo: g.titolo, sezione: g.sezione, items: vociDocumento(g.sezione.items) }))
+  .filter((g) => g.sezione.enabled !== false && documentiDisponibili(g.items).length > 0)
 
 export default function LaDocumentazionePage() {
   return (
@@ -43,7 +43,7 @@ export default function LaDocumentazionePage() {
               <h2 className="text-[#333333] font-bold text-sm uppercase tracking-wide mb-3">
                 {g.titolo}
               </h2>
-              <ListaDocumenti items={g.sezione.items} />
+              <ListaDocumenti items={g.items} />
             </section>
           ))
         )}

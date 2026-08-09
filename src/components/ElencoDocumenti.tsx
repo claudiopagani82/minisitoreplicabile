@@ -13,6 +13,24 @@ interface Props {
   items: VoceDocumento[]
 }
 
+/**
+ * Normalizza l'elenco delle voci di una sezione documentale.
+ *
+ * Nei siti nati prima della 1.8 `items` è un elenco di stringhe — la sola
+ * etichetta, senza file — e la funzione "Aggiorna" del pannello aggiunge le
+ * chiavi nuove ma non riscrive quelle vecchie. Un sito aggiornato arriva quindi
+ * qui con le due forme mescolate: senza questa conversione la build fallisce
+ * sul tipo e il sito, che fino a un minuto prima funzionava, smette di essere
+ * pubblicato. Le voci in forma vecchia non hanno documento, quindi finiscono
+ * comunque scartate — ma la pagina si costruisce.
+ */
+export function vociDocumento(items: unknown): VoceDocumento[] {
+  if (!Array.isArray(items)) return []
+  return items.map((i) =>
+    typeof i === 'string' ? { label: i, documentUrl: null } : (i as VoceDocumento)
+  )
+}
+
 export function documentiDisponibili(items: VoceDocumento[]): VoceDocumento[] {
   return items.filter((i) => i.enabled !== false && i.documentUrl)
 }

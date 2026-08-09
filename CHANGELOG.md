@@ -4,6 +4,11 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.23] - 2026-08-10
+### Corretto
+- **Un sito aggiornato da una versione anteriore alla 1.8 non compilava più, e il deploy falliva.** Le sezioni documentali di quei siti hanno `items` come elenco di stringhe, e la funzione "Aggiorna" del pannello aggiunge le chiavi nuove senza riscrivere quelle vecchie: la pagina 4 riceveva quindi voci in due forme diverse e il controllo dei tipi si fermava (`Type 'string' is not assignable to type 'VoceDocumento'`). Il sito restava pubblicato all'ultima versione buona, ma ogni nuovo deploy falliva.
+- Le pagine 3 e 4 accettano ora entrambe le forme (`vociDocumento` in `ElencoDocumenti`). Le voci in forma vecchia non hanno documento allegato, quindi non compaiono comunque — ma la pagina si costruisce, ed è il pannello a convertirle davvero alla prima apertura dell'editor.
+
 ## [1.22] - 2026-08-09
 ### Aggiunto
 - **Galleria delle foto dell'annuncio** in cima alla sezione "Vivi la Casa": le stesse foto pubblicate sull'annuncio ufficiale, nello stesso ordine, in griglia e apribili a schermo intero con le frecce e lo scorrimento del dito già usati altrove. Nuovi campi `viviLaCasa.gallery`, `galleryEnabled`, `galleryHeading`, `galleryGeneratedAt`.
