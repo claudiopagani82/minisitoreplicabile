@@ -1,6 +1,5 @@
 import Image from 'next/image'
-import Link from 'next/link'
-import { DocumentLayout } from '@/components/DocumentLayout'
+import { PhotoLayout } from '@/components/PhotoLayout'
 import property from '@/config/property.json'
 
 interface Voce {
@@ -9,6 +8,7 @@ interface Voce {
 }
 
 const p = property.qualitaImmobile
+const car = property.caratteristichePrincipali
 
 // Le dieci voci sono fisse, ma non tutte valgono per ogni immobile: un
 // appartamento in condominio non ha un tetto proprio, uno non ristrutturato non
@@ -16,35 +16,47 @@ const p = property.qualitaImmobile
 // un'etichetta seguita dal nulla.
 const voci = (p.voci as Voce[]).filter((v) => v.text.trim())
 
-// Le sezioni che dipendono da questa: non hanno una voce nel menu hamburger e si
-// raggiungono da qui. Oggi è la sola "Caratteristiche principali", ma la regola
-// è la stessa dell'indice de "La Documentazione", così aggiungerne un'altra non
-// richiede di toccare questa pagina.
-const SEZIONI: Record<string, { enabled?: boolean }> = {
-  '/caratteristiche-principali': property.caratteristichePrincipali,
+// I due blocchi restano governati da interruttori distinti, come le due metà di
+// "Scopri la Casa": si può pubblicare la qualità e tenere spente le
+// caratteristiche, o viceversa. Nel pannello sono due sezioni separate.
+const mostraQualita = p.enabled && voci.length > 0
+const mostraCaratteristiche = car.enabled
+
+function Card({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="bg-white/85 rounded-xl shadow-md p-6 w-full space-y-4">{children}</div>
+  )
 }
 
-const sottopagine = property.navigation.filter(
-  (n) =>
-    'parent' in n &&
-    n.parent === '/la-qualita-dell-immobile' &&
-    n.enabled &&
-    SEZIONI[n.href]?.enabled !== false
-)
+function VoceElenco({ children }: { children: React.ReactNode }) {
+  return (
+    <li className="flex items-start gap-3">
+      <Image src="/images/cuore.png" alt="" width={16} height={14} className="flex-shrink-0 mt-0.5" />
+      <span className="text-[#333333] text-sm leading-relaxed">{children}</span>
+    </li>
+  )
+}
 
 export default function QualitaImmobilePage() {
   return (
-    <DocumentLayout sectionNumber={p.sectionNumber} sectionTitle={p.sectionTitle}>
-      {voci.length === 0 && sottopagine.length === 0 ? (
-        <p className="text-sm text-[#71717a]">
-          Informazioni non ancora disponibili.
-        </p>
-      ) : (
-        <>
-          {voci.length > 0 && (
+    <PhotoLayout>
+      <div className="w-full space-y-6">
+        {!mostraQualita && !mostraCaratteristiche && (
+          <Card>
+            <p className="text-sm text-[#71717a]">Informazioni non ancora disponibili.</p>
+          </Card>
+        )}
+
+        {mostraQualita && (
+          <Card>
+            <h1 className="text-[#CC1414] font-bold text-xl uppercase tracking-wide">
+              {p.sectionNumber && <span className="mr-1">{p.sectionNumber}</span>}
+              {p.sectionTitle}
+            </h1>
+
             <dl className="space-y-4">
               {voci.map((v) => (
-                <div key={v.label} className="border-b border-[#f0f0f0] pb-4 last:border-0">
+                <div key={v.label} className="border-b border-[#f0f0f0] pb-4 last:border-0 last:pb-0">
                   <dt className="text-[#CC1414] font-bold text-sm uppercase tracking-wide mb-1">
                     {v.label}
                   </dt>
@@ -52,25 +64,42 @@ export default function QualitaImmobilePage() {
                 </div>
               ))}
             </dl>
-          )}
+          </Card>
+        )}
 
-          {sottopagine.length > 0 && (
-            <ul className={`space-y-3 ${voci.length > 0 ? 'border-t border-[#e4e4e7] mt-8 pt-8' : ''}`}>
-              {sottopagine.map((s) => (
-                <li key={s.href}>
-                  <Link
-                    href={s.href}
-                    className="flex items-start gap-3 hover:opacity-80 transition-opacity"
-                  >
-                    <Image src="/images/cuore.png" alt="" width={16} height={14} className="flex-shrink-0 mt-0.5" />
-                    <span className="text-[#333333] text-sm font-semibold underline">{s.title}</span>
-                  </Link>
-                </li>
+        {mostraCaratteristiche && (
+          <Card>
+            <h2 className="text-[#CC1414] font-bold text-xl uppercase tracking-wide">
+              {car.sectionTitle}
+            </h2>
+
+            <ul className="space-y-3">
+              {car.features.map((feature, index) => (
+                <VoceElenco key={index}>
+                  {'label' in feature && feature.label ? (
+                    <><strong>{feature.label}:</strong> {feature.text}</>
+                  ) : (
+                    feature.text
+                  )}
+                </VoceElenco>
               ))}
             </ul>
-          )}
-        </>
-      )}
-    </DocumentLayout>
+
+            {car.condominioItems.length > 0 && (
+              <div className="border-t border-gray-200 pt-4">
+                <h3 className="text-[#CC1414] font-bold uppercase text-base mb-3">
+                  {car.condominioTitle}
+                </h3>
+                <ul className="space-y-3">
+                  {car.condominioItems.map((item, index) => (
+                    <VoceElenco key={index}>{item}</VoceElenco>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </Card>
+        )}
+      </div>
+    </PhotoLayout>
   )
 }

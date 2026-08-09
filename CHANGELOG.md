@@ -4,6 +4,15 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.15] - 2026-08-09
+### Modificato
+- **"La Qualità dell'Immobile" diventa una pagina sola con due blocchi**: le dieci voci della qualità e, sotto, le caratteristiche principali con le informazioni condominiali. Nella 1.14 le caratteristiche erano una sottopagina raggiungibile da un collegamento; ora il contenuto è lì, senza un secondo passaggio.
+- La pagina passa da `DocumentLayout` a `PhotoLayout`: **niente più sfondo bianco**, ma la foto dell'immobile sotto un velo bianco, con i due blocchi in riquadri chiari — lo sfondo che le caratteristiche avevano già e che la qualità non aveva mai avuto.
+- Ogni blocco conserva il proprio interruttore, come le due metà di "Scopri la Casa": si può pubblicare la qualità e tenere spente le caratteristiche, o viceversa. Nel pannello restano due sezioni distinte.
+
+### Rimosso
+- La pagina `/caratteristiche-principali` e la sua voce di menu. La chiave `caratteristichePrincipali` resta invariata — cambia dove è mostrata, non dove si modifica.
+
 ## [1.14] - 2026-08-09
 ### Modificato
 - **"Caratteristiche principali" diventa una sottopagina della sezione 2, "La Qualità dell'Immobile"**: esce dal menu hamburger e si raggiunge dal collegamento in fondo a quella pagina, come le voci documentali si raggiungono dall'indice de "La Documentazione". Le due pagine parlano della stessa cosa — com'è fatto l'immobile — e la 1.11 aveva già travasato metà delle caratteristiche nella qualità: tenerle su due voci di menu affiancate faceva sembrare due argomenti diversi quello che è uno solo.

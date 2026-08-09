@@ -1,5 +1,5 @@
 {
-  "version": "1.14",
+  "version": "1.15",
   "disabled": false,
   "title": "IL METODO OPENDOMUS",
   "subtitle": "Un modo diverso di acquistare casa",
@@ -88,12 +88,6 @@
       "title": "Per te, VENDITORE",
       "href": "/per-te-venditore",
       "enabled": true
-    },
-    {
-      "title": "Caratteristiche principali",
-      "href": "/caratteristiche-principali",
-      "enabled": true,
-      "parent": "/la-qualita-dell-immobile"
     },
     {
       "title": "APE",
