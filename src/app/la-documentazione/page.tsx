@@ -1,57 +1,52 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { DocumentLayout } from '@/components/DocumentLayout'
+import { PhotoLayout } from '@/components/PhotoLayout'
+import { ListaDocumenti, documentiDisponibili, type VoceDocumento } from '@/components/ElencoDocumenti'
 import property from '@/config/property.json'
 
 const p = property.laDocumentazione
 
-// Ogni voce dell'indice corrisponde a una sezione di property.json: la voce di
-// menu dà titolo e destinazione, la sezione dice se c'è davvero qualcosa da
-// scaricare.
-const SEZIONI: Record<string, { enabled?: boolean; items?: { enabled?: boolean; documentUrl?: string | null }[] }> = {
-  '/ape': property.ape,
-  '/certificazione-impianto-elettrico': property.certificazioneElettrico,
-  '/certificazione-impianto-idrico-termico': property.certificazioneIdricoTermico,
-  '/libretto-caldaia': property.librettoCaldaia,
-  '/regolamento-condominio': property.regolamentoCondominio,
-  '/spese-condominiali': property.speseCondominiali,
-  '/verbali': property.verbali,
-}
+// I sette gruppi documentali erano sette pagine, raggiunte da una pagina indice:
+// tre click per arrivare a un PDF. Ora stanno tutti qui, uno sotto l'altro, e
+// nessuno di loro ha una voce propria nel menu.
+//
+// L'ordine di questo elenco è l'ordine in cui compaiono in pagina.
+const GRUPPI: { titolo: string; sezione: { enabled?: boolean; items: VoceDocumento[] } }[] = [
+  { titolo: 'APE', sezione: property.ape },
+  { titolo: 'Certificazione (rispondenza) impianto elettrico', sezione: property.certificazioneElettrico },
+  { titolo: 'Certificazione (rispondenza) impianto idrico/termico/sanitario', sezione: property.certificazioneIdricoTermico },
+  { titolo: 'Libretto caldaia', sezione: property.librettoCaldaia },
+  { titolo: 'Regolamento di condominio', sezione: property.regolamentoCondominio },
+  { titolo: 'Spese condominiali 2024-2025', sezione: property.speseCondominiali },
+  { titolo: 'Verbali', sezione: property.verbali },
+]
 
-function haDocumenti(href: string): boolean {
-  const sezione = SEZIONI[href]
-  if (!sezione || sezione.enabled === false) return false
-  return (sezione.items ?? []).some((i) => i.enabled !== false && i.documentUrl)
-}
-
-// Come nelle singole pagine, una voce senza documenti caricati non compare:
-// l'indice elenca ciò che si può davvero aprire.
-const voci = property.navigation.filter(
-  (n) => 'parent' in n && n.parent === '/la-documentazione' && n.enabled && haDocumenti(n.href)
+// Un gruppo compare solo se è acceso e ha almeno un documento caricato: la
+// pagina elenca ciò che si può davvero scaricare, senza titoli seguiti dal nulla.
+const gruppi = GRUPPI.filter(
+  (g) => g.sezione.enabled !== false && documentiDisponibili(g.sezione.items).length > 0
 )
 
 export default function LaDocumentazionePage() {
   return (
-    <DocumentLayout sectionNumber={p.sectionNumber} sectionTitle={p.sectionTitle}>
-      {voci.length === 0 ? (
-        <p className="text-sm text-[#71717a]">
-          Nessun documento disponibile al momento.
-        </p>
-      ) : (
-        <ul className="space-y-3">
-          {voci.map((v) => (
-            <li key={v.href}>
-              <Link
-                href={v.href}
-                className="flex items-start gap-3 hover:opacity-80 transition-opacity"
-              >
-                <Image src="/images/cuore.png" alt="" width={16} height={14} className="flex-shrink-0 mt-0.5" />
-                <span className="text-[#333333] text-sm font-semibold underline">{v.title}</span>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
-    </DocumentLayout>
+    <PhotoLayout>
+      <div className="bg-white/85 rounded-xl shadow-md p-6 w-full space-y-6">
+        <h1 className="text-[#CC1414] font-bold text-xl uppercase tracking-wide">
+          {p.sectionNumber && <span className="mr-1">{p.sectionNumber}</span>}
+          {p.sectionTitle}
+        </h1>
+
+        {gruppi.length === 0 ? (
+          <p className="text-sm text-[#71717a]">Nessun documento disponibile al momento.</p>
+        ) : (
+          gruppi.map((g) => (
+            <section key={g.titolo} className="border-t border-[#e4e4e7] pt-5 first:border-0 first:pt-0">
+              <h2 className="text-[#333333] font-bold text-sm uppercase tracking-wide mb-3">
+                {g.titolo}
+              </h2>
+              <ListaDocumenti items={g.sezione.items} />
+            </section>
+          ))
+        )}
+      </div>
+    </PhotoLayout>
   )
 }

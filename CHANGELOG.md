@@ -4,6 +4,16 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.18] - 2026-08-09
+### Modificato
+- **"La Documentazione" diventa una pagina sola.** I sette gruppi documentali — APE, certificazione impianto elettrico, certificazione idrico/termico/sanitario, libretto caldaia, regolamento di condominio, spese condominiali 2024-2025, verbali — erano sette pagine raggiunte da un indice: tre click per arrivare a un PDF. Ora stanno uno sotto l'altro nella pagina 4, ciascuno col proprio titolo e i propri documenti. Un gruppo senza documenti caricati non compare.
+- **I titoli delle quattro sezioni numerate nel menu portano l'emoji e il numero**: `🏡 1. Scopri la Casa`, `🏗️ 2. La Qualità dell'Immobile`, `🗺️ 3. Planimetrie e Catasto`, `📄 4. La Documentazione`. Le altre voci restano testo semplice, così i capitoli si distinguono a colpo d'occhio da ciò che capitolo non è.
+- La pagina 4 passa a `PhotoLayout`, come la 2 e la 3.
+
+### Rimosso
+- Le pagine `/ape`, `/certificazione-impianto-elettrico`, `/certificazione-impianto-idrico-termico`, `/libretto-caldaia`, `/regolamento-condominio`, `/spese-condominiali`, `/verbali` e le loro voci di `navigation`. Le sette chiavi corrispondenti in `property.json` restano invariate, con i loro documenti: cambia dove sono mostrate, non dove si modificano.
+- Con esse sparisce l'ultimo uso del campo `parent` nelle voci di menu, introdotto nella 1.8. Il campo resta supportato.
+
 ## [1.17] - 2026-08-09
 ### Corretto
 - **Il blocco "Planimetrie e dati catastali" spariva del tutto quando non c'era ancora nessun documento caricato**, titolo compreso: la pagina si apriva sull'intestazione "Relazione tecnica", come se la voce di menu portasse altrove. Ora il blocco resta finché la sezione è accesa e, se non c'è nulla da scaricare, mostra "Nessun documento disponibile al momento." — com'era prima che le due sezioni fossero unite. Le singole voci senza file continuano a non comparire.

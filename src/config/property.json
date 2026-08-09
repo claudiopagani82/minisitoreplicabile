@@ -1,5 +1,5 @@
 {
-  "version": "1.17",
+  "version": "1.18",
   "disabled": false,
   "title": "IL METODO OPENDOMUS",
   "subtitle": "Un modo diverso di acquistare casa",
@@ -20,12 +20,12 @@
       "enabled": false
     },
     {
-      "title": "Scopri la Casa",
+      "title": "🏡 1. Scopri la Casa",
       "href": "/scopri-la-casa",
       "enabled": true
     },
     {
-      "title": "La Qualità dell'Immobile",
+      "title": "🏗️ 2. La Qualità dell'Immobile",
       "href": "/la-qualita-dell-immobile",
       "enabled": true
     },
@@ -35,12 +35,12 @@
       "enabled": true
     },
     {
-      "title": "Planimetrie e Catasto",
+      "title": "🗺️ 3. Planimetrie e Catasto",
       "href": "/planimetrie",
       "enabled": true
     },
     {
-      "title": "La Documentazione",
+      "title": "📄 4. La Documentazione",
       "href": "/la-documentazione",
       "enabled": true
     },
@@ -83,48 +83,6 @@
       "title": "Per te, VENDITORE",
       "href": "/per-te-venditore",
       "enabled": true
-    },
-    {
-      "title": "APE",
-      "href": "/ape",
-      "enabled": true,
-      "parent": "/la-documentazione"
-    },
-    {
-      "title": "Certificazione (rispondenza) impianto elettrico",
-      "href": "/certificazione-impianto-elettrico",
-      "enabled": true,
-      "parent": "/la-documentazione"
-    },
-    {
-      "title": "Certificazione (rispondenza) impianto idrico/termico/sanitario",
-      "href": "/certificazione-impianto-idrico-termico",
-      "enabled": true,
-      "parent": "/la-documentazione"
-    },
-    {
-      "title": "Libretto caldaia",
-      "href": "/libretto-caldaia",
-      "enabled": true,
-      "parent": "/la-documentazione"
-    },
-    {
-      "title": "Regolamento di condominio",
-      "href": "/regolamento-condominio",
-      "enabled": true,
-      "parent": "/la-documentazione"
-    },
-    {
-      "title": "Spese condominiali 2024-2025",
-      "href": "/spese-condominiali",
-      "enabled": true,
-      "parent": "/la-documentazione"
-    },
-    {
-      "title": "Verbali",
-      "href": "/verbali",
-      "enabled": true,
-      "parent": "/la-documentazione"
     }
   ],
   "introduzione": {
