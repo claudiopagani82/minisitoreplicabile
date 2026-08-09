@@ -166,12 +166,12 @@
     "enabled": true,
     "sectionNumber": "2.",
     "sectionTitle": "LA QUALITÀ DELL'IMMOBILE",
-    "sourceDocument": null,
-    "generatedAt": null,
+    "sourceDocument": "docs/descrizione-immobile.pdf",
+    "generatedAt": "2026-08-09T11:30:33.581Z",
     "voci": [
       {
         "label": "Anno costruzione",
-        "text": "L'edificio, con struttura in cemento armato, è stato costruito nel 1993, mentre l'appartamento ha subito una ristrutturazione nel 2021 💧"
+        "text": "L'immobile risale agli Anni 70."
       },
       {
         "label": "Ristrutturazioni",
@@ -179,7 +179,7 @@
       },
       {
         "label": "Serramenti",
-        "text": ""
+        "text": "Ingresso con porta blindata. Gli infissi sono in legno con vetri doppi e tapparelle in plastica."
       },
       {
         "label": "Tetto",
@@ -191,7 +191,7 @@
       },
       {
         "label": "Riscaldamento",
-        "text": ""
+        "text": "Impianto centralizzato con contabilizzatore, dotato di termovalvole."
       },
       {
         "label": "Climatizzazione",
@@ -199,15 +199,15 @@
       },
       {
         "label": "Materiali",
-        "text": "È composto da tre locali con una cucina abitabile. Le pavimentazioni sono in gres porcellanato nel bagno e parquet in massello nel resto dell'abitazione"
+        "text": "Pavimentazione in cotto. La facciata del fabbricato è rifinita con intonaco esterno."
       },
       {
         "label": "Impianti",
-        "text": "Il riscaldamento è autonomo, caldaia a condensazione con radiatori in ghisa, porta blindata, infissi sono in PVC con vetri tripli e persiane in legno."
+        "text": "È presente un impianto di allarme perimetrale, oltre a fibra ottica e parabola TV. L'immobile è allacciato alla fogna e dispone di certificazione energetica."
       },
       {
         "label": "Tutti i plus",
-        "text": "Videocitofono, zanzariere, tende da sole manuali e una rete per computer cablata."
+        "text": "Le finestre sono dotate di zanzariere. Nella vendita sono compresi l'arredo della cucina e quello del bagno."
       }
     ]
   },
