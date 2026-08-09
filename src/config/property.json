@@ -1,5 +1,5 @@
 {
-  "version": "1.18",
+  "version": "1.20",
   "disabled": false,
   "title": "IL METODO OPENDOMUS",
   "subtitle": "Un modo diverso di acquistare casa",
@@ -45,11 +45,6 @@
       "enabled": true
     },
     {
-      "title": "Bollette e impianti",
-      "href": "/bollette-e-impianti",
-      "enabled": true
-    },
-    {
       "title": "Bozza proposta",
       "href": "/bozza-proposta",
       "enabled": true
@@ -60,13 +55,8 @@
       "enabled": true
     },
     {
-      "title": "Matterport",
-      "href": "/matterport",
-      "enabled": true
-    },
-    {
-      "title": "Video Social",
-      "href": "/video-social",
+      "title": "🎥 5. Vivi la Casa",
+      "href": "/vivi-la-casa",
       "enabled": true
     },
     {
@@ -425,6 +415,11 @@
     "images": [
       "/images/prospetto-costi-image1.png"
     ]
+  },
+  "viviLaCasa": {
+    "enabled": true,
+    "sectionNumber": "5.",
+    "sectionTitle": "VIVI LA CASA"
   },
   "matterport": {
     "enabled": true,

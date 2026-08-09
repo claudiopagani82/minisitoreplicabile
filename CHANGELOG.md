@@ -4,6 +4,22 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.20] - 2026-08-09
+### Aggiunto
+- Nuova sezione **"🎥 5. Vivi la Casa"**, pagina `/vivi-la-casa`: riunisce il **video social** e il **tour virtuale Matterport**, i due modi di vedere l'immobile senza esserci. Erano due voci di menu separate, e chi cercava "le immagini della casa" non sapeva quale aprire. Nuova chiave `viviLaCasa` (`enabled`, `sectionNumber`, `sectionTitle`), sul modello di `scopriLaCasa`.
+- Ogni blocco conserva il proprio interruttore: si può pubblicare il video tenendo spento il Matterport, o viceversa. Le chiavi `videoSocial` e `matterport` restano invariate.
+
+### Rimosso
+- Le pagine `/video-social` e `/matterport` e le loro voci di menu.
+
+## [1.19] - 2026-08-09
+### Modificato
+- **"Bollette e impianti" chiude la pagina 4**, sotto i sette gruppi documentali: l'elenco delle voci e, se ci sono, le foto delle bollette, che continuano ad aprirsi a schermo intero. Perde la pagina propria e la voce di menu.
+- Nuovo componente `GalleriaImmagini`: le foto con lightbox hanno bisogno di stato, e incapsularlo qui lascia la pagina 4 un componente server nonostante ospiti una galleria.
+
+### Rimosso
+- La pagina `/bollette-e-impianti` e la sua voce di menu. La chiave `bolletteImpianti` resta invariata.
+
 ## [1.18] - 2026-08-09
 ### Modificato
 - **"La Documentazione" diventa una pagina sola.** I sette gruppi documentali — APE, certificazione impianto elettrico, certificazione idrico/termico/sanitario, libretto caldaia, regolamento di condominio, spese condominiali 2024-2025, verbali — erano sette pagine raggiunte da un indice: tre click per arrivare a un PDF. Ora stanno uno sotto l'altro nella pagina 4, ciascuno col proprio titolo e i propri documenti. Un gruppo senza documenti caricati non compare.
