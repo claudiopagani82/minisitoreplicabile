@@ -4,6 +4,17 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.16] - 2026-08-09
+### Modificato
+- **La "Relazione tecnica" smette di essere una voce a sé e diventa il secondo blocco della sezione 3**, sotto le planimetrie: stessa pagina, stessa struttura già adottata per la sezione 2. I due blocchi parlano della stessa cosa — cosa risulta dell'immobile sulla carta — e su due voci di menu affiancate sembravano due argomenti distinti.
+- La sezione 3 passa da `DocumentLayout` a `PhotoLayout`, come la 2: al posto dello sfondo bianco, la foto dell'immobile sotto un velo bianco, con i due blocchi in riquadri chiari. È lo sfondo che la relazione tecnica aveva già.
+- Ogni blocco conserva il proprio interruttore e nel pannello resta una sezione a sé: si possono pubblicare le planimetrie tenendo spenta la relazione, o viceversa.
+- Nella relazione tecnica **una voce senza documento caricato non compare più** in grigio come "non disponibile", uniformandosi a tutte le altre pagine documentali dalla 1.8 in avanti.
+- Nuovi export `ListaDocumenti` e `documentiDisponibili` da `ElencoDocumenti`: la lista dei documenti si usa ora anche fuori dalla pagina a documento singolo, senza duplicarne il markup. `ElencoDocumenti` non cambia comportamento.
+
+### Rimosso
+- La pagina `/relazione-tecnica` e la sua voce di menu. La chiave `relazioneTecnica`, con i suoi testi e documenti, resta invariata.
+
 ## [1.15] - 2026-08-09
 ### Modificato
 - **"La Qualità dell'Immobile" diventa una pagina sola con due blocchi**: le dieci voci della qualità e, sotto, le caratteristiche principali con le informazioni condominiali. Nella 1.14 le caratteristiche erano una sottopagina raggiungibile da un collegamento; ora il contenuto è lì, senza un secondo passaggio.

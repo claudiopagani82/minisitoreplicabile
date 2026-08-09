@@ -13,6 +13,41 @@ interface Props {
   items: VoceDocumento[]
 }
 
+export function documentiDisponibili(items: VoceDocumento[]): VoceDocumento[] {
+  return items.filter((i) => i.enabled !== false && i.documentUrl)
+}
+
+/**
+ * La sola lista dei documenti, senza intestazione né layout.
+ *
+ * Serve alle pagine che accostano più blocchi (per esempio la 3, dove
+ * planimetrie e relazione tecnica convivono): l'elenco è lo stesso, cambia
+ * quello che ci sta intorno. Restituisce `null` quando non c'è nulla da
+ * scaricare, così chi la usa decide se mostrare un messaggio o saltare il blocco.
+ */
+export function ListaDocumenti({ items }: { items: VoceDocumento[] }) {
+  const disponibili = documentiDisponibili(items)
+  if (disponibili.length === 0) return null
+
+  return (
+    <ul className="space-y-3">
+      {disponibili.map((item, i) => (
+        <li key={i}>
+          <a
+            href={item.documentUrl!}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-start gap-3 hover:opacity-80 transition-opacity"
+          >
+            <Image src="/images/cuore.png" alt="" width={16} height={14} className="flex-shrink-0 mt-0.5" />
+            <span className="text-[#333333] text-sm font-semibold underline">{item.label}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
 /**
  * Elenco di documenti scaricabili, senza immagini.
  *
@@ -22,30 +57,16 @@ interface Props {
  * scaricabili, e l'operatore non deve spegnere a mano le voci che non servono.
  */
 export function ElencoDocumenti({ sectionNumber, sectionTitle, items }: Props) {
-  const disponibili = items.filter((i) => i.enabled !== false && i.documentUrl)
+  const vuoto = documentiDisponibili(items).length === 0
 
   return (
     <DocumentLayout sectionNumber={sectionNumber} sectionTitle={sectionTitle}>
-      {disponibili.length === 0 ? (
+      {vuoto ? (
         <p className="text-sm text-[#71717a]">
           Nessun documento disponibile al momento.
         </p>
       ) : (
-        <ul className="space-y-3">
-          {disponibili.map((item, i) => (
-            <li key={i}>
-              <a
-                href={item.documentUrl!}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-start gap-3 hover:opacity-80 transition-opacity"
-              >
-                <Image src="/images/cuore.png" alt="" width={16} height={14} className="flex-shrink-0 mt-0.5" />
-                <span className="text-[#333333] text-sm font-semibold underline">{item.label}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
+        <ListaDocumenti items={items} />
       )}
     </DocumentLayout>
   )

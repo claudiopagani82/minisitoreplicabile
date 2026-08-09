@@ -1,5 +1,5 @@
 {
-  "version": "1.15",
+  "version": "1.16",
   "disabled": false,
   "title": "IL METODO OPENDOMUS",
   "subtitle": "Un modo diverso di acquistare casa",
@@ -47,11 +47,6 @@
     {
       "title": "Bollette e impianti",
       "href": "/bollette-e-impianti",
-      "enabled": true
-    },
-    {
-      "title": "Relazione tecnica",
-      "href": "/relazione-tecnica",
       "enabled": true
     },
     {

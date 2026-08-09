@@ -1,14 +1,80 @@
-import { ElencoDocumenti } from '@/components/ElencoDocumenti'
+import { PhotoLayout } from '@/components/PhotoLayout'
+import { ListaDocumenti, documentiDisponibili, type VoceDocumento } from '@/components/ElencoDocumenti'
 import property from '@/config/property.json'
 
 const p = property.planimetrieCatasto
+const rel = property.relazioneTecnica
+
+// La pagina 3 accosta due blocchi: le planimetrie e i dati catastali, e la
+// relazione tecnica. Parlano della stessa cosa — cosa risulta dell'immobile
+// sulla carta — e su due voci di menu affiancate sembravano due argomenti.
+// Ciascun blocco resta governato dal proprio interruttore, come le due metà
+// della pagina 1 e della pagina 2.
+const mostraPlanimetrie = p.enabled && documentiDisponibili(p.items as VoceDocumento[]).length > 0
+const mostraRelazione = rel.enabled
+
+function Card({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="bg-white/85 rounded-xl shadow-md p-6 w-full space-y-4">{children}</div>
+  )
+}
+
+function Paragrafi({ testo }: { testo: string }) {
+  return (
+    <>
+      {testo.split('\n\n').map((paragrafo, i) => (
+        <p key={i} className="text-[#555555] text-sm leading-relaxed mb-2 last:mb-0">
+          {paragrafo}
+        </p>
+      ))}
+    </>
+  )
+}
 
 export default function PlanimetrieCatastoPage() {
   return (
-    <ElencoDocumenti
-      sectionNumber={p.sectionNumber}
-      sectionTitle={p.sectionTitle}
-      items={p.items}
-    />
+    <PhotoLayout>
+      <div className="w-full space-y-6">
+        {!mostraPlanimetrie && !mostraRelazione && (
+          <Card>
+            <p className="text-sm text-[#71717a]">Nessun documento disponibile al momento.</p>
+          </Card>
+        )}
+
+        {mostraPlanimetrie && (
+          <Card>
+            <h1 className="text-[#CC1414] font-bold text-xl uppercase tracking-wide">
+              {p.sectionNumber && <span className="mr-1">{p.sectionNumber}</span>}
+              {p.sectionTitle}
+            </h1>
+            <ListaDocumenti items={p.items as VoceDocumento[]} />
+          </Card>
+        )}
+
+        {mostraRelazione && (
+          <Card>
+            <h2 className="text-[#CC1414] font-bold text-xl uppercase tracking-wide">
+              {rel.sectionTitle}
+            </h2>
+
+            {rel.introHeading && (
+              <div>
+                <h3 className="text-[#333333] font-bold text-sm mb-1.5">{rel.introHeading}</h3>
+                <Paragrafi testo={rel.introParagraph} />
+              </div>
+            )}
+
+            {rel.statusHeading && (
+              <div>
+                <h3 className="text-[#333333] font-bold text-sm mb-1.5">{rel.statusHeading}</h3>
+                <Paragrafi testo={rel.statusParagraph} />
+              </div>
+            )}
+
+            <ListaDocumenti items={rel.items as VoceDocumento[]} />
+          </Card>
+        )}
+      </div>
+    </PhotoLayout>
   )
 }
