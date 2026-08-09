@@ -4,6 +4,11 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.12] - 2026-08-09
+### Modificato
+- "Planimetrie e Catasto" diventa la **sezione 3** e passa da quattro voci a tre: **Planimetrie quotate**, **Planimetrie catastali**, **Visure catastali**. "Planimetria appartamento" e "Planimetria box" confluiscono nelle planimetrie quotate, "Schede catastali" diventa "Planimetrie catastali"; eventuali documenti già caricati vengono conservati.
+- La pagina usa ora lo stesso elenco documenti delle altre sezioni: **una voce senza file allegato non compare**, invece di restare visibile in grigio come "non disponibile". Niente immagini nella pagina.
+
 ## [1.11] - 2026-08-09
 ### Aggiunto
 - Nuova sezione **"La Qualità dell'Immobile"** (sezione 2), pagina `/la-qualita-dell-immobile`, con dieci voci fisse: anno costruzione, ristrutturazioni, serramenti, tetto, cappotto, riscaldamento, climatizzazione, materiali, impianti e "tutti i plus".

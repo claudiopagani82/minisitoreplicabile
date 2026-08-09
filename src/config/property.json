@@ -1,5 +1,5 @@
 {
-  "version": "1.11",
+  "version": "1.12",
   "disabled": false,
   "title": "IL METODO OPENDOMUS",
   "subtitle": "Un modo diverso di acquistare casa",
@@ -370,21 +370,16 @@
   },
   "planimetrieCatasto": {
     "enabled": true,
-    "sectionNumber": "",
+    "sectionNumber": "3.",
     "sectionTitle": "PLANIMETRIE E DATI CATASTALI",
     "items": [
       {
-        "label": "Planimetria appartamento",
+        "label": "Planimetrie quotate",
         "enabled": true,
         "documentUrl": null
       },
       {
-        "label": "Planimetria box",
-        "enabled": true,
-        "documentUrl": null
-      },
-      {
-        "label": "Schede catastali",
+        "label": "Planimetrie catastali",
         "enabled": true,
         "documentUrl": null
       },
