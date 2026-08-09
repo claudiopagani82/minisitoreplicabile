@@ -4,6 +4,29 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.8] - 2026-08-09
+### Aggiunto
+- Nuovo ramo **"La Documentazione"** (sezione 4): la pagina `/la-documentazione` fa da indice a sette sezioni documentali — APE, certificazione (rispondenza) impianto elettrico, certificazione (rispondenza) impianto idrico/termico/sanitario, libretto caldaia, regolamento di condominio, spese condominiali 2024-2025, verbali.
+- Le voci di `navigation` accettano un campo opzionale `parent`. Una voce che ce l'ha non compare nel menu hamburger e si raggiunge dalla pagina indice del ramo: il menu resta a un livello solo, senza sottomenu.
+- Nuovo componente `ElencoDocumenti`, condiviso dalle pagine documentali.
+- **Sottotitolo dell'immobile** (`subtitle`), mostrato nell'hero sotto il titolo. In precedenza titolo e sottotitolo stavano uniti nello stesso campo `title`.
+- **Descrizione libera** (`description`), la riga in corsivo dell'hero sotto il sottotitolo, con gli a capo rispettati.
+- Interruttore `doveSiamo.showAddress`: l'indirizzo compare sopra la mappa dei dintorni solo se acceso (di default lo è).
+
+### Modificato
+- **In tutte le pagine documentali una voce senza documento caricato non compare più**, invece di restare visibile in grigio come "non disponibile". Le pagine elencano quindi solo ciò che si può davvero scaricare, e la pagina indice salta le sezioni ancora vuote.
+- L'**APE** passa da pagina fotografica (immagine dell'attestato con zoom) a elenco di documenti scaricabili, coerentemente con la regola qui sopra. `ape.caption` e `ape.images` non esistono più.
+- `/come-raggiungerci-1` diventa **`/dove-parcheggiare`** e la sua chiave passa da `dalCentroTradate` a `doveParcheggiare`.
+- Il campo `address` torna a contenere l'indirizzo dell'immobile: prima ospitava un testo descrittivo, ora spostato in `description`.
+- Nell'hero il sottotitolo è di un gradino più grande e la riga "tutti i dettagli dell'immobile…" inizia in minuscolo.
+
+### Rimosso
+- Pagina `/come-raggiungerci-2` e chiave `daViaCrocifisso`.
+- Pagina `/documenti-condominiali` e chiave `documentiCondominiali`: i suoi documenti sono confluiti nelle sezioni "Regolamento di condominio", "Spese condominiali" e "Verbali". Le voci impiantistiche sono uscite da `bolletteImpianti`, che conserva le sole bollette.
+
+### Note per l'aggiornamento dei siti esistenti
+Questa versione **rinomina e rimuove chiavi e rotte**, mentre la funzione "Aggiorna" aggiunge le chiavi mancanti senza togliere quelle vecchie. Un sito aggiornato dalla 1.7 o precedenti si ritroverebbe quindi le vecchie voci di menu verso pagine che non esistono più, e le sezioni nuove riempite con i contenuti del modello invece dei propri. Per i siti ancora sulle versioni precedenti conviene rifarli, non aggiornarli.
+
 ## [1.7] - 2026-08-08
 ### Corretto
 - `Navigation.tsx` chiamava `setState` in modo sincrono dentro un `useEffect` per chiudere il menu al cambio pagina (errore lint `react-hooks/set-state-in-effect`, può causare render a cascata non necessari). Ora l'apertura del menu è derivata dal confronto tra la rotta corrente e la rotta su cui è stato aperto (`openedFrom === pathname`): cambiare pagina lo chiude senza bisogno di un effect. Nessuna chiave di `property.json` coinvolta, nessun cambiamento visibile per l'utente finale.
