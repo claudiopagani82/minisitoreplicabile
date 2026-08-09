@@ -1,5 +1,5 @@
 {
-  "version": "1.25",
+  "version": "1.26",
   "disabled": false,
   "title": "IL METODO OPENDOMUS",
   "subtitle": "Un modo diverso di acquistare casa",
@@ -45,8 +45,8 @@
       "enabled": true
     },
     {
-      "title": "Prospetto costi",
-      "href": "/prospetto-costi",
+      "title": "💶 6. Quanto Costa",
+      "href": "/quanto-costa",
       "enabled": true
     },
     {
@@ -402,19 +402,21 @@
       "/images/bozza-proposta-image5.jpg"
     ]
   },
-  "prospettoCosti": {
+  "quantoCosta": {
     "enabled": true,
-    "sectionNumber": "",
-    "sectionTitle": "PROSPETTO COSTI",
-    "items": [
-      "Prezzo di vendita dell'immobile",
-      "Provvigione agenzia immobiliare",
-      "Costi notarili stimati",
-      "Imposte e tasse sull'acquisto",
-      "Riepilogo totale costi acquisto"
-    ],
-    "images": [
-      "/images/prospetto-costi-image1.png"
+    "sectionNumber": "6.",
+    "sectionTitle": "QUANTO COSTA",
+    "voci": [
+      {
+        "label": "Prezzo acquisto prima casa",
+        "text": "",
+        "documentUrl": null
+      },
+      {
+        "label": "Prezzo acquisto seconda casa",
+        "text": "",
+        "documentUrl": null
+      }
     ]
   },
   "viviLaCasa": {
