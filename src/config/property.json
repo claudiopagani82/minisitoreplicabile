@@ -1,5 +1,5 @@
 {
-  "version": "1.16",
+  "version": "1.17",
   "disabled": false,
   "title": "IL METODO OPENDOMUS",
   "subtitle": "Un modo diverso di acquistare casa",
@@ -430,7 +430,7 @@
         "documentUrl": null
       },
       {
-        "label": "Descrizione interventi di ristrutturazione 2021",
+        "label": "Descrizione interventi di ristrutturazione",
         "enabled": true,
         "documentUrl": null
       }

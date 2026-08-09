@@ -10,8 +10,15 @@ const rel = property.relazioneTecnica
 // sulla carta — e su due voci di menu affiancate sembravano due argomenti.
 // Ciascun blocco resta governato dal proprio interruttore, come le due metà
 // della pagina 1 e della pagina 2.
-const mostraPlanimetrie = p.enabled && documentiDisponibili(p.items as VoceDocumento[]).length > 0
+const mostraPlanimetrie = p.enabled
 const mostraRelazione = rel.enabled
+
+// Le singole voci senza file allegato non compaiono — è la regola di tutte le
+// pagine documentali — ma il blocco sì, finché è acceso: è quello che dà il
+// titolo alla pagina. Nasconderlo quando non c'è ancora nulla da scaricare
+// faceva aprire "Planimetrie e Catasto" sull'intestazione "Relazione tecnica",
+// come se la voce di menu portasse altrove.
+const planimetrieVuote = documentiDisponibili(p.items as VoceDocumento[]).length === 0
 
 function Card({ children }: { children: React.ReactNode }) {
   return (
@@ -47,7 +54,11 @@ export default function PlanimetrieCatastoPage() {
               {p.sectionNumber && <span className="mr-1">{p.sectionNumber}</span>}
               {p.sectionTitle}
             </h1>
-            <ListaDocumenti items={p.items as VoceDocumento[]} />
+            {planimetrieVuote ? (
+              <p className="text-sm text-[#71717a]">Nessun documento disponibile al momento.</p>
+            ) : (
+              <ListaDocumenti items={p.items as VoceDocumento[]} />
+            )}
           </Card>
         )}
 

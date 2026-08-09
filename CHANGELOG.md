@@ -4,6 +4,13 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.17] - 2026-08-09
+### Corretto
+- **Il blocco "Planimetrie e dati catastali" spariva del tutto quando non c'era ancora nessun documento caricato**, titolo compreso: la pagina si apriva sull'intestazione "Relazione tecnica", come se la voce di menu portasse altrove. Ora il blocco resta finché la sezione è accesa e, se non c'è nulla da scaricare, mostra "Nessun documento disponibile al momento." — com'era prima che le due sezioni fossero unite. Le singole voci senza file continuano a non comparire.
+
+### Modificato
+- La voce "Descrizione interventi di ristrutturazione 2021" della relazione tecnica perde l'anno: la descrizione degli interventi non riguarda solo quelli del 2021. Il pannello rinomina la voce anche sui siti già creati; resta comunque modificabile.
+
 ## [1.16] - 2026-08-09
 ### Modificato
 - **La "Relazione tecnica" smette di essere una voce a sé e diventa il secondo blocco della sezione 3**, sotto le planimetrie: stessa pagina, stessa struttura già adottata per la sezione 2. I due blocchi parlano della stessa cosa — cosa risulta dell'immobile sulla carta — e su due voci di menu affiancate sembravano due argomenti distinti.
