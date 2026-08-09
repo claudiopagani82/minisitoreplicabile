@@ -4,6 +4,15 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.21] - 2026-08-09
+### Modificato
+- **"Bollette e impianti" passa da galleria di immagini a elenco di documenti scaricabili**, come tutti gli altri gruppi della pagina 4: niente anteprime, solo i file da aprire. Le voci esistenti restano come etichette, ciascuna con il proprio documento da caricare, e una voce senza file non compare.
+- `bolletteImpianti.items` passa da elenco di stringhe a elenco di `{ label, enabled, documentUrl }`; `bolletteImpianti.images` non esiste più.
+
+### Rimosso
+- Il componente `GalleriaImmagini`, introdotto nella 1.19 per le sole bollette e ora senza usi.
+- Le sette immagini `public/images/bollette-image*.png`, che nessuna pagina referenziava più.
+
 ## [1.20] - 2026-08-09
 ### Aggiunto
 - Nuova sezione **"🎥 5. Vivi la Casa"**, pagina `/vivi-la-casa`: riunisce il **video social** e il **tour virtuale Matterport**, i due modi di vedere l'immobile senza esserci. Erano due voci di menu separate, e chi cercava "le immagini della casa" non sapeva quale aprire. Nuova chiave `viviLaCasa` (`enabled`, `sectionNumber`, `sectionTitle`), sul modello di `scopriLaCasa`.

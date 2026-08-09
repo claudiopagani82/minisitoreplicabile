@@ -1,5 +1,5 @@
 {
-  "version": "1.20",
+  "version": "1.21",
   "disabled": false,
   "title": "IL METODO OPENDOMUS",
   "subtitle": "Un modo diverso di acquistare casa",
@@ -345,17 +345,16 @@
     "sectionNumber": "",
     "sectionTitle": "BOLLETTE E IMPIANTI",
     "items": [
-      "Bolletta gas – riscaldamento autonomo",
-      "Bolletta energia elettrica"
-    ],
-    "images": [
-      "/images/bollette-image1.png",
-      "/images/bollette-image2.png",
-      "/images/bollette-image3.png",
-      "/images/bollette-image4.png",
-      "/images/bollette-image5.png",
-      "/images/bollette-image6.png",
-      "/images/bollette-image7.png"
+      {
+        "label": "Bolletta gas – riscaldamento autonomo",
+        "enabled": true,
+        "documentUrl": null
+      },
+      {
+        "label": "Bolletta energia elettrica",
+        "enabled": true,
+        "documentUrl": null
+      }
     ]
   },
   "relazioneTecnica": {
