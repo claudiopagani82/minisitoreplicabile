@@ -4,6 +4,11 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.25] - 2026-08-10
+### Modificato
+- **"Scopri la Casa" perde lo sfondo bianco** e passa a `PhotoLayout` come le sezioni 2, 3, 4 e 5: la foto dell'immobile sotto un velo bianco, il titolo della pagina in alto e i due blocchi — parcheggi e dintorni — dentro riquadri chiari. Era l'ultima pagina rimasta bianca.
+- Le righe dei servizi nei dintorni perdono il fondo bianco, che dentro il riquadro chiaro sarebbe sparito: le separa il solo bordo.
+
 ## [1.24] - 2026-08-10
 ### Modificato
 - La sezione 3 si chiama ora **"📐 3. Gli Spazi"** invece di "Planimetrie e Catasto", e la sua pagina passa da `/planimetrie` a **`/gli-spazi`**. Le tre voci — planimetrie quotate, planimetrie catastali, visure catastali — restano quelle, con i documenti già caricati.
