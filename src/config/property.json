@@ -1,5 +1,5 @@
 {
-  "version": "1.8",
+  "version": "1.9",
   "disabled": false,
   "title": "IL METODO OPENDOMUS",
   "subtitle": "Un modo diverso di acquistare casa",
@@ -166,7 +166,12 @@
     "images": [
       "/images/come-raggiungerci-1-image1.png",
       "/images/come-raggiungerci-1-image2.jpg"
-    ]
+    ],
+    "mapImage": null,
+    "generatedAt": null,
+    "lat": null,
+    "lng": null,
+    "parcheggi": []
   },
   "doveSiamo": {
     "enabled": true,

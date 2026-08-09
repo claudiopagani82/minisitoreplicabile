@@ -4,6 +4,13 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.9] - 2026-08-09
+### Aggiunto
+- La pagina **"Dove parcheggiare"** mostra una mappa generata da Google Maps che parte dall'indirizzo dell'immobile: l'immobile è il segnaposto rosso, i parcheggi più vicini sono numerati in blu. Sotto la mappa l'elenco dei parcheggi con distanza e tempo a piedi.
+- Nuovi campi nella sezione `doveParcheggiare`: `mapImage`, `generatedAt`, `lat`, `lng` e `parcheggi[]`. I testi e le foto della pagina restano dov'erano, la mappa si aggiunge sopra di essi.
+- La mappa cerca entro 800 metri e tiene i cinque parcheggi più vicini a piedi. Il raggio è più stretto di quello della mappa dei dintorni ("Dove siamo", 1200 m) perché un parcheggio lontano un chilometro non è un parcheggio utile.
+- Se non viene trovato alcun parcheggio la mappa viene comunque generata: mostra dov'è l'immobile, senza elenco.
+
 ## [1.8] - 2026-08-09
 ### Aggiunto
 - Nuovo ramo **"La Documentazione"** (sezione 4): la pagina `/la-documentazione` fa da indice a sette sezioni documentali — APE, certificazione (rispondenza) impianto elettrico, certificazione (rispondenza) impianto idrico/termico/sanitario, libretto caldaia, regolamento di condominio, spese condominiali 2024-2025, verbali.
