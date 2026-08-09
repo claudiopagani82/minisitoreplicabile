@@ -4,6 +4,11 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.14] - 2026-08-09
+### Modificato
+- **"Caratteristiche principali" diventa una sottopagina della sezione 2, "La Qualità dell'Immobile"**: esce dal menu hamburger e si raggiunge dal collegamento in fondo a quella pagina, come le voci documentali si raggiungono dall'indice de "La Documentazione". Le due pagine parlano della stessa cosa — com'è fatto l'immobile — e la 1.11 aveva già travasato metà delle caratteristiche nella qualità: tenerle su due voci di menu affiancate faceva sembrare due argomenti diversi quello che è uno solo.
+- Il collegamento compare solo se la sezione è accesa; da spenta, la pagina della qualità mostra le sole voci di testo. La pagina `/caratteristiche-principali` e la chiave `caratteristichePrincipali` restano dove sono: cambia come ci si arriva, non dove si modifica.
+
 ## [1.13] - 2026-08-09
 ### Aggiunto
 - Nuova sezione **"Scopri la Casa"** (sezione 1), pagina `/scopri-la-casa`: una pagina sola che contiene sia "Dove parcheggiare" sia "Dove siamo". Erano due pagine separate, e chi le apriva una dopo l'altra vedeva due mappe della stessa zona senza capire perché fossero divise.

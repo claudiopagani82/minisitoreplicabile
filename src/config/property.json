@@ -1,5 +1,5 @@
 {
-  "version": "1.13",
+  "version": "1.14",
   "disabled": false,
   "title": "IL METODO OPENDOMUS",
   "subtitle": "Un modo diverso di acquistare casa",
@@ -32,11 +32,6 @@
     {
       "title": "Cos'è e come funziona l'Open Domus",
       "href": "/open-domus",
-      "enabled": true
-    },
-    {
-      "title": "Caratteristiche principali",
-      "href": "/caratteristiche-principali",
       "enabled": true
     },
     {
@@ -93,6 +88,12 @@
       "title": "Per te, VENDITORE",
       "href": "/per-te-venditore",
       "enabled": true
+    },
+    {
+      "title": "Caratteristiche principali",
+      "href": "/caratteristiche-principali",
+      "enabled": true,
+      "parent": "/la-qualita-dell-immobile"
     },
     {
       "title": "APE",
