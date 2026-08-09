@@ -4,6 +4,13 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.13] - 2026-08-09
+### Aggiunto
+- Nuova sezione **"Scopri la Casa"** (sezione 1), pagina `/scopri-la-casa`: una pagina sola che contiene sia "Dove parcheggiare" sia "Dove siamo". Erano due pagine separate, e chi le apriva una dopo l'altra vedeva due mappe della stessa zona senza capire perché fossero divise.
+
+### Rimosso
+- Le pagine `/dove-parcheggiare` e `/dove-siamo`: i loro contenuti vivono ora dentro "Scopri la Casa". Le chiavi `doveParcheggiare` e `doveSiamo` restano invariate — cambia dove sono mostrate, non dove si modificano — e ciascuna conserva il proprio interruttore, così si può tenere la mappa dei dintorni e spegnere quella dei parcheggi, o viceversa.
+
 ## [1.12] - 2026-08-09
 ### Modificato
 - "Planimetrie e Catasto" diventa la **sezione 3** e passa da quattro voci a tre: **Planimetrie quotate**, **Planimetrie catastali**, **Visure catastali**. "Planimetria appartamento" e "Planimetria box" confluiscono nelle planimetrie quotate, "Schede catastali" diventa "Planimetrie catastali"; eventuali documenti già caricati vengono conservati.

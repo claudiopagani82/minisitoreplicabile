@@ -1,5 +1,5 @@
 {
-  "version": "1.12",
+  "version": "1.13",
   "disabled": false,
   "title": "IL METODO OPENDOMUS",
   "subtitle": "Un modo diverso di acquistare casa",
@@ -20,18 +20,13 @@
       "enabled": true
     },
     {
+      "title": "Scopri la Casa",
+      "href": "/scopri-la-casa",
+      "enabled": true
+    },
+    {
       "title": "La Qualità dell'Immobile",
       "href": "/la-qualita-dell-immobile",
-      "enabled": true
-    },
-    {
-      "title": "Dove parcheggiare",
-      "href": "/dove-parcheggiare",
-      "enabled": true
-    },
-    {
-      "title": "Dove siamo",
-      "href": "/dove-siamo",
       "enabled": true
     },
     {
@@ -161,6 +156,11 @@
       "VIDEO SOCIAL"
     ],
     "paragraph2": "Con Domus Tua, avere tutte le informazioni a portata di mano significa poter valutare l'immobile con serenità e trasparenza, senza dover attendere ulteriori documenti o chiarimenti."
+  },
+  "scopriLaCasa": {
+    "enabled": true,
+    "sectionNumber": "1.",
+    "sectionTitle": "SCOPRI LA CASA"
   },
   "qualitaImmobile": {
     "enabled": true,
