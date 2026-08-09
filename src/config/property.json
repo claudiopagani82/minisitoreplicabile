@@ -167,11 +167,18 @@
       "/images/come-raggiungerci-1-image1.png",
       "/images/come-raggiungerci-1-image2.jpg"
     ],
-    "mapImage": null,
-    "generatedAt": null,
-    "lat": null,
-    "lng": null,
-    "parcheggi": []
+    "mapImage": "/images/dove-parcheggiare-map-1786264543587.png",
+    "generatedAt": "2026-08-09T08:35:44.404Z",
+    "lat": 45.7115556,
+    "lng": 8.907163299999999,
+    "parcheggi": [
+      {
+        "markerNumber": 1,
+        "label": "Parcheggio",
+        "distanceText": "0,6 km",
+        "durationText": "8 min"
+      }
+    ]
   },
   "doveSiamo": {
     "enabled": true,
