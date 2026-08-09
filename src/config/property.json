@@ -1,5 +1,5 @@
 {
-  "version": "1.23",
+  "version": "1.24",
   "disabled": false,
   "title": "IL METODO OPENDOMUS",
   "subtitle": "Un modo diverso di acquistare casa",
@@ -35,8 +35,8 @@
       "enabled": true
     },
     {
-      "title": "🗺️ 3. Planimetrie e Catasto",
-      "href": "/planimetrie",
+      "title": "📐 3. Gli Spazi",
+      "href": "/gli-spazi",
       "enabled": true
     },
     {
@@ -309,7 +309,7 @@
   "planimetrieCatasto": {
     "enabled": true,
     "sectionNumber": "3.",
-    "sectionTitle": "PLANIMETRIE E DATI CATASTALI",
+    "sectionTitle": "GLI SPAZI",
     "items": [
       {
         "label": "Planimetrie quotate",
