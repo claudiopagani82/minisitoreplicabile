@@ -4,6 +4,15 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.10] - 2026-08-09
+### Aggiunto
+- La pagina "Dove parcheggiare" può mostrare **quattro varianti di mappa** una sotto l'altra, etichettate, per scegliere quale tenere. Si accende e si spegne dal pannello con `confrontoMappe`; da spenta resta la sola mappa disegnata.
+  1. **Mappa disegnata** — quella già esistente.
+  2. **Vista satellitare** (`mapImageSatellite`) — stessa inquadratura su foto aerea: si vedono i palazzi reali dall'alto, con i nomi delle vie sovrapposti. È la stessa chiamata di prima con `maptype=hybrid`, quindi non richiede nulla in più.
+  3. **Mappa 3D interattiva** — riquadro di Google che il visitatore può ruotare e inclinare. È l'unica che gira nel browser: richiede `NEXT_PUBLIC_GOOGLE_MAPS_EMBED_KEY` sul progetto Vercel del singolo sito (vedi `.env.example`) e si paga a visita, non a generazione. Senza la chiave la variante semplicemente non compare.
+  4. **Vista dalla strada** (`streetViewImage`) — foto Street View dell'ingresso. Prima di scaricarla si interrogano i metadati: dove Street View non è mai passato la variante non compare, invece di pubblicare il riquadro grigio "no imagery here" che Google restituirebbe comunque.
+- Nuovo `.env.example` nel template, che finora non ne aveva uno.
+
 ## [1.9] - 2026-08-09
 ### Aggiunto
 - La pagina **"Dove parcheggiare"** mostra una mappa generata da Google Maps che parte dall'indirizzo dell'immobile: l'immobile è il segnaposto rosso, i parcheggi più vicini sono numerati in blu. Sotto la mappa l'elenco dei parcheggi con distanza e tempo a piedi.
