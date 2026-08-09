@@ -4,6 +4,14 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.22] - 2026-08-09
+### Aggiunto
+- **Galleria delle foto dell'annuncio** in cima alla sezione "Vivi la Casa": le stesse foto pubblicate sull'annuncio ufficiale, nello stesso ordine, in griglia e apribili a schermo intero con le frecce e lo scorrimento del dito già usati altrove. Nuovi campi `viviLaCasa.gallery`, `galleryEnabled`, `galleryHeading`, `galleryGeneratedAt`.
+- Le foto **non vengono copiate nel sito**: `gallery` contiene i loro indirizzi, e restano servite dal gestionale dell'agenzia. Un annuncio ne ha spesso cinquanta da qualche centinaio di kilobyte l'una, e copiarle significherebbe decine di megabyte per ogni immobile, da rifare a ogni foto aggiunta o tolta. Il rovescio: se l'annuncio viene ritirato, la galleria si svuota.
+- Le prime sei foto si caricano subito, le altre quando si avvicinano allo schermo, e `next/image` le ridimensiona per il telefono invece di servire gli originali.
+- `next.config.ts` autorizza `annunci.domustua.com` per `next/image`.
+- Nuovo componente `GalleriaFoto`.
+
 ## [1.21] - 2026-08-09
 ### Modificato
 - **"Bollette e impianti" passa da galleria di immagini a elenco di documenti scaricabili**, come tutti gli altri gruppi della pagina 4: niente anteprime, solo i file da aprire. Le voci esistenti restano come etichette, ciascuna con il proprio documento da caricare, e una voce senza file non compare.

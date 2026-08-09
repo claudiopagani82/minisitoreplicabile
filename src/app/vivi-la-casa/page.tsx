@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { PhotoLayout } from '@/components/PhotoLayout'
+import { GalleriaFoto } from '@/components/GalleriaFoto'
 import property from '@/config/property.json'
 
 const p = property.viviLaCasa
@@ -12,6 +13,12 @@ const matterport = property.matterport
 // Ciascun blocco resta governato dal proprio interruttore.
 const mostraVideo = video.enabled
 const mostraMatterport = matterport.enabled
+
+// Le foto arrivano dall'annuncio ufficiale, aggiornate dal pannello: qui c'è
+// solo l'elenco degli indirizzi. Se l'annuncio non è ancora stato letto — o non
+// ha foto — la galleria non compare, senza riquadro vuoto.
+const galleria = property.viviLaCasa.gallery as string[]
+const mostraGalleria = property.viviLaCasa.galleryEnabled && galleria.length > 0
 
 function Card({ children }: { children: React.ReactNode }) {
   return (
@@ -37,9 +44,18 @@ export default function ViviLaCasaPage() {
           {p.sectionTitle}
         </h1>
 
-        {!mostraVideo && !mostraMatterport && (
+        {!mostraVideo && !mostraMatterport && !mostraGalleria && (
           <Card>
             <p className="text-sm text-[#71717a]">Contenuti non ancora disponibili.</p>
+          </Card>
+        )}
+
+        {mostraGalleria && (
+          <Card>
+            <h2 className="text-center text-[#CC1414] font-bold uppercase text-base tracking-wide">
+              {property.viviLaCasa.galleryHeading}
+            </h2>
+            <GalleriaFoto images={galleria} alt="Foto dell'immobile" />
           </Card>
         )}
 

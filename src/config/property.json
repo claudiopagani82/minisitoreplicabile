@@ -1,5 +1,5 @@
 {
-  "version": "1.21",
+  "version": "1.22",
   "disabled": false,
   "title": "IL METODO OPENDOMUS",
   "subtitle": "Un modo diverso di acquistare casa",
@@ -418,7 +418,11 @@
   "viviLaCasa": {
     "enabled": true,
     "sectionNumber": "5.",
-    "sectionTitle": "VIVI LA CASA"
+    "sectionTitle": "VIVI LA CASA",
+    "galleryHeading": "LE FOTO DELL’IMMOBILE",
+    "galleryEnabled": true,
+    "gallery": [],
+    "galleryGeneratedAt": null
   },
   "matterport": {
     "enabled": true,
