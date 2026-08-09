@@ -167,8 +167,8 @@
       "/images/come-raggiungerci-1-image1.png",
       "/images/come-raggiungerci-1-image2.jpg"
     ],
-    "mapImage": "/images/dove-parcheggiare-map-1786265740914.png",
-    "generatedAt": "2026-08-09T08:55:41.669Z",
+    "mapImage": "/images/dove-parcheggiare-map-1786270339400.png",
+    "generatedAt": "2026-08-09T10:12:20.214Z",
     "lat": 45.7115556,
     "lng": 8.907163299999999,
     "parcheggi": [
@@ -177,11 +177,30 @@
         "label": "Parcheggio",
         "distanceText": "0,6 km",
         "durationText": "8 min"
+      },
+      {
+        "markerNumber": 2,
+        "label": "Parcheggio pubblico",
+        "distanceText": "1,3 km",
+        "durationText": "18 min"
+      },
+      {
+        "markerNumber": 3,
+        "label": "Parcheggio Ospedale di Tradate",
+        "distanceText": "1,5 km",
+        "durationText": "21 min"
+      },
+      {
+        "markerNumber": 4,
+        "label": "Parcheggio parco pineta",
+        "distanceText": "2,0 km",
+        "durationText": "27 min"
       }
     ],
     "mapImageSatellite": null,
     "streetViewImage": null,
-    "confrontoMappe": true
+    "confrontoMappe": true,
+    "searchRadius": 1600
   },
   "doveSiamo": {
     "enabled": true,
