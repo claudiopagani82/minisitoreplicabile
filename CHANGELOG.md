@@ -4,6 +4,12 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.34] - 2026-08-10
+### Aggiunto
+- Nuova sezione **"🔁 9B. Per comprare devi vendere la tua casa?"**, pagina `/devi-vendere`: un testo, un video e un pulsante che porta alla valutazione. È l'ostacolo più frequente fra l'interesse e la proposta, e la pagina lo dice apertamente invece di lasciarlo come dubbio non detto.
+- Il pulsante compare solo se ha sia il testo sia il link: può portare alla pagina di valutazione dell'agenzia, a un modulo o a una chat WhatsApp.
+- L'ordinamento del menu accetta ora i numeri con lettera (`9B.`), che altrimenti finivano in fondo con le voci non numerate.
+
 ## [1.33] - 2026-08-10
 ### Aggiunto
 - Le recensioni della sezione 9 possono ora venire **dalla scheda Google dell'agenzia**, caricate dal pannello. Nuovi campi `googlePlaceId`, `recensioniFonte`, `recensioniAggiornateIl`, e `data` e `url` in ogni recensione.
