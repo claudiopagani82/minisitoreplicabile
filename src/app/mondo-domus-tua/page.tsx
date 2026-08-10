@@ -21,7 +21,18 @@ interface Social {
 const p = property.mondoDomusTua
 
 const numeri = (p.numeri as Numero[]).filter((n) => n.valore.trim())
-const premi = (p.premi as Premio[]).filter((x) => x.titolo.trim())
+// Uno stesso premio vinto più volte è una riga sola con gli anni accanto: due
+// righe identiche tranne l'anno direbbero meno di quel che vale averlo vinto
+// due volte di fila.
+const premi = Object.values(
+  (p.premi as Premio[])
+    .filter((x) => x.titolo.trim())
+    .reduce<Record<string, { titolo: string; anni: string[] }>>((acc, x) => {
+      const voce = (acc[x.titolo] ??= { titolo: x.titolo, anni: [] })
+      if (x.anno?.trim()) voce.anni.push(x.anno.trim())
+      return acc
+    }, {})
+).map((v) => ({ ...v, anni: v.anni.sort() }))
 const social = (p.social as Social[]).filter((s) => s.url.trim())
 
 const SOCIAL_ICONS: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
@@ -147,7 +158,9 @@ export default function MondoDomusTuaPage() {
                   <span className="text-[#f5b301]">★</span>
                   <span>
                     <span className="font-semibold">{x.titolo}</span>
-                    {x.anno && <span className="text-[#71717a]"> — {x.anno}</span>}
+                    {x.anni.length > 0 && (
+                      <span className="text-[#71717a]"> — {x.anni.join(' e ')}</span>
+                    )}
                   </span>
                 </li>
               ))}

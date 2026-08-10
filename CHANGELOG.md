@@ -4,6 +4,11 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.36] - 2026-08-10
+### Aggiunto
+- Nella sezione 10 compaiono i premi dell'agenzia: **Top Agency d'Italia, 2024 e 2025**.
+- Uno stesso premio vinto più volte è una riga sola con gli anni accanto ("Top Agency d'Italia — 2024 e 2025"): due righe identiche tranne l'anno direbbero meno di quel che vale averlo vinto due volte di fila.
+
 ## [1.35] - 2026-08-10
 ### Aggiunto
 - Nuova sezione **"❤️ 10. Il Mondo Domus Tua"**, pagina `/mondo-domus-tua`: chi siamo, i valori, il manifesto, i numeri, i premi, le recensioni, il canale YouTube, il sito e i social, tutto in una pagina invece del solo collegamento al sito dell'agenzia.

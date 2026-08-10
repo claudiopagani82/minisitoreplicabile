@@ -1,5 +1,5 @@
 {
-  "version": "1.35",
+  "version": "1.36",
   "disabled": false,
   "title": "IL METODO OPENDOMUS",
   "subtitle": "Un modo diverso di acquistare casa",
@@ -338,7 +338,16 @@
         "etichetta": "mq valutati"
       }
     ],
-    "premi": [],
+    "premi": [
+      {
+        "titolo": "Top Agency d'Italia",
+        "anno": "2025"
+      },
+      {
+        "titolo": "Top Agency d'Italia",
+        "anno": "2024"
+      }
+    ],
     "recensioniUrl": "",
     "youtubeCanale": "https://www.youtube.com/@DOMUSTUASRLIMMOBILIARE",
     "youtubePlaylist": "https://www.youtube.com/playlist?list=PLPCjl_WhESf95lAgOUkWgImiNehWJZvty",
