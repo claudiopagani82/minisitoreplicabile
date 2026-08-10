@@ -1,5 +1,5 @@
 {
-  "version": "1.29",
+  "version": "1.30",
   "disabled": false,
   "title": "IL METODO OPENDOMUS",
   "subtitle": "Un modo diverso di acquistare casa",
@@ -57,14 +57,14 @@
       "enabled": true
     },
     {
+      "title": "🤝 8. Il Metodo Open Domus®",
+      "href": "/open-domus",
+      "enabled": true
+    },
+    {
       "title": "Introduzione",
       "href": "/introduzione",
       "enabled": false
-    },
-    {
-      "title": "Cos'è e come funziona l'Open Domus",
-      "href": "/open-domus",
-      "enabled": true
     },
     {
       "title": "Link utili",
@@ -260,7 +260,8 @@
   },
   "openDomus": {
     "enabled": true,
-    "heading": "COS'È E COME FUNZIONA L'OPEN DOMUS",
+    "sectionNumber": "8.",
+    "heading": "IL METODO OPEN DOMUS®",
     "images": []
   },
   "caratteristichePrincipali": {

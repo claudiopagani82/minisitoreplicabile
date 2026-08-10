@@ -4,6 +4,11 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.30] - 2026-08-10
+### Modificato
+- La pagina dell'Open Domus diventa **"🤝 8. Il Metodo Open Domus®"**: nuovo titolo nel menu e in cima alla pagina, con il numero di sezione come gli altri capitoli. La rotta resta `/open-domus` e il testo della pagina non cambia.
+- Nuovo campo `openDomus.sectionNumber`.
+
 ## [1.29] - 2026-08-10
 ### Aggiunto
 - Nuova sezione **"✍️ 7. Come Acquistarla"**, pagina `/come-acquistarla`, con i tre passi dell'acquisto: **procedura (manifestazione di interesse)**, **bozza proposta**, **caparra o bonifico bancario**. Ciascuno è un documento da scaricare, e una voce senza file allegato non compare.

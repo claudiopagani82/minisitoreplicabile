@@ -16,9 +16,10 @@ function Bullet({ children }: { children: React.ReactNode }) {
 export default function OpenDomusPage() {
   return (
     <PhotoLayout>
-      <h2 className="text-[#CC1414] font-bold uppercase text-lg text-center tracking-wide mb-3">
+      <h1 className="text-[#CC1414] font-bold uppercase text-lg text-center tracking-wide mb-3">
+        {p.sectionNumber && <span className="mr-1">{p.sectionNumber}</span>}
         {p.heading}
-      </h2>
+      </h1>
 
       <p className="text-[#333333] text-sm text-center mb-6 px-2">
         Open Domus non è una semplice visita, ma <em>un modo organizzato, trasparente e corretto</em> per acquistare casa.
