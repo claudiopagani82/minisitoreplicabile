@@ -1,5 +1,5 @@
 {
-  "version": "1.34",
+  "version": "1.35",
   "disabled": false,
   "title": "IL METODO OPENDOMUS",
   "subtitle": "Un modo diverso di acquistare casa",
@@ -69,6 +69,11 @@
     {
       "title": "🔁 9B. Per comprare devi vendere la tua casa?",
       "href": "/devi-vendere",
+      "enabled": true
+    },
+    {
+      "title": "❤️ 10. Il Mondo Domus Tua",
+      "href": "/mondo-domus-tua",
       "enabled": true
     },
     {
@@ -309,6 +314,54 @@
     "videoUrl": "",
     "ctaLabel": "Chiedi la tua valutazione",
     "ctaUrl": ""
+  },
+  "mondoDomusTua": {
+    "enabled": true,
+    "sectionNumber": "10.",
+    "sectionTitle": "IL MONDO DOMUS TUA",
+    "claim": "L'agenzia immobiliare indipendente più recensita della provincia",
+    "numeri": [
+      {
+        "valore": "6.433",
+        "etichetta": "persone felici"
+      },
+      {
+        "valore": "1.523",
+        "etichetta": "transazioni"
+      },
+      {
+        "valore": "92%",
+        "etichetta": "di immobili venduti"
+      },
+      {
+        "valore": "269.395",
+        "etichetta": "mq valutati"
+      }
+    ],
+    "premi": [],
+    "recensioniUrl": "",
+    "youtubeCanale": "https://www.youtube.com/@DOMUSTUASRLIMMOBILIARE",
+    "youtubePlaylist": "https://www.youtube.com/playlist?list=PLPCjl_WhESf95lAgOUkWgImiNehWJZvty",
+    "sitoUrl": "https://www.domustua.com",
+    "social": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/domustuaimmobiliare_tradate"
+      },
+      {
+        "platform": "facebook",
+        "url": "https://www.facebook.com/domustuaimmobiliaretradate"
+      },
+      {
+        "platform": "tiktok",
+        "url": "https://www.tiktok.com/@domustuaimmobiliare"
+      },
+      {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/@DOMUSTUASRLIMMOBILIARE"
+      }
+    ],
+    "indirizzo": "Corso Bernacchi, 91 – 21049 Tradate (VA)"
   },
   "caratteristichePrincipali": {
     "enabled": true,

@@ -4,6 +4,13 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.35] - 2026-08-10
+### Aggiunto
+- Nuova sezione **"❤️ 10. Il Mondo Domus Tua"**, pagina `/mondo-domus-tua`: chi siamo, i valori, il manifesto, i numeri, i premi, le recensioni, il canale YouTube, il sito e i social, tutto in una pagina invece del solo collegamento al sito dell'agenzia.
+- I contenuti vengono dal sito ufficiale: la frase "we love home, we love life" e il senso di "chi siamo", i tre valori (professionalità, innovazione, integrità) con il protocollo Domus D.O.C., il manifesto, e i **numeri reali letti dai contatori della home** — 6.433 persone felici, 1.523 transazioni, 92% di immobili venduti, 269.395 mq valutati.
+- Chi siamo, valori e manifesto sono **testi fissi nel modello**, come le regole dell'Open Domus: uguali per ogni immobile, si cambiano qui una volta per tutti. Dal pannello si aggiornano invece i numeri, i premi e i collegamenti, che cambiano nel tempo.
+- I premi partono da un elenco vuoto: sul sito dell'agenzia non c'è una pagina che li elenchi, quindi vanno aggiunti a mano. Finché è vuoto, il blocco non compare.
+
 ## [1.34] - 2026-08-10
 ### Aggiunto
 - Nuova sezione **"🔁 9B. Per comprare devi vendere la tua casa?"**, pagina `/devi-vendere`: un testo, un video e un pulsante che porta alla valutazione. È l'ostacolo più frequente fra l'interesse e la proposta, e la pagina lo dice apertamente invece di lasciarlo come dubbio non detto.
