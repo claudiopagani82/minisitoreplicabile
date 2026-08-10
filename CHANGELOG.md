@@ -4,6 +4,14 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.33] - 2026-08-10
+### Aggiunto
+- Le recensioni della sezione 9 possono ora venire **dalla scheda Google dell'agenzia**, caricate dal pannello. Nuovi campi `googlePlaceId`, `recensioniFonte`, `recensioniAggiornateIl`, e `data` e `url` in ogni recensione.
+- Ogni recensione mostra la data e il collegamento "Leggila su Google", e sotto l'elenco compare l'attribuzione richiesta dai termini d'uso delle Places API. Le recensioni scritte a mano restano possibili: quei campi restano vuoti e l'attribuzione non compare.
+
+### Note
+- **Google restituisce al massimo cinque recensioni**, quelle che considera più rilevanti: non c'è modo, via API, di averle tutte. Media e numero complessivo però ci sono, e finiscono nel riepilogo sopra l'elenco, altrimenti chi legge crede che l'agenzia abbia cinque recensioni in tutto.
+
 ## [1.32] - 2026-08-10
 ### Aggiunto
 - Nuova sezione **"⭐ 9. Le Esperienze dei Nostri Acquirenti"**, pagina `/esperienze-acquirenti`, con due blocchi: i **video** di chi ha già comprato (quanti se ne vogliono, ciascuno con la sua didascalia) e le **recensioni** scritte, con nome, stelle e testo, sopra un riepilogo facoltativo tipo "+500 recensioni · ★4,9 su Google".

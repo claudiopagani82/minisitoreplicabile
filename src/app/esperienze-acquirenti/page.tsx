@@ -11,6 +11,8 @@ interface Recensione {
   name: string
   rating: number
   text: string
+  data?: string
+  url?: string
 }
 
 const p = property.esperienzeAcquirenti
@@ -20,6 +22,7 @@ const p = property.esperienzeAcquirenti
 // "esperienze" vuota direbbe l'opposto di quello che vuole dire.
 const videos = (p.videos as Video[]).filter((v) => v.url.trim())
 const recensioni = (p.recensioni as Recensione[]).filter((r) => r.text.trim())
+const daGoogle = p.recensioniFonte === 'google'
 
 function Stelle({ voto }: { voto: number }) {
   const pieno = Math.max(0, Math.min(5, Math.round(voto)))
@@ -79,10 +82,30 @@ export default function EsperienzeAcquirentiPage() {
                     {r.name && <p className="text-xs font-semibold text-[#18181b]">{r.name}</p>}
                     <Stelle voto={r.rating} />
                   </div>
+                  {r.data && <span className="ml-auto text-[11px] text-[#71717a]">{r.data}</span>}
                 </div>
                 <p className="text-[#333333] text-sm leading-relaxed">{r.text}</p>
+                {r.url && (
+                  <a
+                    href={r.url}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    className="text-[11px] text-[#71717a] underline hover:opacity-80"
+                  >
+                    Leggila su Google
+                  </a>
+                )}
               </div>
             ))}
+
+            {daGoogle && (
+              // Attribuzione richiesta dai termini d'uso delle Places API:
+              // le recensioni sono di Google e va detto, con il collegamento
+              // alla scheda da cui arrivano.
+              <p className="text-[11px] text-[#71717a]">
+                Recensioni pubblicate su Google, mostrate come sono state scritte.
+              </p>
+            )}
           </section>
         )}
       </div>

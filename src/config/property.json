@@ -1,5 +1,5 @@
 {
-  "version": "1.32",
+  "version": "1.33",
   "disabled": false,
   "title": "IL METODO OPENDOMUS",
   "subtitle": "Un modo diverso di acquistare casa",
@@ -282,12 +282,17 @@
       }
     ],
     "recensioniHeading": "Le recensioni",
+    "googlePlaceId": "",
+    "recensioniFonte": "manuale",
+    "recensioniAggiornateIl": null,
     "recensioniBadge": "",
     "recensioni": [
       {
         "name": "",
         "rating": 5,
-        "text": ""
+        "text": "",
+        "data": "",
+        "url": ""
       }
     ]
   },
