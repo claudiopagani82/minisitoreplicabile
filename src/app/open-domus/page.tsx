@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { PhotoLayout } from '@/components/PhotoLayout'
+import { VideoYoutube } from '@/components/VideoYoutube'
 import property from '@/config/property.json'
 
 const p = property.openDomus
@@ -76,6 +77,12 @@ export default function OpenDomusPage() {
             <Bullet>L&apos;immobile resterà in vendita <strong>fino</strong> all&apos;accettazione formale di una proposta.</Bullet>
           </ul>
         </div>
+
+        {p.videoUrl?.trim() && (
+          <div className="border-t border-[#e4e4e7] pt-5">
+            <VideoYoutube url={p.videoUrl} title={p.heading} />
+          </div>
+        )}
       </div>
     </PhotoLayout>
   )

@@ -1,5 +1,5 @@
 {
-  "version": "1.30",
+  "version": "1.31",
   "disabled": false,
   "title": "IL METODO OPENDOMUS",
   "subtitle": "Un modo diverso di acquistare casa",
@@ -262,6 +262,7 @@
     "enabled": true,
     "sectionNumber": "8.",
     "heading": "IL METODO OPEN DOMUS®",
+    "videoUrl": "",
     "images": []
   },
   "caratteristichePrincipali": {
@@ -401,16 +402,22 @@
       {
         "label": "Procedura (manifestazione di interesse)",
         "enabled": true,
+        "text": "",
+        "videoUrl": "",
         "documentUrl": null
       },
       {
         "label": "Bozza proposta",
         "enabled": true,
+        "text": "",
+        "videoUrl": "",
         "documentUrl": null
       },
       {
         "label": "Caparra o bonifico bancario",
         "enabled": true,
+        "text": "",
+        "videoUrl": "",
         "documentUrl": null
       }
     ]

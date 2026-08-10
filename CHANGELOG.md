@@ -4,6 +4,13 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.31] - 2026-08-10
+### Aggiunto
+- Nella sezione **7. Come Acquistarla** ogni passo può ora essere spiegato in tre modi, tutti facoltativi: un **testo**, un **video di YouTube** e il documento da scaricare. Nuovi campi `text` e `videoUrl` in ogni voce di `comeAcquistarla.items`.
+- In fondo alla sezione **8. Il Metodo Open Domus®** compare un **video** (`openDomus.videoUrl`). Nel pannello il campo è bloccato dietro una spunta, come telefono ed email: il video del metodo è lo stesso per tutti gli immobili e non va cambiato sito per sito.
+- Nuovo componente `VideoYoutube` e funzione `parseYoutubeId`: accettano l'indirizzo copiato dalla barra del browser, quello del pulsante "Condividi" (`youtu.be`) e gli Shorts. Un indirizzo non riconosciuto non produce nulla, invece di un riquadro con l'errore di YouTube dentro.
+- I video usano `youtube-nocookie.com`: stesso video, nessun cookie di profilazione finché il visitatore non preme play. **Nota privacy:** se un domani arriverà un banner di consenso, questi riquadri vanno tra quelli da bloccare.
+
 ## [1.30] - 2026-08-10
 ### Modificato
 - La pagina dell'Open Domus diventa **"🤝 8. Il Metodo Open Domus®"**: nuovo titolo nel menu e in cima alla pagina, con il numero di sezione come gli altri capitoli. La rotta resta `/open-domus` e il testo della pagina non cambia.
