@@ -4,6 +4,14 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.28] - 2026-08-10
+### Modificato
+- La sezione **"6. Quanto Costa"** si riduce all'osso: due sezioni, "prezzo acquisto prima casa" e "prezzo acquisto seconda casa", ciascuna con il solo prospetto da caricare dal pannello. Il campo per l'importo scritto a mano non c'è più. Finché il prospetto manca, la sezione compare comunque e dichiara che non è ancora disponibile.
+
+### Aggiunto
+- Nuova chiave `annuncio` (`adId`, `url`, `prezzo`, `prezzoTesto`, `aggiornatoIl`): **il prezzo dell'annuncio ufficiale viene conservato nel sito**, riletto a ogni rigenerazione delle caratteristiche o della galleria. Nessuna pagina lo usa ancora — è la base per i conti della sezione 6.
+- `prezzo` è il numero in euro, `prezzoTesto` la scritta originale. Un annuncio in "trattativa riservata" lascia `prezzo` a `null` invece di uno zero, che sarebbe stato peggio di un'assenza dichiarata.
+
 ## [1.27] - 2026-08-10
 ### Modificato
 - **Il menu hamburger è riordinato**: prima "Benvenuto", poi i capitoli numerati dall'1 al 6 in ordine, poi le voci non ancora numerate (Introduzione, Open Domus, Bozza proposta, Link utili, Link utili 2, Per te VENDITORE). I capitoli erano finiti sparsi, nell'ordine in cui erano nati: la 6 prima della 5, la 3 in fondo dopo "Per te, VENDITORE".
