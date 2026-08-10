@@ -1,5 +1,5 @@
 {
-  "version": "1.28",
+  "version": "1.29",
   "disabled": false,
   "title": "IL METODO OPENDOMUS",
   "subtitle": "Un modo diverso di acquistare casa",
@@ -52,6 +52,11 @@
       "enabled": true
     },
     {
+      "title": "✍️ 7. Come Acquistarla",
+      "href": "/come-acquistarla",
+      "enabled": true
+    },
+    {
       "title": "Introduzione",
       "href": "/introduzione",
       "enabled": false
@@ -59,11 +64,6 @@
     {
       "title": "Cos'è e come funziona l'Open Domus",
       "href": "/open-domus",
-      "enabled": true
-    },
-    {
-      "title": "Bozza proposta",
-      "href": "/bozza-proposta",
       "enabled": true
     },
     {
@@ -392,21 +392,26 @@
       }
     ]
   },
-  "bozzaProposta": {
+  "comeAcquistarla": {
     "enabled": true,
-    "sectionNumber": "",
-    "sectionTitle": "BOZZA PROPOSTA DI ACQUISTO",
+    "sectionNumber": "7.",
+    "sectionTitle": "COME ACQUISTARLA",
     "items": [
-      "Bozza proposta di acquisto compilabile",
-      "Modalità di presentazione offerta",
-      "Tempistiche e procedura"
-    ],
-    "images": [
-      "/images/bozza-proposta-image1.jpg",
-      "/images/bozza-proposta-image2.jpg",
-      "/images/bozza-proposta-image3.jpg",
-      "/images/bozza-proposta-image4.jpg",
-      "/images/bozza-proposta-image5.jpg"
+      {
+        "label": "Procedura (manifestazione di interesse)",
+        "enabled": true,
+        "documentUrl": null
+      },
+      {
+        "label": "Bozza proposta",
+        "enabled": true,
+        "documentUrl": null
+      },
+      {
+        "label": "Caparra o bonifico bancario",
+        "enabled": true,
+        "documentUrl": null
+      }
     ]
   },
   "quantoCosta": {

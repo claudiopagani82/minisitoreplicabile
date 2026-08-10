@@ -4,6 +4,16 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.29] - 2026-08-10
+### Aggiunto
+- Nuova sezione **"✍️ 7. Come Acquistarla"**, pagina `/come-acquistarla`, con i tre passi dell'acquisto: **procedura (manifestazione di interesse)**, **bozza proposta**, **caparra o bonifico bancario**. Ciascuno è un documento da scaricare, e una voce senza file allegato non compare.
+
+### Modificato
+- **"Bozza proposta di acquisto" confluisce nella nuova sezione** e passa da fotografie a documenti scaricabili: erano immagini della bozza cartacea, ma è un modulo da leggere e compilare, non da guardare.
+
+### Rimosso
+- La pagina `/bozza-proposta`, la chiave `bozzaProposta` e le cinque immagini `public/images/bozza-proposta-image*.jpg`.
+
 ## [1.28] - 2026-08-10
 ### Modificato
 - La sezione **"6. Quanto Costa"** si riduce all'osso: due sezioni, "prezzo acquisto prima casa" e "prezzo acquisto seconda casa", ciascuna con il solo prospetto da caricare dal pannello. Il campo per l'importo scritto a mano non c'è più. Finché il prospetto manca, la sezione compare comunque e dichiara che non è ancora disponibile.
