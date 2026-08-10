@@ -1,5 +1,5 @@
 {
-  "version": "1.31",
+  "version": "1.32",
   "disabled": false,
   "title": "IL METODO OPENDOMUS",
   "subtitle": "Un modo diverso di acquistare casa",
@@ -59,6 +59,11 @@
     {
       "title": "🤝 8. Il Metodo Open Domus®",
       "href": "/open-domus",
+      "enabled": true
+    },
+    {
+      "title": "⭐ 9. Le Esperienze dei Nostri Acquirenti",
+      "href": "/esperienze-acquirenti",
       "enabled": true
     },
     {
@@ -264,6 +269,27 @@
     "heading": "IL METODO OPEN DOMUS®",
     "videoUrl": "",
     "images": []
+  },
+  "esperienzeAcquirenti": {
+    "enabled": true,
+    "sectionNumber": "9.",
+    "sectionTitle": "LE ESPERIENZE DEI NOSTRI ACQUIRENTI",
+    "videoHeading": "Le loro parole",
+    "videos": [
+      {
+        "label": "Videointervista",
+        "url": ""
+      }
+    ],
+    "recensioniHeading": "Le recensioni",
+    "recensioniBadge": "",
+    "recensioni": [
+      {
+        "name": "",
+        "rating": 5,
+        "text": ""
+      }
+    ]
   },
   "caratteristichePrincipali": {
     "enabled": true,

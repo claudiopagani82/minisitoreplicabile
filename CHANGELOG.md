@@ -4,6 +4,12 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.32] - 2026-08-10
+### Aggiunto
+- Nuova sezione **"⭐ 9. Le Esperienze dei Nostri Acquirenti"**, pagina `/esperienze-acquirenti`, con due blocchi: i **video** di chi ha già comprato (quanti se ne vogliono, ciascuno con la sua didascalia) e le **recensioni** scritte, con nome, stelle e testo, sopra un riepilogo facoltativo tipo "+500 recensioni · ★4,9 su Google".
+- Un video senza link e una recensione senza testo non compaiono: si possono lasciare vuoti finché non si hanno. Se non c'è né l'uno né l'altro, la pagina lo dichiara invece di mostrare una sezione "esperienze" vuota, che direbbe l'opposto di quel che vuole dire.
+- Nuova chiave `esperienzeAcquirenti`.
+
 ## [1.31] - 2026-08-10
 ### Aggiunto
 - Nella sezione **7. Come Acquistarla** ogni passo può ora essere spiegato in tre modi, tutti facoltativi: un **testo**, un **video di YouTube** e il documento da scaricare. Nuovi campi `text` e `videoUrl` in ogni voce di `comeAcquistarla.items`.
