@@ -23,7 +23,7 @@
       "enabled": true
     },
     {
-      "title": "🏡 1. Scopri la Casa",
+      "title": "🏡 1. Dove si trova",
       "href": "/scopri-la-casa",
       "enabled": true
     },
@@ -121,7 +121,7 @@
   "scopriLaCasa": {
     "enabled": true,
     "sectionNumber": "1.",
-    "sectionTitle": "SCOPRI LA CASA"
+    "sectionTitle": "DOVE SI TROVA"
   },
   "qualitaImmobile": {
     "enabled": true,
