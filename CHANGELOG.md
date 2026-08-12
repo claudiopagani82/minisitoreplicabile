@@ -6,6 +6,15 @@ Il changelog parte da questa versione in avanti: le versioni precedenti non sono
 
 ## [1.41] - 2026-08-12
 ### Aggiunto
+- **Il video dell'immobile viene linkato da solo alla creazione del sito**, letto dall'annuncio ufficiale: un filmato YouTube incorporato o un reel Instagram. I link ai profili social dell'agenzia — canale YouTube, profilo Instagram, TikTok — sono nella stessa pagina e non vanno confusi con il video di questa casa: si riconoscono solo le forme che identificano un singolo filmato (`embed/`, `youtu.be/`, `watch?v=`, `reel|p|tv/`), e un indirizzo di canale o profilo non corrisponde a nessuna.
+- Del video YouTube si tiene l'indirizzo normale, non quello da incorporare con cui compare nell'annuncio: sul sito è un link da aprire, e `embed` con l'autoplay attaccato aprirebbe una pagina spoglia che parte da sola.
+- **Il riquadro si adegua alla piattaforma**: colori e marchio di YouTube per un video YouTube, quelli di Instagram per un reel. Il riquadro col marchio sbagliato dice al visitatore che sta per andare in un posto diverso da quello dove va davvero.
+- **Senza video la sezione resta spenta**, invece di mostrare un riquadro che porta da nessuna parte — come già fa la galleria quando l'annuncio non ha foto.
+
+### Modificato
+- La sezione si chiama **"Guarda il video dell'immobile"**, senza "su Instagram": il video può stare tanto su Instagram quanto su YouTube. Anche il sottotitolo perde il nome della piattaforma.
+
+### Aggiunto
 - **La foto di sfondo del sito è quella dell'immobile, presa dalla copertina dell'annuncio ufficiale.** Finora era scritta nel codice — `foto-principale.jpg`, la foto di un appartamento di Tradate — e ogni sito nuovo nasceva con quella: uno sfondo plausibile e sbagliato, che nessuno notava.
 - Nuovo campo `fotoPrincipale`, modificabile dal pannello con il caricatore di immagini. Se lo si svuota, le pagine restano sul fondo chiaro invece di mostrare il riquadro vuoto di un'immagine che non c'è.
 - La copertina viene **copiata dentro il repo del sito**, non collegata al gestionale: la galleria di "Vivi la Casa" si svuota se l'annuncio viene ritirato, e allo sfondo di tutte le pagine non può succedere lo stesso. Il prezzo è qualche centinaio di kilobyte per sito; in cambio `next/image` la ottimizza come qualsiasi file locale.

@@ -451,9 +451,9 @@
     "url": "https://INSERISCI-QUI-IL-LINK-MATTERPORT"
   },
   "videoSocial": {
-    "enabled": true,
-    "heading": "GUARDA IL VIDEO DELL'IMMOBILE SU INSTAGRAM",
-    "subtitle": "Segui Domus Tua Immobiliare su Instagram per non perdere nessun immobile",
+    "enabled": false,
+    "heading": "GUARDA IL VIDEO DELL'IMMOBILE",
+    "subtitle": "Segui Domus Tua Immobiliare per non perdere nessun immobile",
     "instagramHandle": "@domustua.immobiliare",
     "url": "",
     "thumbnail": null
