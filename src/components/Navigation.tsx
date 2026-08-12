@@ -21,10 +21,6 @@ export function Navigation() {
   const openMenu = () => setOpenedFrom(pathname)
   const closeMenu = () => setOpenedFrom(null)
 
-  // L'indicazione verso il menu serve solo a chi arriva: dalla seconda pagina
-  // in poi il visitatore il menu l'ha già aperto.
-  const inHome = pathname === '/'
-
   // Altre parti della pagina (per esempio "SCOPRI ORA" in home) possono
   // chiedere l'apertura del menu con un evento.
   useEffect(() => {
@@ -52,26 +48,24 @@ export function Navigation() {
         {/* L'indicazione sta nel flusso accanto al pulsante, non sopra di esso:
             così non può sovrapporsi al menu a nessuna larghezza. Se lo schermo
             è troppo stretto per il testo intero, è il testo a farsi da parte —
-            il pulsante non si sposta e non si restringe. */}
-        {inHome && (
-          <p className="min-w-0 truncate select-none text-right text-[#CC1414] italic font-semibold text-[11px] sm:text-sm">
-            Clicca sul menu di navigazione
-          </p>
-        )}
-        {inHome && (
-          <svg
-            width="22"
-            height="12"
-            viewBox="0 0 22 12"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-            className="flex-shrink-0"
-          >
-            <line x1="1" y1="6" x2="17" y2="6" stroke="#CC1414" strokeWidth="2" strokeLinecap="round" />
-            <path d="M15 1.5 L20.5 6 L15 10.5" stroke="#CC1414" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        )}
+            il pulsante non si sposta e non si restringe.
+            Compare su tutte le pagine: la barra è l'unico modo di spostarsi
+            dentro il sito, e il menu chiuso non somiglia granché a un menu. */}
+        <p className="min-w-0 truncate select-none text-right text-[#CC1414] italic font-semibold text-[11px] sm:text-sm">
+          Clicca sul menu di navigazione
+        </p>
+        <svg
+          width="22"
+          height="12"
+          viewBox="0 0 22 12"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          className="flex-shrink-0"
+        >
+          <line x1="1" y1="6" x2="17" y2="6" stroke="#CC1414" strokeWidth="2" strokeLinecap="round" />
+          <path d="M15 1.5 L20.5 6 L15 10.5" stroke="#CC1414" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
         <button
           onClick={openMenu}
           aria-label="Apri menu di navigazione"
