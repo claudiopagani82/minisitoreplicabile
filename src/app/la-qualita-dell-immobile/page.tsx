@@ -51,31 +51,12 @@ export default function QualitaImmobilePage() {
           </Card>
         )}
 
-        {mostraQualita && (
-          <Card>
-            <h1 className="text-[#CC1414] font-bold text-xl uppercase tracking-wide">
-              {p.sectionNumber && <span className="mr-1">{p.sectionNumber}</span>}
-              {p.sectionTitle}
-            </h1>
-
-            <dl className="space-y-4">
-              {voci.map((v) => (
-                <div key={v.label} className="border-b border-[#f0f0f0] pb-4 last:border-0 last:pb-0">
-                  <dt className="text-[#CC1414] font-bold text-sm uppercase tracking-wide mb-1">
-                    {v.label}
-                  </dt>
-                  <dd className="text-[#333333] text-sm leading-relaxed">{v.text}</dd>
-                </div>
-              ))}
-            </dl>
-          </Card>
-        )}
-
         {mostraCaratteristiche && (
           <Card>
-            <h2 className="text-[#CC1414] font-bold text-xl uppercase tracking-wide">
+            <h1 className="text-[#CC1414] font-bold text-xl uppercase tracking-wide">
+              {car.sectionNumber && <span className="mr-1">{car.sectionNumber}</span>}
               {car.sectionTitle}
-            </h2>
+            </h1>
 
             <ul className="space-y-3">
               {caratteristiche.map((feature, index) => (
@@ -101,6 +82,26 @@ export default function QualitaImmobilePage() {
                 </ul>
               </div>
             )}
+          </Card>
+        )}
+
+        {mostraQualita && (
+          <Card>
+            <h2 className="text-[#CC1414] font-bold text-xl uppercase tracking-wide">
+              {p.sectionNumber && <span className="mr-1">{p.sectionNumber}</span>}
+              {p.sectionTitle}
+            </h2>
+
+            <dl className="space-y-4">
+              {voci.map((v) => (
+                <div key={v.label} className="border-b border-[#f0f0f0] pb-4 last:border-0 last:pb-0">
+                  <dt className="text-[#CC1414] font-bold text-sm uppercase tracking-wide mb-1">
+                    {v.label}
+                  </dt>
+                  <dd className="text-[#333333] text-sm leading-relaxed">{v.text}</dd>
+                </div>
+              ))}
+            </dl>
           </Card>
         )}
       </div>
