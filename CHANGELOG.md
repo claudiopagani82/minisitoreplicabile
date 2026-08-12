@@ -4,6 +4,16 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.42] - 2026-08-12
+### Modificato
+- **In "Dove siamo" l'indirizzo è in grassetto e si tocca per farsi portare lì.** Apre il percorso nell'app di mappe del telefono, con l'immobile come destinazione: chi legge la brochure davanti al portone di casa propria è a un tocco dall'andarci, senza ricopiare la via.
+- **Anche la mappa è tappabile**, con l'etichetta "Apri nel navigatore" in un angolo. Il segnaposto rosso sarebbe stato il bersaglio più naturale, ma la mappa è un'immagine statica che Google inquadra da sé sui marcatori: il pin non sta in un punto fisso dell'immagine, e un'area cliccabile sovrapposta finirebbe spesso altrove. Tocca tutta l'immagine, pin compreso.
+
+### Note tecniche
+- La destinazione sono le **coordinate**, non l'indirizzo scritto: sono quelle con cui è stata generata la mappa e non si prestano a interpretazioni — un civico ambiguo manderebbe il visitatore in un'altra via. L'indirizzo resta come ripiego per i siti senza coordinate.
+- Il link è quello di Google Maps: apre l'app di mappe sul telefono, se installata, e il browser altrimenti. Un indirizzo `geo:` aprirebbe il navigatore predefinito su Android ma non farebbe nulla su iPhone.
+- Senza coordinate né indirizzo l'indirizzo resta scritto in grassetto ma non è un link, e la mappa non è tappabile: meglio nessun collegamento che uno verso il nulla.
+
 ## [1.41] - 2026-08-12
 ### Aggiunto
 - **Il video dell'immobile viene linkato da solo alla creazione del sito**, letto dall'annuncio ufficiale: un filmato YouTube incorporato o un reel Instagram. I link ai profili social dell'agenzia — canale YouTube, profilo Instagram, TikTok — sono nella stessa pagina e non vanno confusi con il video di questa casa: si riconoscono solo le forme che identificano un singolo filmato (`embed/`, `youtu.be/`, `watch?v=`, `reel|p|tv/`), e un indirizzo di canale o profilo non corrisponde a nessuna.

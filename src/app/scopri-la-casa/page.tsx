@@ -30,6 +30,19 @@ const dintorni = property.doveSiamo
 const parcheggi = parcheggio.parcheggi as Parcheggio[]
 const servizi = dintorni.servizi as Servizio[]
 
+// Indirizzo e mappa portano al navigatore. Le coordinate vincono sull'indirizzo
+// scritto: sono quelle con cui è stata generata la mappa, e non si prestano a
+// interpretazioni — un civico ambiguo può mandare il visitatore in un'altra via.
+//
+// L'indirizzo di Google Maps apre l'app di mappe sul telefono, se c'è, e il
+// browser altrimenti. Un `geo:` aprirebbe il navigatore preferito su Android ma
+// non farebbe nulla su iPhone, dove sono la maggioranza dei visitatori.
+const coordinate = dintorni.lat !== null && dintorni.lng !== null ? `${dintorni.lat},${dintorni.lng}` : ''
+const destinazione = coordinate || dintorni.address
+const linkNavigatore = destinazione
+  ? `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destinazione)}`
+  : ''
+
 const CATEGORY_ICONS: Record<string, LucideIcon> = {
   scuola: School,
   supermercato: ShoppingCart,
@@ -52,11 +65,45 @@ function Sottotitolo({ children }: { children: React.ReactNode }) {
   )
 }
 
-function Mappa({ src, alt }: { src: string; alt: string }) {
+/**
+ * La mappa, tappabile per intero quando c'è una destinazione.
+ *
+ * Il segnaposto rosso dell'immobile sarebbe il bersaglio naturale, ma la mappa
+ * è un'immagine statica che Google inquadra da sé sui marcatori: il pin non sta
+ * in un punto fisso, e un'area cliccabile sovrapposta finirebbe spesso altrove.
+ * Tocca quindi tutta l'immagine, pin compreso.
+ */
+function Mappa({ src, alt, href }: { src: string; alt: string; href?: string }) {
+  const immagine = <Image src={src} alt={alt} fill className="object-cover" />
+
   return (
     <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-[#e4e4e7] mb-4">
-      <Image src={src} alt={alt} fill className="object-cover" />
+      {href ? (
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute inset-0 block"
+          aria-label="Apri il percorso verso l'immobile nel navigatore"
+        >
+          {immagine}
+          <span className="absolute bottom-2 right-2 z-10 bg-white/90 text-[#CC1414] text-[11px] font-semibold px-2.5 py-1 rounded-full shadow-sm">
+            Apri nel navigatore
+          </span>
+        </a>
+      ) : (
+        immagine
+      )}
     </div>
+  )
+}
+
+/** Freccia da navigatore, accanto all'indirizzo. */
+function IconaNavigatore() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" className="flex-shrink-0">
+      <path d="M21.7 2.3a1 1 0 0 0-1.06-.23l-18 7a1 1 0 0 0 .05 1.88l7.4 2.46 2.46 7.4a1 1 0 0 0 1.88.05l7-18a1 1 0 0 0-.23-1.06z" />
+    </svg>
   )
 }
 
@@ -132,11 +179,27 @@ export default function ScopriLaCasaPage() {
             <Sottotitolo>{dintorni.heading}</Sottotitolo>
 
             {dintorni.showAddress && dintorni.address && (
-              <p className="text-sm text-[#333333] font-semibold mb-4">{dintorni.address}</p>
+              linkNavigatore ? (
+                <a
+                  href={linkNavigatore}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm font-bold text-[#CC1414] underline underline-offset-2 mb-4 hover:opacity-80 transition-opacity"
+                >
+                  {dintorni.address}
+                  <IconaNavigatore />
+                </a>
+              ) : (
+                <p className="text-sm text-[#333333] font-bold mb-4">{dintorni.address}</p>
+              )
             )}
 
             {dintorni.mapImage && (
-              <Mappa src={dintorni.mapImage} alt={`Mappa dei dintorni di ${dintorni.address}`} />
+              <Mappa
+                src={dintorni.mapImage}
+                alt={`Mappa dei dintorni di ${dintorni.address}`}
+                href={linkNavigatore || undefined}
+              />
             )}
 
             {servizi.length > 0 && (
