@@ -1,10 +1,10 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import property from '@/config/property.json'
+import { OPEN_MENU_EVENT } from '@/lib/menu-events'
 
 // Le voci con `parent` non compaiono nel menu: si raggiungono dalla pagina
 // indice del ramo che le contiene (per esempio "La Documentazione"), così il
@@ -21,6 +21,14 @@ export function Navigation() {
   const openMenu = () => setOpenedFrom(pathname)
   const closeMenu = () => setOpenedFrom(null)
 
+  // Altre parti della pagina (per esempio "SCOPRI ORA" in home) possono
+  // chiedere l'apertura del menu con un evento.
+  useEffect(() => {
+    const handler = () => setOpenedFrom(pathname)
+    window.addEventListener(OPEN_MENU_EVENT, handler)
+    return () => window.removeEventListener(OPEN_MENU_EVENT, handler)
+  }, [pathname])
+
   // Prevent body scroll when menu is open
   useEffect(() => {
     if (isOpen) {
@@ -36,19 +44,7 @@ export function Navigation() {
   return (
     <>
       {/* Top navbar */}
-      <header className="fixed top-0 left-0 right-0 z-50 h-12 bg-white shadow-sm flex items-center justify-between px-4">
-        <div className="flex items-center">
-          <Link href="/">
-            <Image
-              src="/images/logo-domustua.png"
-              alt="DomusTua Immobiliare"
-              width={110}
-              height={36}
-              className="object-contain"
-              priority
-            />
-          </Link>
-        </div>
+      <header className="fixed top-0 left-0 right-0 z-50 h-12 bg-white shadow-sm flex items-center justify-end px-4">
         <button
           onClick={openMenu}
           aria-label="Apri menu di navigazione"

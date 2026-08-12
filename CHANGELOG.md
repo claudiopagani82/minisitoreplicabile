@@ -4,6 +4,14 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.39] - 2026-08-12
+### Rimosso
+- **Logo DomusTua orizzontale nella barra in cima.** Il logo compare già, grande, dentro la home: ripeterlo nella barra toglieva spazio senza aggiungere nulla. La barra resta alta uguale, con il solo pulsante del menu allineato a destra.
+- **Scritta "Clicca sul menù di navigazione" con la freccia rossa** nella home, sia nella versione telefono sia in quella desktop.
+
+### Modificato
+- **"SCOPRI ORA" apre il menu di navigazione** invece di portare alla pagina Introduzione. Sostituisce l'indicazione appena rimossa: chi arriva sulla home vede subito da dove si entra nelle sezioni, senza doverlo spiegare a parole.
+
 ## [1.38] - 2026-08-10
 ### Corretto
 - **I titoli rinominati nel modello non arrivavano ai siti già creati.** L'aggiornamento aggiunge le chiavi mancanti ma non tocca i valori esistenti — apposta, perché titoli e voci di menu si possono personalizzare — e così un sito aggiornato alla 1.37 mostrava ancora "Cos'è e come funziona l'Open Domus" al posto di "🤝 8. Il Metodo Open Domus®", e "Planimetrie e dati catastali" al posto di "Gli Spazi".
