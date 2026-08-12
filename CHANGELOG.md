@@ -10,6 +10,8 @@ Il changelog parte da questa versione in avanti: le versioni precedenti non sono
 - La voce di menu 1 e il titolo della sua pagina diventano **"Dove si trova"** al posto di "Scopri la Casa": la pagina contiene la mappa dei dintorni e quella dei parcheggi, e il nome ora lo dice.
 
 ### Aggiunto
+- **Frase di benvenuto in cima a "Dove si trova"**, compilata da sola alla creazione del sito leggendo l'annuncio ufficiale: *"Benvenuta/o, visita questo trilocale duplex versatile con ingresso indipendente sito in Via A. Manzoni, 34, Venegono Inferiore"*. La tipologia è il titolo dell'annuncio, con l'iniziale resa minuscola perché lì sta in mezzo a una frase; l'indirizzo è quello dell'immobile.
+- La frase resta **modificabile dal pannello** e ha un interruttore suo. Non è un vezzo: l'accordo al maschile di "questo" non regge con ogni tipologia — "questo villa singola" — e i titoli degli annunci sono scritti a mano, uno per uno. Se manca la tipologia o l'indirizzo la frase non compare, invece di comparire a metà.
 - **"Clicca sul menu di navigazione →" nella barra bianca in cima**, in rosso a destra, accanto al pulsante del menu. Compare su **tutte le pagine**: la barra è l'unico modo di spostarsi dentro il sito, e tre trattini fermi in un angolo non dicono da soli che lì c'è un menu. Sostituisce l'indicazione tolta dalla home nella 1.39, che stava sopra la foto e su alcune larghezze finiva addosso al pulsante.
 - La scritta e la freccia stanno **accanto** al pulsante, nel flusso della barra, non sovrapposte: su schermi stretti si accorcia il testo, mentre il pulsante resta dov'è e della stessa dimensione.
 

@@ -121,7 +121,11 @@
   "scopriLaCasa": {
     "enabled": true,
     "sectionNumber": "1.",
-    "sectionTitle": "DOVE SI TROVA"
+    "sectionTitle": "DOVE SI TROVA",
+    "intro": {
+      "enabled": true,
+      "text": ""
+    }
   },
   "qualitaImmobile": {
     "enabled": true,
