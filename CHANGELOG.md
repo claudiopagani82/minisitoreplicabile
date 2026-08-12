@@ -4,6 +4,14 @@ Registro delle modifiche a questo template, una voce per ogni valore del campo `
 
 Il changelog parte da questa versione in avanti: le versioni precedenti non sono documentate qui.
 
+## [1.41] - 2026-08-12
+### Aggiunto
+- **La foto di sfondo del sito è quella dell'immobile, presa dalla copertina dell'annuncio ufficiale.** Finora era scritta nel codice — `foto-principale.jpg`, la foto di un appartamento di Tradate — e ogni sito nuovo nasceva con quella: uno sfondo plausibile e sbagliato, che nessuno notava.
+- Nuovo campo `fotoPrincipale`, modificabile dal pannello con il caricatore di immagini. Se lo si svuota, le pagine restano sul fondo chiaro invece di mostrare il riquadro vuoto di un'immagine che non c'è.
+- La copertina viene **copiata dentro il repo del sito**, non collegata al gestionale: la galleria di "Vivi la Casa" si svuota se l'annuncio viene ritirato, e allo sfondo di tutte le pagine non può succedere lo stesso. Il prezzo è qualche centinaio di kilobyte per sito; in cambio `next/image` la ottimizza come qualsiasi file locale.
+- La copertina si identifica da due segnali concordi: il campo `image` del blocco JSON-LD e la prima foto in ordine di pagina. Del percorso dichiarato si tiene solo l'impronta del file, perché servito così com'è quell'indirizzo restituisce una pagina HTML invece dell'immagine.
+- Rileggendo le foto dall'annuncio ("Rigenera galleria") si aggiorna anche lo sfondo, ma **solo se è ancora quello del modello**: una foto caricata a mano è una scelta e resta.
+
 ## [1.40] - 2026-08-12
 ### Modificato
 - **La pagina 2 comincia dalle "Caratteristiche principali".** Le dieci voci della "Qualità dell'immobile" — anno di costruzione, serramenti, impianti — passano sotto. Chi apre la pagina cerca prima cosa è l'immobile: metri quadri, stanze, prezzo; la qualità costruttiva è la risposta alla domanda dopo. Il numero della sezione ("2.") segue il blocco che ora viene per primo.
