@@ -16,11 +16,15 @@ const car = property.caratteristichePrincipali
 // un'etichetta seguita dal nulla.
 const voci = (p.voci as Voce[]).filter((v) => v.text.trim())
 
+// Nel modello l'elenco è vuoto — si riempie leggendo l'annuncio del singolo
+// immobile — e da un array vuoto TypeScript dedurrebbe `never[]`.
+const caratteristiche = car.features as Voce[]
+
 // I due blocchi restano governati da interruttori distinti, come le due metà di
 // "Scopri la Casa": si può pubblicare la qualità e tenere spente le
 // caratteristiche, o viceversa. Nel pannello sono due sezioni separate.
 const mostraQualita = p.enabled && voci.length > 0
-const mostraCaratteristiche = car.enabled
+const mostraCaratteristiche = car.enabled && caratteristiche.length > 0
 
 function Card({ children }: { children: React.ReactNode }) {
   return (
@@ -74,9 +78,9 @@ export default function QualitaImmobilePage() {
             </h2>
 
             <ul className="space-y-3">
-              {car.features.map((feature, index) => (
+              {caratteristiche.map((feature, index) => (
                 <VoceElenco key={index}>
-                  {'label' in feature && feature.label ? (
+                  {feature.label ? (
                     <><strong>{feature.label}:</strong> {feature.text}</>
                   ) : (
                     feature.text
